@@ -1,7 +1,7 @@
 # Translations template for seedsigner.
-# Copyright (C) 2024 ORGANIZATION
+# Copyright (C) 2025 ORGANIZATION
 # This file is distributed under the same license as the seedsigner project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 # 
 # Translators:
 # Cabildo BTC, 2022
@@ -9,17 +9,17 @@
 # joe mayo, 2022
 # Dax Sosa, 2022
 # ronny avendano, 2024
-# Keith Mukai, 2024
 # Max Apogee, 2025
+# Keith Mukai, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: seedsigner 0.8.5-rc1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-12-30 13:43-0600\n"
+"POT-Creation-Date: 2025-01-14 10:35-0600\n"
 "PO-Revision-Date: 2022-04-29 13:50+0000\n"
-"Last-Translator: Max Apogee, 2025\n"
+"Last-Translator: Keith Mukai, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/seedsigner/teams/135832/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -50,12 +50,12 @@ msgstr "sats"
 #. The abbreviated label for the special key <del> on a standard keyboard.
 #: src/seedsigner/gui/keyboard.py
 msgid "del"
-msgstr "Borrar"
+msgstr "borrar"
 
 #. The abbreviated label for the special key <space> on a standard keyboard.
 #: src/seedsigner/gui/keyboard.py
 msgid "space"
-msgstr "Espacio"
+msgstr "espacio"
 
 #: src/seedsigner/gui/toast.py
 msgid ""
@@ -695,7 +695,7 @@ msgstr "Regtest"
 
 #: src/seedsigner/models/settings_definition.py
 msgid "Store Settings on SD card"
-msgstr "Guardar Ajustes en la tarjeta SD"
+msgstr "Guardar ajustes en la tarjeta SD"
 
 #: src/seedsigner/models/settings_definition.py
 msgid "Insert SD card to enable"
@@ -789,7 +789,11 @@ msgstr "SeedQR Compacto"
 
 #: src/seedsigner/models/settings_definition.py
 msgid "BIP-85 child seeds"
-msgstr "Frase Semilla hijos BIP-85"
+msgstr "Frase semilla hijos BIP-85"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Electrum seeds"
+msgstr "Semillas de Electrum"
 
 #: src/seedsigner/models/settings_definition.py
 msgid "Native Segwit only"
@@ -967,7 +971,7 @@ msgstr "Firma Fallida"
 
 #: src/seedsigner/views/psbt_views.py
 msgid "Signing with this seed did not add a valid signature."
-msgstr "Esta Semilla no produjo una firma válida."
+msgstr "Esta semilla no produjo una firma válida."
 
 #: src/seedsigner/views/scan_views.py
 msgid "Scan a QR code"
@@ -1066,7 +1070,7 @@ msgstr "Escanear SeedQR"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Create a seed"
-msgstr "Crear una Semilla"
+msgstr "Crear una semilla"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Load A Seed"
@@ -1116,7 +1120,7 @@ msgstr "Guardar Semilla"
 #. Inserts the seed fingerprint
 #: src/seedsigner/views/seed_views.py
 msgid "Wipe seed {} from the device?"
-msgstr "¿Borrar Semilla {} del dispositivo?"
+msgstr "¿Borrar semilla {} del dispositivo?"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Discard Seed?"
