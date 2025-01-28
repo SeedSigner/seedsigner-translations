@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: seedsigner 0.8.5-rc1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-01-19 10:20-0600\n"
+"POT-Creation-Date: 2025-01-28 13:28-0600\n"
 "PO-Revision-Date: 2022-04-29 13:50+0000\n"
 "Last-Translator: Keith Mukai, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/seedsigner/teams/135832/es/)\n"
@@ -191,7 +191,7 @@ msgstr "Clic para aprobar esta transacción"
 #: src/seedsigner/gui/screens/scan_screens.py
 #: src/seedsigner/gui/screens/tools_screens.py
 msgid "back"
-msgstr "regresar"
+msgstr "volver"
 
 #. Inserts the percentage value of the animated QR scan progress
 #: src/seedsigner/gui/screens/scan_screens.py
@@ -235,6 +235,11 @@ msgstr "Entendido"
 #: src/seedsigner/gui/screens/screen.py
 msgid "Classified Info!"
 msgstr "¡Información Clasificada!"
+
+#: src/seedsigner/gui/screens/screen.py src/seedsigner/views/scan_views.py
+#: src/seedsigner/views/view.py
+msgid "Error"
+msgstr "Error"
 
 #: src/seedsigner/gui/screens/screen.py
 msgid "Restarting"
@@ -529,13 +534,13 @@ msgid "Home"
 msgstr "Menú"
 
 #: src/seedsigner/gui/screens/tools_screens.py
-msgid "click joystick"
-msgstr "haga clic en la palanca"
+msgid "click a button"
+msgstr "clic para foto"
 
 #. A prompt to the user to either accept or reshoot the image
 #: src/seedsigner/gui/screens/tools_screens.py
 msgid "reshoot"
-msgstr "Volver a tomar"
+msgstr "volver a tomar"
 
 #. A prompt to the user to either accept or reshoot the image
 #: src/seedsigner/gui/screens/tools_screens.py
@@ -970,24 +975,6 @@ msgstr "Código QR no reconocido o aún no soportado"
 msgid "Wrong QR Type"
 msgstr "Tipo de QR Equivocado"
 
-#: src/seedsigner/views/scan_views.py src/seedsigner/views/view.py
-msgid "Error"
-msgstr "Error"
-
-#: src/seedsigner/views/scan_views.py
-msgid "Unknown QR Type"
-msgstr "Tipo QR Desconocido"
-
-#: src/seedsigner/views/scan_views.py
-msgid "QRCode is invalid or is a data format not yet supported."
-msgstr ""
-"El código QR no es válido o es un formato de datos que aún no es compatible."
-
-#: src/seedsigner/views/scan_views.py src/seedsigner/views/seed_views.py
-#: src/seedsigner/views/view.py
-msgid "Done"
-msgstr "Finalizar"
-
 #: src/seedsigner/views/scan_views.py src/seedsigner/views/seed_views.py
 msgid "Scan PSBT"
 msgstr "Escanear PSBT"
@@ -1019,6 +1006,20 @@ msgstr "Escanear dirección QR"
 #: src/seedsigner/views/scan_views.py
 msgid "Expected an address QR"
 msgstr "Se esperaba una dirección QR"
+
+#: src/seedsigner/views/scan_views.py
+msgid "Unknown QR Type"
+msgstr "Tipo QR Desconocido"
+
+#: src/seedsigner/views/scan_views.py
+msgid "QRCode is invalid or is a data format not yet supported."
+msgstr ""
+"El código QR no es válido o es un formato de datos que aún no es compatible."
+
+#: src/seedsigner/views/scan_views.py src/seedsigner/views/seed_views.py
+#: src/seedsigner/views/view.py
+msgid "Done"
+msgstr "Finalizar"
 
 #. This is on the opening splash screen, displayed above the HRF logo
 #: src/seedsigner/views/screensaver.py
