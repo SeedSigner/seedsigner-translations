@@ -965,7 +965,7 @@ msgstr "Esta semilla no produjo una firma válida."
 
 #: src/seedsigner/views/scan_views.py
 msgid "Scan a QR code"
-msgstr "Escanear código QR"
+msgstr "escanear QR"
 
 #: src/seedsigner/views/scan_views.py
 msgid "QRCode not recognized or not yet supported."
@@ -1001,7 +1001,7 @@ msgstr "Se esperaba un descriptor de billetera QR"
 
 #: src/seedsigner/views/scan_views.py
 msgid "Scan address QR"
-msgstr "Escanear dirección QR"
+msgstr "escanear dirección"
 
 #: src/seedsigner/views/scan_views.py
 msgid "Expected an address QR"
