@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: seedsigner 0.8.5-rc1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-01-28 13:28-0600\n"
-"PO-Revision-Date: 2022-02-11 14:00+0000\n"
+"PO-Revision-Date: 2022-04-29 13:50+0000\n"
 "Last-Translator: jpph, 2025\n"
 "Language-Team: French (https://app.transifex.com/seedsigner/teams/135832/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -187,7 +187,7 @@ msgstr "Cliquer pour approuver cette transaction"
 #: src/seedsigner/gui/screens/scan_screens.py
 #: src/seedsigner/gui/screens/tools_screens.py
 msgid "back"
-msgstr "arriere"
+msgstr "retour"
 
 #. Inserts the percentage value of the animated QR scan progress
 #: src/seedsigner/gui/screens/scan_screens.py
@@ -517,7 +517,7 @@ msgid ""
 "Donate onchain or LN at:"
 msgstr ""
 "SeedSigner est 100%% gratuit et open source, financé par la communauté "
-"Bitcoin. Faite un don 'onchain' ou LN à:"
+"Bitcoin. Faites un don 'onchain' ou LN à:"
 
 #: src/seedsigner/gui/screens/settings_screens.py
 #: src/seedsigner/views/settings_views.py
@@ -563,9 +563,8 @@ msgid ""
 "The {mnemonic_length}th word is built from {num_bits} more entropy bits plus"
 " auto-calculated checksum."
 msgstr ""
-"Le {mnemonic_length}ème mot est construit à partir de {num_bits} bits "
-"d'entropie supplémentaires plus une somme de contrôle calculée "
-"automatiquement."
+"Le {mnemonic_length}ème mot nécessite {num_bits} bits d'entropie "
+"supplémentaires."
 
 #. current coin-flip number vs total flips (e.g. flip 3 of 4)
 #: src/seedsigner/gui/screens/tools_screens.py
@@ -737,7 +736,7 @@ msgstr "Langue Mnémoniques"
 
 #: src/seedsigner/models/settings_definition.py
 msgid "Persistent settings"
-msgstr "Paramètres persistent"
+msgstr "Paramètres persistants"
 
 #: src/seedsigner/models/settings_definition.py
 msgid "Coordinator software"
@@ -968,7 +967,7 @@ msgstr "Signer avec cette seed n'a pas ajouté une signature valide"
 
 #: src/seedsigner/views/scan_views.py
 msgid "Scan a QR code"
-msgstr "Scanner un code QR"
+msgstr "Scanner un QR"
 
 #: src/seedsigner/views/scan_views.py
 msgid "QRCode not recognized or not yet supported."
@@ -996,7 +995,7 @@ msgstr "Attendu un SeedQR"
 
 #: src/seedsigner/views/scan_views.py
 msgid "Scan descriptor"
-msgstr "Scanner descripteur"
+msgstr "Scanner descr."
 
 #: src/seedsigner/views/scan_views.py
 msgid "Expected a wallet descriptor QR"
@@ -1006,7 +1005,7 @@ msgstr ""
 
 #: src/seedsigner/views/scan_views.py
 msgid "Scan address QR"
-msgstr "Scanner une adresse QR"
+msgstr "Scanner QR"
 
 #: src/seedsigner/views/scan_views.py
 msgid "Expected an address QR"
@@ -1321,7 +1320,7 @@ msgstr "Validation d'une adresse single sig impossible sans spécifier la seed"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Scan Descriptor"
-msgstr "Scanner le Descriptor"
+msgstr "Scanner le Descripteur"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Return to PSBT"
