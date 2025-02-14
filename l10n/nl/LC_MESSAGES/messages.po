@@ -559,7 +559,7 @@ msgid ""
 "The {mnemonic_length}th word is built from {num_bits} more entropy bits plus"
 " auto-calculated checksum."
 msgstr ""
-"Het {}e woord is opgebouwd uit {} extra entropie plus een automatisch "
+"Het {mnemonic_length}e woord is opgebouwd uit {num_bits} extra entropie plus een automatisch "
 "berekende controlesom."
 
 #. current coin-flip number vs total flips (e.g. flip 3 of 4)
