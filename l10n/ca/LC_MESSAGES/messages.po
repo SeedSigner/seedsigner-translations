@@ -361,7 +361,7 @@ msgstr "Estàndard"
 #. Briefly explains the Standard SeedQR data format
 #: src/seedsigner/gui/screens/seed_screens.py
 msgid "BIP-39 wordlist indices"
-msgstr "Índexs de la llista de paraules del BIP-39"
+msgstr "Índexs de la llista BIP-39"
 
 #. Refers to the SeedQR type: Standard or Compact
 #: src/seedsigner/gui/screens/seed_screens.py
@@ -432,8 +432,8 @@ msgid ""
 "Load your multisig wallet descriptor to verify your receive/self-transfer or"
 " change address."
 msgstr ""
-"Carrega el descriptor de la bitlletera multisig per verificar l'adreça del "
-"receptor, d'autotransferència o canvi."
+"Carregar descriptor de la multisig per verificar l'adreça del receptor, "
+"d'autotransferència o canvi."
 
 #: src/seedsigner/gui/screens/seed_screens.py
 msgid "Descriptor Loaded"
@@ -560,8 +560,8 @@ msgid ""
 "The {mnemonic_length}th word is built from {num_bits} more entropy bits plus"
 " auto-calculated checksum."
 msgstr ""
-"Es genera a partir de {num_bits} bits d'entropia + la suma de control "
-"autogenerada."
+"La {mnemonic_length} necesita {num_bits} extres d'entropia + suma de "
+"control."
 
 #. current coin-flip number vs total flips (e.g. flip 3 of 4)
 #: src/seedsigner/gui/screens/tools_screens.py
@@ -581,7 +581,7 @@ msgstr "Creus = 0"
 #. The additional entropy the user supplied (e.g. coin flips)
 #: src/seedsigner/gui/screens/tools_screens.py
 msgid "Your input: \"{}\""
-msgstr "La teva entrada: \"{}\""
+msgstr "Entrada: \"{}\""
 
 #. A function of "x" to be used for detecting errors in "x"
 #: src/seedsigner/gui/screens/tools_screens.py
@@ -805,7 +805,7 @@ msgstr "Mostra advertències greus"
 
 #: src/seedsigner/models/settings_definition.py
 msgid "Show QR brightness tips"
-msgstr "Mostrar consells sobre la brillantor QR"
+msgstr "Mostrar consells sobre la brillantor dels QR"
 
 #: src/seedsigner/models/settings_definition.py
 msgid "Show partner logos"
@@ -920,7 +920,7 @@ msgstr "Verificant Autotransferència..."
 #. Variable is either "change" or "self-transfer".
 #: src/seedsigner/views/psbt_views.py
 msgid "PSBT's {} address could not be verified from wallet descriptor."
-msgstr "L'adreça de {} de la PSBT no s'ha pogut verificar amb el descriptor."
+msgstr "L'adreça de PSTB per {} no s'ha pogut verificar amb el descriptor."
 
 #. Variable is either "change" or "self-transfer".
 #: src/seedsigner/views/psbt_views.py
@@ -961,7 +961,7 @@ msgstr "Signar amb aquesta llavor no ha afegit una signatura vàlida."
 
 #: src/seedsigner/views/scan_views.py
 msgid "Scan a QR code"
-msgstr "Escanejar codi QR"
+msgstr "Escanejar QR"
 
 #: src/seedsigner/views/scan_views.py
 msgid "QRCode not recognized or not yet supported."
@@ -981,7 +981,7 @@ msgstr "S'esperava una PSBT"
 
 #: src/seedsigner/views/scan_views.py
 msgid "Scan SeedQR"
-msgstr "Escanejar una SeedQR"
+msgstr "Escanejar QR"
 
 #: src/seedsigner/views/scan_views.py
 msgid "Expected a SeedQR"
@@ -997,7 +997,7 @@ msgstr "S'esperava el descriptor QR d'una bitlletera"
 
 #: src/seedsigner/views/scan_views.py
 msgid "Scan address QR"
-msgstr "Escanejar el QR d'una Adreça"
+msgstr "Escanejar Adreça"
 
 #: src/seedsigner/views/scan_views.py
 msgid "Expected an address QR"
@@ -1251,7 +1251,7 @@ msgstr "Format SeedQR"
 
 #: src/seedsigner/views/seed_views.py
 msgid "SeedQR is your private key!"
-msgstr "El SeedQR és la teva clau privada!"
+msgstr "El SeedQR és la clau privada!"
 
 #: src/seedsigner/views/seed_views.py
 msgid ""

@@ -6,9 +6,9 @@
 # Translators:
 # Keith Mukai, 2022
 # SeedMint, 2022
-# abc dev, 2025
 # Uggl, 2025
 # Go Brrr, 2025
+# abc dev, 2025
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-01-28 13:28-0600\n"
 "PO-Revision-Date: 2022-04-29 13:50+0000\n"
-"Last-Translator: Go Brrr, 2025\n"
+"Last-Translator: abc dev, 2025\n"
 "Language-Team: German (https://app.transifex.com/seedsigner/teams/135832/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -389,7 +389,7 @@ msgid ""
 "Optionally scan your transcribed SeedQR to confirm that it reads back "
 "correctly."
 msgstr ""
-"Optional umgeschriebenen SeedQR scannen, um zu verifizieren, dass er korrekt"
+"Optional transkribierten SeedQR scannen, um zu verifizieren, dass er korrekt"
 " gelesen wird."
 
 #: src/seedsigner/gui/screens/seed_screens.py
@@ -924,7 +924,7 @@ msgstr "PSBT: {} Adresse konnte nicht verifiziert werden."
 #. Variable is either "change" or "self-transfer".
 #: src/seedsigner/views/psbt_views.py
 msgid "PSBT's {} address could not be generated from your seed."
-msgstr "PSBT's {} Adresse konnte vom Seed nicht generiert werden."
+msgstr "PSBTs {} Adresse konnte vom Seed nicht generiert werden."
 
 #: src/seedsigner/views/psbt_views.py
 msgid "Suspicious PSBT"
@@ -932,7 +932,7 @@ msgstr "Verdächtige PSBT"
 
 #: src/seedsigner/views/psbt_views.py
 msgid "Address Verification Failed"
-msgstr "Adressen Verifikation gescheitert"
+msgstr "Verifikation der Adresse gescheitert"
 
 #: src/seedsigner/views/psbt_views.py
 msgid "Discard PSBT"
@@ -952,7 +952,7 @@ msgstr "PSBT Fehler"
 
 #: src/seedsigner/views/psbt_views.py
 msgid "Signing Failed"
-msgstr "Signing fehlgeschlagen"
+msgstr "Signierung fehlgeschlagen"
 
 #: src/seedsigner/views/psbt_views.py
 msgid "Signing with this seed did not add a valid signature."
@@ -1038,7 +1038,7 @@ msgstr "Zu verifizierenden Seed wählen"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Load the seed to sign with"
-msgstr "zum Signieren benötigten Seed laden"
+msgstr "Seed zum Signieren auswählen"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Select seed to sign with"
@@ -1128,7 +1128,7 @@ msgstr "Seed verwerfen"
 
 #: src/seedsigner/views/seed_views.py
 msgid "View Seed Words"
-msgstr "Seed Phrase zeigen"
+msgstr "Seed Wörter anzeigen"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Export as SeedQR"
@@ -1156,15 +1156,15 @@ msgstr "Child #{}"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Seed Words"
-msgstr "Seed Worte"
+msgstr "Seed Wörter"
 
 #: src/seedsigner/views/seed_views.py
 msgid "12 Words"
-msgstr "12 Worte"
+msgstr "12 Wörter"
 
 #: src/seedsigner/views/seed_views.py
 msgid "24 Words"
-msgstr "24 Worte"
+msgstr "24 Wörter"
 
 #: src/seedsigner/views/seed_views.py
 msgid "BIP-85 Num Words"
@@ -1282,8 +1282,7 @@ msgstr "SeedQR überprüfen"
 #: src/seedsigner/views/seed_views.py
 msgid ""
 "Your transcribed SeedQR successfully scanned and yielded the same seed."
-msgstr ""
-"Ihr übersetzter SeedQR wurde erfolgreich gescannt und ergab den selben Seed."
+msgstr "Ihr übersetzter SeedQR wurde erfolgreich gescannt und stimmt überein."
 
 #: src/seedsigner/views/seed_views.py
 msgid "Your transcribed SeedQR could not be read!"
@@ -1296,7 +1295,7 @@ msgstr "Sig Typ konnte nicht automatisch erkannt werden. Bitte spezifizieren:"
 #. Option when scanning for a matching address; skips ten addresses ahead
 #: src/seedsigner/views/seed_views.py
 msgid "Skip 10"
-msgstr "Springe 10"
+msgstr "Überspringe 10"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Cancel"
@@ -1318,7 +1317,7 @@ msgstr "Zurück zur PSBT"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Signing messages for custom derivation paths not supported"
-msgstr "Nachrichten signieren inkompatibel mit eigenem Derivationspfad"
+msgstr "Nachrichten Signatur mit eigenem Derivationspfad nicht unterstützt"
 
 #: src/seedsigner/views/settings_views.py
 msgid "I/O test"
@@ -1346,7 +1345,7 @@ msgstr "Neuer Seed"
 
 #: src/seedsigner/views/tools_views.py
 msgid "Calc 12th/24th word"
-msgstr "Ber. 12./24. Wort"
+msgstr "Berechne 12./24. Wort"
 
 #: src/seedsigner/views/tools_views.py src/seedsigner/views/view.py
 msgid "Tools"
@@ -1354,11 +1353,11 @@ msgstr "Tools"
 
 #: src/seedsigner/views/tools_views.py
 msgid "12 words"
-msgstr "12 Worte"
+msgstr "12 Wörter"
 
 #: src/seedsigner/views/tools_views.py
 msgid "24 words"
-msgstr "24 Worte"
+msgstr "24 Wörter"
 
 #: src/seedsigner/views/tools_views.py
 msgid "Mnemonic Length?"
@@ -1367,12 +1366,12 @@ msgstr "Seedphrasen Länge?"
 #. Inserts the number of dice rolls needed for a 12-word mnemonic
 #: src/seedsigner/views/tools_views.py
 msgid "12 words ({} rolls)"
-msgstr "12 Worte ({} Würfe)"
+msgstr "12 Wörter ({} Würfe)"
 
 #. Inserts the number of dice rolls needed for a 24-word mnemonic
 #: src/seedsigner/views/tools_views.py
 msgid "24 words ({} rolls)"
-msgstr "24 Worte ({} Würfe)"
+msgstr "24 Wörter ({} Würfe)"
 
 #: src/seedsigner/views/tools_views.py
 msgid "Mnemonic Length"
@@ -1396,7 +1395,7 @@ msgstr "Mit Nullen finaliseren"
 #. label to calculate the last word of a BIP-39 mnemonic seed phrase
 #: src/seedsigner/views/tools_views.py
 msgid "Final Word Calc"
-msgstr "Final Wort errechnen"
+msgstr "Finales Wort errechnen"
 
 #: src/seedsigner/views/tools_views.py
 msgid "Load seed"
