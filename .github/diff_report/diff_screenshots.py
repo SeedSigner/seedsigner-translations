@@ -4,7 +4,7 @@ differences.
 
 Expected usage in a GitHub Actions workflow; compare `dev` with the `$BRANCH_NAME` in the
 associated PR that triggered the CI run:
-python src/seedsigner/resources/seedsigner-translations/.github/diff_report/diff_screenshots.py ./artifacts/dev ./artifacts/$BRANCH_NAME ./artifacts/diff
+python src/seedsigner/resources/seedsigner-translations/.github/diff_report/diff_screenshots.py ./artifacts/dev ./artifacts/$BRANCH_NAME ./artifacts/diff $REPO_NAME
 """
 import argparse
 import glob
@@ -19,12 +19,14 @@ parser = argparse.ArgumentParser(prog=__name__)
 parser.add_argument("before_dir", type=str, help="Directory containing screenshots before the proposed changes")
 parser.add_argument("after_dir", type=str, help="Directory containing screenshots after the proposed changes")
 parser.add_argument("output_dir", type=str, help="Directory to save the screenshots diff report")
+parser.add_argument("source_repo", type=str, help="Submitter's fork's repo name")
 
 args = parser.parse_args()
 
 # "before" and "after" directories are named: artifacts/$TARGET_BRANCH and artifacts/$BRANCH_NAME
 before_branch_name = args.before_dir.split(os.path.sep)[-1]
 after_branch_name = args.after_dir.split(os.path.sep)[-1]
+source_repo = args.source_repo
 
 def list_files_recursively(path: str) -> list[str]:
     """ Return a list of paths to all png files in the directory tree """
@@ -91,7 +93,7 @@ for file in list_files_recursively(args.after_dir):
 only_in_before = set(paths_before) - set(paths_after)
 
 html_content = "<h1>Screenshots diff report</h1>"
-html_content += f"""<p>Comparing {before_branch_name} to <a href="https://github.com/SeedSigner/seedsigner-translations/compare/dev...kdmukai:seedsigner-translations:{after_branch_name}" target="github">{after_branch_name}</a></p>"""
+html_content += f"""<p>Comparing {before_branch_name} to <a href="https://github.com/SeedSigner/seedsigner-translations/compare/dev...{source_repo}:{after_branch_name}" target="github">{after_branch_name}</a></p>"""
 output_dir_before = os.path.join(args.output_dir, "before")
 output_dir_after = os.path.join(args.output_dir, "after")
 os.makedirs(output_dir_before, exist_ok=True)
