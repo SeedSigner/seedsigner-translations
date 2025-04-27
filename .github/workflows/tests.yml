@@ -20,7 +20,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     env:
-      BRANCH_NAME: ${{ github.head_ref || github.ref_name }} 
+      REPO_NAME: ${{ github.event.repository.name }}
+      BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
     steps:
       - name: Checkout main repo 'dev'
         uses: actions/checkout@v4
@@ -71,7 +72,7 @@ jobs:
       - name: Diff screenshots
         run: |
           mkdir -p artifacts/diff
-          python src/seedsigner/resources/seedsigner-translations/.github/diff_report/diff_screenshots.py ./artifacts/dev ./artifacts/$BRANCH_NAME ./artifacts/diff
+          python src/seedsigner/resources/seedsigner-translations/.github/diff_report/diff_screenshots.py ./artifacts/dev ./artifacts/$BRANCH_NAME ./artifacts/diff $REPO_NAME
       - name: Clean up artifacts
         run: |
           rm -rf ./artifacts/$BRANCH_NAME
