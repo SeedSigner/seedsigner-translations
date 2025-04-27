@@ -25,7 +25,6 @@ args = parser.parse_args()
 # "before" and "after" directories are named: artifacts/$TARGET_BRANCH and artifacts/$BRANCH_NAME
 before_branch_name = args.before_dir.split(os.path.sep)[-1]
 after_branch_name = args.after_dir.split(os.path.sep)[-1]
-source_repo = args.source_repo
 
 def list_files_recursively(path: str) -> list[str]:
     """ Return a list of paths to all png files in the directory tree """
