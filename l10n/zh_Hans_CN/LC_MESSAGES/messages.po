@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Ouou Ahah, 2025
+# Tang ZHONGCHEN, 2025
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-01-28 13:28-0600\n"
 "PO-Revision-Date: 2022-04-29 13:50+0000\n"
-"Last-Translator: Ouou Ahah, 2025\n"
+"Last-Translator: Tang ZHONGCHEN, 2025\n"
 "Language-Team: Chinese Simplified (https://app.transifex.com/seedsigner/teams/135832/zh-Hans/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -51,11 +52,11 @@ msgstr ""
 
 #: src/seedsigner/gui/toast.py
 msgid "SD card removed"
-msgstr "已取出SD卡"
+msgstr "SD 卡已移除"
 
 #: src/seedsigner/gui/toast.py
 msgid "SD card inserted"
-msgstr "已插入SD卡"
+msgstr "SD 卡已插入"
 
 #: src/seedsigner/gui/screens/psbt_screens.py
 msgid "Review PSBT"
@@ -63,7 +64,7 @@ msgstr "审核 PSBT"
 
 #: src/seedsigner/gui/screens/psbt_screens.py
 msgid "Review Details"
-msgstr "审核详情"
+msgstr "查看详情"
 
 #: src/seedsigner/gui/screens/psbt_screens.py
 msgid "1 input"
@@ -125,11 +126,11 @@ msgstr "找零"
 
 #: src/seedsigner/gui/screens/psbt_screens.py
 msgid "PSBT Math"
-msgstr "PSBT 算术"
+msgstr "PSBT 运算"
 
 #: src/seedsigner/gui/screens/psbt_screens.py
 msgid "Review Recipients"
-msgstr "审核收款人"
+msgstr "查看收款人"
 
 #: src/seedsigner/gui/screens/psbt_screens.py
 msgid "input"
@@ -168,7 +169,7 @@ msgstr "地址已验证！"
 #. Shown when displaying OP_RETURN as non-human-readable hexadecimal data
 #: src/seedsigner/gui/screens/psbt_screens.py
 msgid "raw hex data"
-msgstr "原始的十六进制数据"
+msgstr "原始十六进制数据"
 
 #: src/seedsigner/gui/screens/psbt_screens.py
 msgid "Sign PSBT"
@@ -176,12 +177,12 @@ msgstr "签署 PSBT"
 
 #: src/seedsigner/gui/screens/psbt_screens.py
 msgid "Click to approve this transaction"
-msgstr "点击以批准此交易"
+msgstr "点击确认交易"
 
 #: src/seedsigner/gui/screens/scan_screens.py
 #: src/seedsigner/gui/screens/tools_screens.py
 msgid "back"
-msgstr "后退"
+msgstr "返回"
 
 #. Inserts the percentage value of the animated QR scan progress
 #: src/seedsigner/gui/screens/scan_screens.py
@@ -191,24 +192,24 @@ msgstr "{}%"
 #. Increase QR code screen brightness
 #: src/seedsigner/gui/screens/screen.py
 msgid "Brighter"
-msgstr "更亮"
+msgstr "增加亮度"
 
 #. Decrease QR code screen brightness
 #: src/seedsigner/gui/screens/screen.py
 msgid "Darker"
-msgstr "更暗"
+msgstr "降低亮度"
 
 #: src/seedsigner/gui/screens/screen.py
 #: src/seedsigner/gui/screens/seed_screens.py
 #: src/seedsigner/views/seed_views.py
 msgid "Success!"
-msgstr "成功！"
+msgstr "操作成功！"
 
 #: src/seedsigner/gui/screens/screen.py
 #: src/seedsigner/gui/screens/seed_screens.py
 #: src/seedsigner/views/seed_views.py
 msgid "OK"
-msgstr "好的"
+msgstr "确定"
 
 #: src/seedsigner/gui/screens/screen.py
 msgid "Caution"
@@ -251,7 +252,7 @@ msgstr "正在关机"
 
 #: src/seedsigner/gui/screens/screen.py
 msgid "Please wait about 30 seconds before disconnecting power."
-msgstr "请等待大约 30 秒后再断电。"
+msgstr "请等待约 30 秒后再断电"
 
 #: src/seedsigner/gui/screens/screen.py
 msgid "Just Unplug It"
@@ -259,11 +260,11 @@ msgstr "拔出电源线即可"
 
 #: src/seedsigner/gui/screens/screen.py
 msgid "It is safe to disconnect power at any time."
-msgstr "在任何时候断电都是安全的。"
+msgstr "可随时断电，已确保安全"
 
 #: src/seedsigner/gui/screens/seed_screens.py
 msgid "Finalize Seed"
-msgstr "最终确定种子"
+msgstr "最终确认助记词"
 
 #. a label for the shortened Key-id of a BIP-32 master HD wallet
 #: src/seedsigner/gui/screens/seed_screens.py
@@ -275,18 +276,18 @@ msgstr "指纹"
 #: src/seedsigner/gui/screens/seed_screens.py
 #: src/seedsigner/views/seed_views.py
 msgid "Backup Seed"
-msgstr "备份种子"
+msgstr "备份助记词"
 
 #. Additional explainer for the two seed backup options (mnemonic phrase and
 #. SeedQR).
 #: src/seedsigner/gui/screens/seed_screens.py
 msgid "Backups do not include your passphrase."
-msgstr "备份不包括您的密码短语"
+msgstr "备份不包含您的密码短语"
 
 #. Displays the page number and total: (e.g. page 1 of 6)
 #: src/seedsigner/gui/screens/seed_screens.py
 msgid "Seed Words: {}/{}"
-msgstr "助记单词: {}/{}"
+msgstr "助记词: {}/{}"
 
 #: src/seedsigner/gui/screens/seed_screens.py
 msgid "BIP-85 Index"
@@ -298,7 +299,7 @@ msgstr "验证备份？"
 
 #: src/seedsigner/gui/screens/seed_screens.py
 msgid "Optionally verify that your mnemonic backup is correct."
-msgstr "可选择性地验证您的助记词备份是否正确。"
+msgstr "可选验证助记词备份是否正确"
 
 #: src/seedsigner/gui/screens/seed_screens.py
 msgid "Derivation Path"
@@ -356,7 +357,7 @@ msgstr "标准型"
 #. Briefly explains the Standard SeedQR data format
 #: src/seedsigner/gui/screens/seed_screens.py
 msgid "BIP-39 wordlist indices"
-msgstr "BIP-39 单词列表索引"
+msgstr "BIP-39 单词表索引"
 
 #. Refers to the SeedQR type: Standard or Compact
 #: src/seedsigner/gui/screens/seed_screens.py
@@ -379,13 +380,13 @@ msgstr "开始 {}x{}"
 
 #: src/seedsigner/gui/screens/seed_screens.py
 msgid "click to exit"
-msgstr "点击以退出"
+msgstr "点击退出"
 
 #: src/seedsigner/gui/screens/seed_screens.py
 msgid ""
 "Optionally scan your transcribed SeedQR to confirm that it reads back "
 "correctly."
-msgstr "可选择性地扫描已抄写的 SeedQR，以确认其回读正确。"
+msgstr "可选择扫描您抄写的 SeedQR，以确认是否读取正确"
 
 #: src/seedsigner/gui/screens/seed_screens.py
 #: src/seedsigner/views/seed_views.py src/seedsigner/views/tools_views.py
@@ -399,7 +400,7 @@ msgstr "核对地址 {}"
 
 #: src/seedsigner/gui/screens/seed_screens.py
 msgid "Address Verified"
-msgstr "地址已验证"
+msgstr "地址验证成功"
 
 #. Describes the address type (change or receive)
 #: src/seedsigner/gui/screens/seed_screens.py
@@ -441,7 +442,7 @@ msgstr "签名密钥"
 
 #: src/seedsigner/gui/screens/seed_screens.py
 msgid "Review Message"
-msgstr "审核留言"
+msgstr "查看留言"
 
 #. Short for "Next step"
 #: src/seedsigner/gui/screens/seed_screens.py
@@ -486,7 +487,7 @@ msgstr "退出"
 #: src/seedsigner/gui/screens/settings_screens.py
 #: src/seedsigner/gui/screens/tools_screens.py
 msgid "Capturing image..."
-msgstr "拍摄图像..."
+msgstr "正在拍摄图像..."
 
 #: src/seedsigner/gui/screens/settings_screens.py
 #: src/seedsigner/views/settings_views.py
@@ -504,9 +505,9 @@ msgid ""
 "\n"
 "Donate onchain or LN at:"
 msgstr ""
-"SeedSigner 是 100%% 自由和开源的，资助资金全部来自于比特币社区。\n"
+"SeedSigner 是 100%% 自由和开源的，由比特币社区独立资助。\n"
 "\n"
-"请在区块链或闪电网络上打赏："
+"请通过链上或闪电网络捐赠："
 
 #: src/seedsigner/gui/screens/settings_screens.py
 #: src/seedsigner/views/settings_views.py
@@ -533,7 +534,7 @@ msgstr "重新拍摄"
 #. A prompt to the user to either accept or reshoot the image
 #: src/seedsigner/gui/screens/tools_screens.py
 msgid "accept"
-msgstr "采纳"
+msgstr "接受"
 
 #. current roll number vs total rolls (e.g. roll 7 of 50)
 #: src/seedsigner/gui/screens/tools_screens.py
@@ -543,7 +544,7 @@ msgstr "掷骰子计数 {}/{}"
 #. Build the last word in a 12 or 24 word BIP-39 mnemonic seed phrase.
 #: src/seedsigner/gui/screens/tools_screens.py
 msgid "Build Final Word"
-msgstr "建设最终的助记单词"
+msgstr "生成最终助记词"
 
 #. Final word calc. `mnemonic_length` = 12 or 24. `num_bits` = 7 or 3 (bits of
 #. entropy in final word).
@@ -551,7 +552,7 @@ msgstr "建设最终的助记单词"
 msgid ""
 "The {mnemonic_length}th word is built from {num_bits} more entropy bits plus"
 " auto-calculated checksum."
-msgstr "第 {mnemonic_length} 个单词由 {num_bits} 个熵位加上自动计算的校验和构成。"
+msgstr "第 {mnemonic_length} 个助记词由 {num_bits} 个熵位及自动校验码生成"
 
 #. current coin-flip number vs total flips (e.g. flip 3 of 4)
 #: src/seedsigner/gui/screens/tools_screens.py
@@ -677,7 +678,7 @@ msgstr "回归测试网"
 
 #: src/seedsigner/models/settings_definition.py
 msgid "Store Settings on SD card"
-msgstr "将设置存储在SD卡上"
+msgstr "将设置保存到 SD 卡"
 
 #: src/seedsigner/models/settings_definition.py
 msgid "Insert SD card to enable"
@@ -686,7 +687,7 @@ msgstr "插入SD卡以启用"
 #: src/seedsigner/models/settings_definition.py
 #: src/seedsigner/views/seed_views.py
 msgid "Single Sig"
-msgstr "单一签名"
+msgstr "单签名"
 
 #: src/seedsigner/models/settings_definition.py
 msgid "Native Segwit"
@@ -706,7 +707,7 @@ msgstr "Taproot"
 
 #: src/seedsigner/models/settings_definition.py
 msgid "Custom Derivation"
-msgstr "自定义派生"
+msgstr "自定义派生路径"
 
 #. Terminology used by Electrum seeds; equivalent to bip39 passphrase
 #: src/seedsigner/models/settings_definition.py
@@ -727,11 +728,11 @@ msgstr "持久性设置"
 
 #: src/seedsigner/models/settings_definition.py
 msgid "Coordinator software"
-msgstr "协调员软件"
+msgstr "协调器软件"
 
 #: src/seedsigner/models/settings_definition.py
 msgid "Denomination display"
-msgstr "面额显示"
+msgstr "单位显示"
 
 #: src/seedsigner/models/settings_definition.py
 msgid "Bitcoin network"
@@ -771,15 +772,15 @@ msgstr "紧凑型 SeedQR"
 
 #: src/seedsigner/models/settings_definition.py
 msgid "BIP-85 child seeds"
-msgstr "BIP-85 子种子"
+msgstr "BIP-85 子助记词"
 
 #: src/seedsigner/models/settings_definition.py
 msgid "Electrum seeds"
-msgstr "Electrum 种子"
+msgstr "Electrum 助记词"
 
 #: src/seedsigner/models/settings_definition.py
 msgid "Native Segwit only"
-msgstr "仅限于原生隔离见证"
+msgstr "仅支持原生隔离见证"
 
 #: src/seedsigner/models/settings_definition.py
 msgid "Message signing"
@@ -808,22 +809,22 @@ msgstr "二维码背景颜色"
 #: src/seedsigner/views/psbt_views.py src/seedsigner/views/seed_views.py
 #: src/seedsigner/views/tools_views.py
 msgid "Scan a seed"
-msgstr "扫描一个种子备份"
+msgstr "扫描一个助记词备份"
 
 #: src/seedsigner/views/psbt_views.py src/seedsigner/views/seed_views.py
 #: src/seedsigner/views/tools_views.py
 msgid "Enter 12-word seed"
-msgstr "输入 12 个单词的种子"
+msgstr "输入 12 个助记词"
 
 #: src/seedsigner/views/psbt_views.py src/seedsigner/views/seed_views.py
 #: src/seedsigner/views/tools_views.py
 msgid "Enter 24-word seed"
-msgstr "输入 24 个单词的种子"
+msgstr "输入 24 个助记词"
 
 #: src/seedsigner/views/psbt_views.py src/seedsigner/views/seed_views.py
 #: src/seedsigner/views/tools_views.py
 msgid "Enter Electrum seed"
-msgstr "输入 Electrum 格式的种子"
+msgstr "输入 Electrum 格式的助记词"
 
 #. Inserts fingerprint w/"?" to indicate that this seed can't sign the current
 #. PSBT
@@ -933,7 +934,7 @@ msgstr "批准 PSBT"
 
 #: src/seedsigner/views/psbt_views.py
 msgid "Select Diff Seed"
-msgstr "选择另一个种子"
+msgstr "选择另一个助记词"
 
 #: src/seedsigner/views/psbt_views.py
 msgid "PSBT Error"
@@ -945,7 +946,7 @@ msgstr "签名已失败"
 
 #: src/seedsigner/views/psbt_views.py
 msgid "Signing with this seed did not add a valid signature."
-msgstr "使用该种子签名时，未添加一个有效的签名。"
+msgstr "使用该助记词签名时，未添加一个有效的签名。"
 
 #: src/seedsigner/views/scan_views.py
 msgid "Scan a QR code"
@@ -1011,27 +1012,27 @@ msgstr "支持方为:"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Load a seed"
-msgstr "加载一个种子"
+msgstr "加载一个助记词"
 
 #: src/seedsigner/views/seed_views.py
 msgid "In-Memory Seeds"
-msgstr "内存中的种子"
+msgstr "内存中的助记词"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Load the seed to verify"
-msgstr "加载种子以进行验证"
+msgstr "加载助记词以进行验证"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Select seed to verify"
-msgstr "选择种子以进行验证"
+msgstr "选择助记词以进行验证"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Load the seed to sign with"
-msgstr "加载种子与之签名"
+msgstr "加载助记词与之签名"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Select seed to sign with"
-msgstr "选择要签署的种子"
+msgstr "选择要签署的助记词"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Scan a SeedQR"
@@ -1039,11 +1040,11 @@ msgstr "扫描一个 SeedQR"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Create a seed"
-msgstr "创建一个种子"
+msgstr "创建一个助记词"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Load A Seed"
-msgstr "加载一个种子"
+msgstr "加载一个助记词"
 
 #. Inserts the word number (e.g. "Seed Word #6")
 #: src/seedsigner/views/seed_views.py
@@ -1084,16 +1085,16 @@ msgstr "您当前输入的密码短语将被清除"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Keep Seed"
-msgstr "保留种子"
+msgstr "保留助记词"
 
 #. Inserts the seed fingerprint
 #: src/seedsigner/views/seed_views.py
 msgid "Wipe seed {} from the device?"
-msgstr "从设备中抹除种子 {}？"
+msgstr "从设备中抹除助记词 {}？"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Discard Seed?"
-msgstr "是否废弃该种子？"
+msgstr "是否废弃该助记词？"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Electrum warning"
@@ -1101,7 +1102,7 @@ msgstr "Electrum 警告"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Some features are disabled for Electrum seeds."
-msgstr "某些功能对于 Electrum 格式的种子是被禁用的。"
+msgstr "某些功能对于 Electrum 格式的助记词是被禁用的。"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Verify Addr"
@@ -1109,11 +1110,11 @@ msgstr "核对地址"
 
 #: src/seedsigner/views/seed_views.py
 msgid "BIP-85 Child Seed"
-msgstr "BIP-85 的子种子"
+msgstr "BIP-85 的子助记词"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Discard Seed"
-msgstr "废弃该种子"
+msgstr "废弃该助记词"
 
 #: src/seedsigner/views/seed_views.py
 msgid "View Seed Words"
@@ -1259,7 +1260,7 @@ msgstr "出错！"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Your transcribed SeedQR does not match your original seed!"
-msgstr "您抄写的 SeedQR 与您的原始种子不匹配！"
+msgstr "您抄写的 SeedQR 与您的原始助记词不匹配！"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Review SeedQR"
@@ -1268,7 +1269,7 @@ msgstr "审核 SeedQR"
 #: src/seedsigner/views/seed_views.py
 msgid ""
 "Your transcribed SeedQR successfully scanned and yielded the same seed."
-msgstr "您抄写的 SeedQR 已成功被扫描并生成了相同的种子。"
+msgstr "您抄写的 SeedQR 已成功被扫描并生成了相同的助记词。"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Your transcribed SeedQR could not be read!"
@@ -1325,7 +1326,7 @@ msgstr "临时内存中的设置已更新"
 
 #: src/seedsigner/views/tools_views.py
 msgid "New seed"
-msgstr "新的种子"
+msgstr "新的助记词"
 
 #: src/seedsigner/views/tools_views.py
 msgid "Calc 12th/24th word"
@@ -1383,7 +1384,7 @@ msgstr "最终的单词计算"
 
 #: src/seedsigner/views/tools_views.py
 msgid "Load seed"
-msgstr "加载种子"
+msgstr "加载助记词"
 
 #: src/seedsigner/views/tools_views.py
 msgid "Scan wallet descriptor"
@@ -1431,7 +1432,7 @@ msgstr "扫描"
 
 #: src/seedsigner/views/view.py
 msgid "Seeds"
-msgstr "种子"
+msgstr "助记词"
 
 #: src/seedsigner/views/view.py
 msgid "Restart"

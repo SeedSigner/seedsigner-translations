@@ -924,9 +924,7 @@ msgstr "Vérification du transfert à soi-même"
 #. Variable is either "change" or "self-transfer".
 #: src/seedsigner/views/psbt_views.py
 msgid "PSBT's {} address could not be verified from wallet descriptor."
-msgstr ""
-"L'adresse {} de PSBT n'a pas pu être vérifiée à partir du descripteur de "
-"portefeuille."
+msgstr "L'adresse {} de PSBT n'a pas pu être vérifiée."
 
 #. Variable is either "change" or "self-transfer".
 #: src/seedsigner/views/psbt_views.py
@@ -939,7 +937,7 @@ msgstr "PSBT suspicieux"
 
 #: src/seedsigner/views/psbt_views.py
 msgid "Address Verification Failed"
-msgstr "Echec vérification de l'adresse"
+msgstr "Echec vérification adresse"
 
 #: src/seedsigner/views/psbt_views.py
 msgid "Discard PSBT"
