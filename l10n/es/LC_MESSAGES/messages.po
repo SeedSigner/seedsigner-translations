@@ -9,8 +9,9 @@
 # joe mayo, 2022
 # Dax Sosa, 2022
 # ronny avendano, 2024
-# Max Apogee, 2025
 # Keith Mukai, 2025
+# Max Apogee, 2025
+# Ace, 2025
 # 
 #, fuzzy
 msgid ""
@@ -19,7 +20,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-01-28 13:28-0600\n"
 "PO-Revision-Date: 2022-04-29 13:50+0000\n"
-"Last-Translator: Keith Mukai, 2025\n"
+"Last-Translator: Ace, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/seedsigner/teams/135832/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -414,7 +415,7 @@ msgstr "Dirección Verificada"
 #. Describes the address type (change or receive)
 #: src/seedsigner/gui/screens/seed_screens.py
 msgid "change address"
-msgstr "Dirección de cambio"
+msgstr "dirección de cambio"
 
 #. Describes the address type (change or receive)
 #: src/seedsigner/gui/screens/seed_screens.py
@@ -428,7 +429,7 @@ msgstr "Índice {}"
 
 #: src/seedsigner/gui/screens/seed_screens.py
 msgid "Multisig Verification"
-msgstr "Validación de Multifirma"
+msgstr "Verificar Multifirma"
 
 #: src/seedsigner/gui/screens/seed_screens.py
 msgid ""
@@ -535,7 +536,7 @@ msgstr "Menú"
 
 #: src/seedsigner/gui/screens/tools_screens.py
 msgid "click a button"
-msgstr "clic para foto"
+msgstr "Clic para foto"
 
 #. A prompt to the user to either accept or reshoot the image
 #: src/seedsigner/gui/screens/tools_screens.py
@@ -924,7 +925,7 @@ msgstr "Verificando Autotransferencia"
 #. Variable is either "change" or "self-transfer".
 #: src/seedsigner/views/psbt_views.py
 msgid "PSBT's {} address could not be verified from wallet descriptor."
-msgstr "Dirección de PSBT para su {} no se pudo verificar con su descriptor."
+msgstr "Dirección de PSBT para {} no se pudo verificar con su descriptor."
 
 #. Variable is either "change" or "self-transfer".
 #: src/seedsigner/views/psbt_views.py
@@ -1065,7 +1066,7 @@ msgstr "Cargar una Semilla"
 #. Inserts the word number (e.g. "Seed Word #6")
 #: src/seedsigner/views/seed_views.py
 msgid "Seed Word #{}"
-msgstr "Palabra Número {}"
+msgstr "Palabra Nº. {}"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Review & Edit"
