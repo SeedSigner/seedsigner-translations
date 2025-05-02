@@ -123,7 +123,7 @@ msgstr "OP_RETURN"
 #: src/seedsigner/gui/screens/psbt_screens.py
 #: src/seedsigner/views/psbt_views.py
 msgid "change"
-msgstr "rendu de monnaie"
+msgstr "rendu"
 
 #: src/seedsigner/gui/screens/psbt_screens.py
 msgid "PSBT Math"
@@ -150,7 +150,7 @@ msgstr[2] "destinataires"
 #. Denonination is inserted (e.g. your "btc change" or "sats change")
 #: src/seedsigner/gui/screens/psbt_screens.py
 msgid "{} change"
-msgstr "{} rendu de monnaie"
+msgstr "{} rendu"
 
 #: src/seedsigner/gui/screens/psbt_screens.py
 #: src/seedsigner/models/settings_definition.py
@@ -160,7 +160,7 @@ msgstr "Multisig"
 
 #: src/seedsigner/gui/screens/psbt_screens.py
 msgid "Change"
-msgstr "Monnaie de change"
+msgstr "Rendu"
 
 #. Abbreviation for receive address
 #: src/seedsigner/gui/screens/psbt_screens.py
@@ -414,7 +414,7 @@ msgstr "Adresse vérifiée"
 #. Describes the address type (change or receive)
 #: src/seedsigner/gui/screens/seed_screens.py
 msgid "change address"
-msgstr "adresse de monnaie"
+msgstr "adresse de rendu"
 
 #. Describes the address type (change or receive)
 #: src/seedsigner/gui/screens/seed_screens.py
@@ -903,7 +903,7 @@ msgstr "Vérifier la monnaie Multisig"
 #. The amount you're receiving back from the transaction
 #: src/seedsigner/views/psbt_views.py
 msgid "Your Change"
-msgstr "Votre monnaie"
+msgstr "Votre rendu"
 
 #: src/seedsigner/views/psbt_views.py
 msgid "Self-Transfer"
@@ -915,7 +915,7 @@ msgstr "Vérifier l'adresse Multisig"
 
 #: src/seedsigner/views/psbt_views.py
 msgid "Verifying Change..."
-msgstr "Vérification Monnaie"
+msgstr "Vérification Rendu"
 
 #: src/seedsigner/views/psbt_views.py
 msgid "Verifying Self-Transfer..."
@@ -1424,7 +1424,7 @@ msgstr "Adresses de Réception"
 #. label for addresses that collect the change from our own outgoing payments
 #: src/seedsigner/views/tools_views.py
 msgid "Change Addresses"
-msgstr "Adresses de Monnaie"
+msgstr "Adresses du Rendu"
 
 #. a status message that our payment addresses are being calculated
 #: src/seedsigner/views/tools_views.py
@@ -1452,7 +1452,7 @@ msgstr "Adrs Réception"
 
 #: src/seedsigner/views/tools_views.py
 msgid "Change Addrs"
-msgstr "Adrs Monnaie"
+msgstr "Adrs Rendu"
 
 #: src/seedsigner/views/view.py
 msgid "Scan"
