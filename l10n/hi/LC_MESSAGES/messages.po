@@ -1,0 +1,1586 @@
+# Translations template for seedsigner.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the seedsigner project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+# 
+# Translators:
+# tanveer A, 2025
+# okaybro, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: seedsigner 0.8.6\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-12-14 11:40-0600\n"
+"PO-Revision-Date: 2022-04-29 13:50+0000\n"
+"Last-Translator: okaybro, 2025\n"
+"Language-Team: Hindi (https://app.transifex.com/seedsigner/teams/135832/hi/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: hi\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Testnet bitcoin
+#: src/seedsigner/gui/components.py
+msgid "tBtc"
+msgstr "tBtc"
+
+#. Testnet sats
+#: src/seedsigner/gui/components.py
+msgid "tSats"
+msgstr "tSats"
+
+#: src/seedsigner/gui/components.py src/seedsigner/gui/screens/psbt_screens.py
+msgid "btc"
+msgstr "btc"
+
+#: src/seedsigner/gui/components.py src/seedsigner/gui/screens/psbt_screens.py
+#: src/seedsigner/models/settings_definition.py
+msgid "sats"
+msgstr "sats"
+
+#: src/seedsigner/gui/toast.py
+msgid ""
+"You can remove\n"
+"the SD card now"
+msgstr ""
+"अब आप SD कार्ड\n"
+"निकाल सकते हैं"
+
+#: src/seedsigner/gui/toast.py
+msgid "SD card removed"
+msgstr "SD कार्ड निकाला गया"
+
+#: src/seedsigner/gui/toast.py
+msgid "SD card inserted"
+msgstr "SD कार्ड लगाया गया"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "Review Transaction"
+msgstr "लेन-देन जाँचें"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "Review details"
+msgstr "विवरण जाँचें"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "1 input"
+msgstr "1 इनपुट"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "input 1"
+msgstr "इनपुट 1"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "input 2"
+msgstr "इनपुट 2"
+
+#. Indicates that items have been omitted from a series: e.g. "1, 2, 3, [...],
+#. 8"
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "[ ... ]"
+msgstr "[ ... ]"
+
+#. Input number will be inserted (e.g. "input 3")
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "input {}"
+msgstr "इनपुट {}"
+
+#. Ellipsis ("...") characters used to truncate an address (e.g. "bc1qabc...")
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "..."
+msgstr "..."
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+#: src/seedsigner/views/psbt_views.py
+msgid "self-transfer"
+msgstr "सेल्फ-ट्रांसफर"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "recipient 1"
+msgstr "प्राप्तकर्ता 1"
+
+#. Inserts the recipient number (e.g. the fifth one is: "recipient 5")
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "recipient {}"
+msgstr "प्राप्तकर्ता {}"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "fee"
+msgstr "शुल्क"
+
+#. Technical term, should probably NOT be translated in most languages
+#: src/seedsigner/gui/screens/psbt_screens.py
+#: src/seedsigner/views/psbt_views.py
+msgid "OP_RETURN"
+msgstr "OP_RETURN"
+
+#. Label for a change output in the PSBT Overview flow diagram
+#: src/seedsigner/gui/screens/psbt_screens.py
+#: src/seedsigner/views/psbt_views.py
+msgid "change"
+msgstr "चेंज"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "Transaction Math"
+msgstr "लेन-देन का हिसाब"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "Review recipients"
+msgstr "प्राप्तकर्ता जाँचें"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "input"
+msgid_plural "inputs"
+msgstr[0] "इनपुट"
+msgstr[1] "इनपुट्स"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "recipient"
+msgid_plural "recipients"
+msgstr[0] "प्राप्तकर्ता"
+msgstr[1] "प्राप्तकर्ता"
+
+#. Denonination is inserted (e.g. your "btc change" or "sats change")
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "{} change"
+msgstr "{} चेंज"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+#: src/seedsigner/models/settings_definition.py
+#: src/seedsigner/views/seed_views.py
+msgid "Multisig"
+msgstr "मल्टीसिग"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "Change"
+msgstr "चेंज"
+
+#. Abbreviation for receive address
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "Addr"
+msgstr "पता"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "Address verified!"
+msgstr "पता सत्यापित!"
+
+#. Shown when displaying OP_RETURN as non-human-readable hexadecimal data
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "raw hex data"
+msgstr "रॉ हेक्स डेटा"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "Sign Transaction"
+msgstr "लेन-देन पर हस्ताक्षर"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "Click to approve this transaction"
+msgstr "इस लेन-देन की पुष्टि करने के लिए क्लिक करें"
+
+#: src/seedsigner/gui/screens/scan_screens.py
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "back"
+msgstr "वापस"
+
+#. Inserts the percentage value of the animated QR scan progress
+#: src/seedsigner/gui/screens/scan_screens.py
+msgid "{}%"
+msgstr "{}%"
+
+#. Increase QR code screen brightness
+#: src/seedsigner/gui/screens/screen.py
+msgid "Brighter"
+msgstr "ज़्यादा रोशनी"
+
+#. Decrease QR code screen brightness
+#: src/seedsigner/gui/screens/screen.py
+msgid "Darker"
+msgstr "कम रोशनी"
+
+#: src/seedsigner/gui/screens/screen.py
+#: src/seedsigner/gui/screens/seed_screens.py
+#: src/seedsigner/views/seed_views.py
+msgid "Success!"
+msgstr "सफल!"
+
+#: src/seedsigner/gui/screens/screen.py
+#: src/seedsigner/gui/screens/seed_screens.py
+#: src/seedsigner/views/seed_views.py
+msgid "OK"
+msgstr "ठीक है"
+
+#: src/seedsigner/gui/screens/screen.py
+msgid "Caution"
+msgstr "सावधान"
+
+#: src/seedsigner/gui/screens/screen.py src/seedsigner/views/seed_views.py
+msgid "Privacy Leak!"
+msgstr "निजता को खतरा!"
+
+#: src/seedsigner/gui/screens/screen.py
+msgid "I understand"
+msgstr "मैंने समझ लिया है"
+
+#: src/seedsigner/gui/screens/screen.py
+msgid "Classified Info!"
+msgstr "गुप्त जानकारी!"
+
+#: src/seedsigner/gui/screens/screen.py src/seedsigner/views/scan_views.py
+#: src/seedsigner/views/view.py
+msgid "Error"
+msgstr "त्रुटि"
+
+#: src/seedsigner/gui/screens/screen.py
+msgid "Restarting"
+msgstr "रीस्टार्ट हो रहा है"
+
+#: src/seedsigner/gui/screens/screen.py
+msgid ""
+"SeedSigner is restarting.\n"
+"\n"
+"All in-memory data will be wiped."
+msgstr ""
+"SeedSigner रीस्टार्ट हो रहा है।\n"
+"\n"
+"सारा डेटा मेमोरी से मिट जाएगा।"
+
+#: src/seedsigner/gui/screens/screen.py
+msgid "Powering Off"
+msgstr "पावर बंद हो रहा है"
+
+#: src/seedsigner/gui/screens/screen.py
+msgid "Please wait about 30 seconds before disconnecting power."
+msgstr "पावर हटाने से पहले लगभग 30 सेकंड प्रतीक्षा करें।"
+
+#: src/seedsigner/gui/screens/screen.py
+msgid "Just Unplug It"
+msgstr "बस प्लग निकाल दें"
+
+#: src/seedsigner/gui/screens/screen.py
+msgid "It is safe to disconnect power at any time."
+msgstr "किसी भी समय पावर हटाना सुरक्षित है।"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Finalize Seed"
+msgstr "सीड फाइनल करें"
+
+#. a label for the shortened Key-id of a BIP-32 master HD wallet
+#: src/seedsigner/gui/screens/seed_screens.py
+#: src/seedsigner/gui/screens/tools_screens.py
+#: src/seedsigner/views/seed_views.py
+msgid "fingerprint"
+msgstr "फिंगरप्रिंट"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+#: src/seedsigner/views/seed_views.py
+msgid "Backup Seed"
+msgstr "सीड का बैकअप लें"
+
+#. Additional explainer for the two seed backup options (mnemonic phrase and
+#. SeedQR).
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Backups do not include your passphrase."
+msgstr "बैकअप में आपका पासफ्रेज़ शामिल नहीं होता है।"
+
+#. Displays the page number and total: (e.g. page 1 of 6)
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Seed Words: {}/{}"
+msgstr "सीड शब्द: {}/{}"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "BIP-85 Index"
+msgstr "BIP-85 इंडेक्स"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Verify Backup?"
+msgstr "बैकअप सत्यापित करें?"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Optionally verify that your mnemonic backup is correct."
+msgstr "चाहें तो सत्यापित करें कि आपका निमोनिक बैकअप सही है।"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Derivation Path"
+msgstr "डेरिवेशन पाथ"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+#: src/seedsigner/views/seed_views.py
+msgid "Export xpub"
+msgstr "Xpub एक्सपोर्ट"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Xpub Details"
+msgstr "Xpub विवरण"
+
+#. Short for "BIP-32 Master Fingerprint"
+#. a label for the shortened Key-id of a BIP-32 master HD wallet
+#: src/seedsigner/gui/screens/seed_screens.py
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "Fingerprint"
+msgstr "फिंगरप्रिंट"
+
+#. Short for "Derivation Path"
+#. a label for the derivation-path into a BIP-32 HD wallet
+#: src/seedsigner/gui/screens/seed_screens.py
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "Derivation"
+msgstr "डेरिवेशन"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Xpub"
+msgstr "Xpub"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+#: src/seedsigner/models/settings_definition.py
+#: src/seedsigner/views/seed_views.py
+msgid "BIP-39 Passphrase"
+msgstr "BIP-39 पासफ्रेज़"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Verify Passphrase"
+msgstr "पासफ्रेज़ सत्यापित करें"
+
+#. Describes the effect of applying a BIP-39 passphrase; it changes the seed's
+#. fingerprint
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "changes fingerprint"
+msgstr "फिंगरप्रिंट बदल देता है"
+
+#. Refers to the SeedQR type: Standard or Compact
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Standard"
+msgstr "स्टैंडर्ड"
+
+#. Briefly explains the Standard SeedQR data format
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "BIP-39 wordlist indices"
+msgstr "BIP-39 शब्द-सूची इंडेक्स"
+
+#. Refers to the SeedQR type: Standard or Compact
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Compact"
+msgstr "कॉम्पैक्ट"
+
+#. Briefly explains the Compact SeedQR data format
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Raw entropy bits"
+msgstr "रॉ एन्ट्रोपी बिट्स"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Transcribe SeedQR"
+msgstr "SeedQR उतारें"
+
+#. Refers to the QR code size: 21x21, 25x25, or 29x29
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Begin {}x{}"
+msgstr "{}x{} शुरू करें"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "click to exit"
+msgstr "निकलने के लिए क्लिक करें"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid ""
+"Optionally scan your transcribed SeedQR to confirm that it reads back "
+"correctly."
+msgstr ""
+"चाहें तो अपने उतारे गए SeedQR को स्कैन करके सत्यापित करें कि वह सही है।"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+#: src/seedsigner/views/seed_views.py
+msgid "Verify Address"
+msgstr "पता सत्यापित करें"
+
+#. Inserts the nth address number (e.g. "Checking address 7")
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Checking address {}"
+msgstr "पता {} जांचा जा रहा है"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Address Verified"
+msgstr "पता सत्यापित"
+
+#. Describes the address type (change or receive)
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "change address"
+msgstr "चेंज पता"
+
+#. Describes the address type (change or receive)
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "receive address"
+msgstr "प्राप्ति पता"
+
+#. Describes the address index (e.g. "index 7")
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "index {}"
+msgstr "इंडेक्स {}"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Multisig Verification"
+msgstr "मल्टीसिग सत्यापन"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid ""
+"Load your multisig wallet descriptor to verify your receive/self-transfer or"
+" change address."
+msgstr ""
+"अपने प्राप्ति/सेल्फ-ट्रांसफर या चेंज पते को सत्यापित करने के लिए अपना "
+"मल्टीसिग वॉलेट डिस्क्रिप्टर लोड करें।"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Descriptor Loaded"
+msgstr "डिस्क्रिप्टर लोड किया गया"
+
+#. Label for the multisig wallet's signing policy (e.g. 2-of-3)
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Policy"
+msgstr "पॉलिसी"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Signing Keys"
+msgstr "हस्ताक्षर कुंजियाँ"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Review Message"
+msgstr "संदेश जाँचें"
+
+#. Short for "Next step"
+#: src/seedsigner/gui/screens/seed_screens.py
+#: src/seedsigner/views/psbt_views.py src/seedsigner/views/seed_views.py
+#: src/seedsigner/views/tools_views.py
+msgid "Next"
+msgstr "आगे"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Confirm Address"
+msgstr "पते की पुष्टि करें"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+#: src/seedsigner/views/seed_views.py
+msgid "Sign message"
+msgstr "संदेश पर हस्ताक्षर करें"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "derivation path"
+msgstr "डेरिवेशन पाथ"
+
+#: src/seedsigner/gui/screens/settings_screens.py
+#: src/seedsigner/views/settings_views.py src/seedsigner/views/view.py
+msgid "Settings"
+msgstr "सेटिंग"
+
+#. Short for "Input/Output"; screen to make sure the buttons and camera are
+#. working properly
+#: src/seedsigner/gui/screens/settings_screens.py
+msgid "I/O Test"
+msgstr "इनपुट/आउटपुट जाँच"
+
+#. Blank the screen
+#: src/seedsigner/gui/screens/settings_screens.py
+msgid "Clear"
+msgstr "साफ़ करें"
+
+#: src/seedsigner/gui/screens/settings_screens.py
+msgid "Exit"
+msgstr "निकलें"
+
+#: src/seedsigner/gui/screens/settings_screens.py
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "Capturing image..."
+msgstr "तस्वीर ली जा रही है..."
+
+#: src/seedsigner/gui/screens/settings_screens.py
+#: src/seedsigner/views/settings_views.py
+msgid "Donate"
+msgstr "दान करें"
+
+#. If your language uses the percent sign ("%"), your translation must also
+#. use
+#. two percent signs ("%%") due to python formatting oddities. "100%%" will be
+#. rendered as "100%".
+#: src/seedsigner/gui/screens/settings_screens.py
+#, python-format
+msgid ""
+"SeedSigner is 100%% free & open source, funded solely by the Bitcoin community.\n"
+"\n"
+"Donate onchain or LN at:"
+msgstr ""
+"SeedSigner 100%% मुफ्त और ओपन सोर्स है, जिसे केवल बिटकॉइन समुदाय द्वारा फंड किया जाता है।\n"
+"Onchain या LN पर दान करें:"
+
+#: src/seedsigner/gui/screens/settings_screens.py
+#: src/seedsigner/views/settings_views.py
+msgid "Settings QR"
+msgstr "सेटिंग QR"
+
+#: src/seedsigner/gui/screens/settings_screens.py
+msgid "Settings updated..."
+msgstr "सेटिंग अपडेट हो गई..."
+
+#: src/seedsigner/gui/screens/settings_screens.py src/seedsigner/views/view.py
+msgid "Home"
+msgstr "होम"
+
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "click a button"
+msgstr "बटन दबाएं"
+
+#. A prompt to the user to either accept or reshoot the image
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "reshoot"
+msgstr "दोबारा लें"
+
+#. A prompt to the user to either accept or reshoot the image
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "accept"
+msgstr "स्वीकारें"
+
+#. current roll number vs total rolls (e.g. roll 7 of 50)
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "Dice Roll {}/{}"
+msgstr "पासा फेंक {}/{}"
+
+#. Build the last word in a 12 or 24 word BIP-39 mnemonic seed phrase.
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "Build Final Word"
+msgstr "अंतिम शब्द बनाएं"
+
+#. Final word calc. `mnemonic_length` = 12 or 24. `num_bits` = 7 or 3 (bits of
+#. entropy in final word).
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid ""
+"The {mnemonic_length}th word is built from {num_bits} more entropy bits plus"
+" auto-calculated checksum."
+msgstr ""
+"{mnemonic_length}वां शब्द {num_bits} और एंट्रॉपी बिट्स व ऑटो-कैलकुलेटेड "
+"चेकसम से मिलकर बना है।"
+
+#. current coin-flip number vs total flips (e.g. flip 3 of 4)
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "Coin Flip {}/{}"
+msgstr "सिक्का उछाल {}/{}"
+
+#. How we call the "front" side result during a coin toss.
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "Heads = 1"
+msgstr "चित = 1"
+
+#. How we call the "back" side result during a coin toss.
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "Tails = 0"
+msgstr "पट = 0"
+
+#. The additional entropy the user supplied (e.g. coin flips)
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "Your input: \"{}\""
+msgstr "आपका इनपुट: \"{}\""
+
+#. A function of "x" to be used for detecting errors in "x"
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "Checksum"
+msgstr "चेकसम"
+
+#. labeled presentation of the last word in a BIP-39 mnemonic seed phrase.
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "Final Word: \"{}\""
+msgstr "अंतिम शब्द: \"{}\""
+
+#. a label for the last word of a 12-word BIP-39 mnemonic seed phrase
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "12th Word"
+msgstr "12वां शब्द"
+
+#. a label for the last word of a 24-word BIP-39 mnemonic seed phrase
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "24th Word"
+msgstr "24वां शब्द"
+
+#. a label for the tool to explore public addresses for this seed.
+#: src/seedsigner/gui/screens/tools_screens.py
+#: src/seedsigner/views/seed_views.py src/seedsigner/views/tools_views.py
+msgid "Address Explorer"
+msgstr "पता एक्सप्लोरर"
+
+#. a label for a BIP-380-ish Output Descriptor
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "Wallet descriptor"
+msgstr "वॉलेट डिस्क्रिप्टर"
+
+#. Insert the number of addrs displayed per screen (e.g. "Next 10")
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "Next {}"
+msgstr "अगले {}"
+
+#: src/seedsigner/hardware/camera.py
+msgid "Camera error. Check camera connections."
+msgstr "कैमरा त्रुटि। कैमरा कनेक्शन जाँचें।"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Enabled"
+msgstr "चालू"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Disabled"
+msgstr "बंद"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Prompt"
+msgstr "प्रॉम्प्ट"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Required"
+msgstr "आवश्यक"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "BTC"
+msgstr "BTC"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Threshold at 0.01"
+msgstr "सीमा 0.01 पर है"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "BTC | sats hybrid"
+msgstr "BTC | sats मिश्रित"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "0°"
+msgstr "0°"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "90°"
+msgstr "90°"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "180°"
+msgstr "180°"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "270°"
+msgstr "270°"
+
+#. QR code density option: Low, Medium, High
+#: src/seedsigner/models/settings_definition.py
+msgid "Low"
+msgstr "कम"
+
+#. QR code density option: Low, Medium, High
+#: src/seedsigner/models/settings_definition.py
+msgid "Medium"
+msgstr "मध्यम"
+
+#. QR code density option: Low, Medium, High
+#: src/seedsigner/models/settings_definition.py
+msgid "High"
+msgstr "ज़्यादा"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Mainnet"
+msgstr "मेननेट"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Testnet"
+msgstr "टेस्टनेट"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Regtest"
+msgstr "रेगटेस्ट"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Store Settings on SD card"
+msgstr "सेटिंग SD कार्ड में सेव करें"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Insert SD card to enable"
+msgstr "चालू करने के लिए SD कार्ड डालें"
+
+#: src/seedsigner/models/settings_definition.py
+#: src/seedsigner/views/seed_views.py
+msgid "Single Sig"
+msgstr "सिंगल सिग"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Native Segwit"
+msgstr "नेटिव सेगविट"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Nested Segwit"
+msgstr "नेस्टेड सेगविट"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Legacy"
+msgstr "लेगेसी"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Taproot"
+msgstr "टैपरूट"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Custom Derivation"
+msgstr "कस्टम डेरिवेशन"
+
+#. Terminology used by Electrum seeds; equivalent to BIP-39 passphrase
+#: src/seedsigner/models/settings_definition.py
+msgid "Custom Extension"
+msgstr "कस्टम एक्सटेंशन"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Language"
+msgstr "भाषा"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Mnemonic language"
+msgstr "निमोनिक भाषा"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Persistent settings"
+msgstr "स्थायी सेटिंग"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Coordinator software"
+msgstr "कोऑर्डिनेटर सॉफ्टवेयर"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Denomination display"
+msgstr "मूल्यवर्ग प्रदर्शन"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Bitcoin network"
+msgstr "बिटकॉइन नेटवर्क"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "QR code density"
+msgstr "QR कोड डेंसिटी"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Xpub export"
+msgstr "Xpub एक्सपोर्ट"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Sig types"
+msgstr "सिग्नेचर के प्रकार"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Script types"
+msgstr "स्क्रिप्ट के प्रकार"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Show xpub details"
+msgstr "Xpub विवरण दिखाएं"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "BIP-39 passphrase"
+msgstr "BIP-39 पासफ्रेज़"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Camera rotation"
+msgstr "कैमरा घुमाये"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Compact SeedQR"
+msgstr "कॉम्पैक्ट SeedQR"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "BIP-85 child seeds"
+msgstr "BIP-85 चाइल्ड सीड्स"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Electrum seeds"
+msgstr "इलेक्ट्रम सीड्स"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Native Segwit only"
+msgstr "सिर्फ नेटिव सेगविट"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Message signing"
+msgstr "संदेश हस्ताक्षर"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Show privacy warnings"
+msgstr "निजता चेतावनी दिखाएं"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Show dire warnings"
+msgstr "गंभीर चेतावनी दिखाएं"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Show QR brightness tips"
+msgstr "QR ब्राइटनेस टिप्स दिखाएं"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Show partner logos"
+msgstr "पार्टनर लोगो दिखाएं"
+
+#. Hardware settings option to specify the screen driver (e.g. st7789 vs
+#. ili9341)
+#: src/seedsigner/models/settings_definition.py
+msgid "Display type"
+msgstr " डिस्प्ले प्रकार"
+
+#. Hardware settings option to invert how the screen driver displays colors.
+#: src/seedsigner/models/settings_definition.py
+msgid "Invert colors"
+msgstr "रंग उल्टे करें"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "QR background color"
+msgstr "QR का पीछे का रंग"
+
+#: src/seedsigner/views/psbt_views.py src/seedsigner/views/seed_views.py
+#: src/seedsigner/views/tools_views.py
+msgid "Scan a seed"
+msgstr "सीड स्कैन करें"
+
+#: src/seedsigner/views/psbt_views.py src/seedsigner/views/seed_views.py
+#: src/seedsigner/views/tools_views.py
+msgid "Enter 12-word seed"
+msgstr "12-शब्दों वाला सीड डालें"
+
+#: src/seedsigner/views/psbt_views.py src/seedsigner/views/seed_views.py
+#: src/seedsigner/views/tools_views.py
+msgid "Enter 24-word seed"
+msgstr "24-शब्दों वाला सीड डालें"
+
+#: src/seedsigner/views/psbt_views.py src/seedsigner/views/seed_views.py
+#: src/seedsigner/views/tools_views.py
+msgid "Enter Electrum seed"
+msgstr "इलेक्ट्रम सीड डालें"
+
+#. Inserts fingerprint w/"?" to indicate that this seed can't sign the current
+#. PSBT
+#: src/seedsigner/views/psbt_views.py
+msgid "{} (?)"
+msgstr "{} (?)"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Select Signer"
+msgstr " साइनर चुनें"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Parsing PSBT..."
+msgstr "PSBT पढ़ा जा रहा है..."
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Unsupported Script Type!"
+msgstr "असमर्थित स्क्रिप्ट प्रकार!"
+
+#: src/seedsigner/views/psbt_views.py
+msgid ""
+"Transaction has unsupported input script type, please verify your change "
+"addresses."
+msgstr ""
+"लेन-देन में असमर्थित इनपुट स्क्रिप्ट टाइप है, कृपया अपने चेंज पतों की जाँच "
+"करें।"
+
+#: src/seedsigner/views/psbt_views.py src/seedsigner/views/view.py
+msgid "Continue"
+msgstr "आगे"
+
+#. User will receive no change back; the inputs to this transaction are fully
+#. spent
+#: src/seedsigner/views/psbt_views.py
+msgid "Full Spend!"
+msgstr "पूरा खर्च!"
+
+#: src/seedsigner/views/psbt_views.py
+msgid ""
+"This transaction spends its entire input value. No change is coming back to "
+"your wallet."
+msgstr ""
+"यह लेन-देन पूरी इनपुट वैल्यू खर्च करता है। आपके वॉलेट में कोई चेंज वापस नहीं"
+" आ रहा है।"
+
+#. Future-tense used to indicate that this transaction will send this amount,
+#. as opposed to "Send" on its own which could be misread as an instant
+#. command
+#. (e.g. "Send Now").
+#: src/seedsigner/views/psbt_views.py
+msgid "Will Send"
+msgstr "भेजी जाने वाली राशि"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Next recipient"
+msgstr "अगला प्राप्तकर्ता"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Skip verification"
+msgstr "जाँच छोड़ें"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Verify multisig change"
+msgstr "मल्टीसिग चेंज जाँचें"
+
+#. The amount you're receiving back from the transaction
+#: src/seedsigner/views/psbt_views.py
+msgid "Your Change"
+msgstr "आपका चेंज"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Self-Transfer"
+msgstr "सेल्फ-ट्रांसफर"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Verify Multisig Addr"
+msgstr "मल्टीसिग पता जाँचें"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Verifying Change..."
+msgstr "चेंज जाँचा जा रहा है..."
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Verifying Self-Transfer..."
+msgstr "सेल्फ-ट्रांसफर जाँचा जा रहा है..."
+
+#. Variable is either "change" or "self-transfer".
+#: src/seedsigner/views/psbt_views.py
+msgid "Transaction's {} address could not be verified from wallet descriptor."
+msgstr "{} पता डिस्क्रिप्टर से सत्यापित नहीं हुआ।"
+
+#. Variable is either "change" or "self-transfer".
+#: src/seedsigner/views/psbt_views.py
+msgid "Transaction's {} address could not be generated from your seed."
+msgstr "{} एड्रेस सीड से प्राप्त नहीं हुआ।"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Suspicious Transaction"
+msgstr "संदिग्ध लेन-देन"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Address Verification Failed"
+msgstr "पता सत्यापन विफल"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Discard transaction"
+msgstr "लेन-देन हटाएं"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Approve transaction"
+msgstr "लेन-देन की पुष्टि करें"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Select diff seed"
+msgstr "अलग सीड चुनें"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Transaction Error"
+msgstr "लेन-देन त्रुटि"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Signing Failed"
+msgstr "हस्ताक्षर विफल"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Signing with this seed did not add a valid signature."
+msgstr "इस सीड से मान्य हस्ताक्षर नहीं जुड़ा।"
+
+#: src/seedsigner/views/scan_views.py
+msgid "Scan a QR code"
+msgstr "QR कोड स्कैन करें"
+
+#: src/seedsigner/views/scan_views.py
+msgid "QRCode not recognized or not yet supported."
+msgstr "QR कोड या तो पहचाना नहीं गया या समर्थित नहीं है।"
+
+#: src/seedsigner/views/scan_views.py
+msgid "Wrong QR Type"
+msgstr "गलत QR प्रकार"
+
+#: src/seedsigner/views/scan_views.py
+msgid "Scan Transaction"
+msgstr "लेन-देन स्कैन करें"
+
+#: src/seedsigner/views/scan_views.py
+msgid "Expected a transaction"
+msgstr "लेन-देन अपेक्षित था"
+
+#: src/seedsigner/views/scan_views.py
+msgid "Scan SeedQR"
+msgstr "सीडQR स्कैन करें"
+
+#: src/seedsigner/views/scan_views.py
+msgid "Expected a SeedQR"
+msgstr "सीडQR अपेक्षित था"
+
+#: src/seedsigner/views/scan_views.py src/seedsigner/views/seed_views.py
+msgid "Scan descriptor"
+msgstr "डिस्क्रिप्टर स्कैन करें"
+
+#: src/seedsigner/views/scan_views.py
+msgid "Expected a wallet descriptor QR"
+msgstr "वॉलेट डिस्क्रिप्टर QR अपेक्षित था"
+
+#: src/seedsigner/views/scan_views.py
+msgid "Scan address QR"
+msgstr "पता QR स्कैन करें"
+
+#: src/seedsigner/views/scan_views.py
+msgid "Expected an address QR"
+msgstr "पता QR अपेक्षित था"
+
+#: src/seedsigner/views/scan_views.py
+msgid "Unknown QR Type"
+msgstr " अज्ञात QR प्रकार"
+
+#: src/seedsigner/views/scan_views.py
+msgid "QRCode is invalid or is a data format not yet supported."
+msgstr "QR कोड अमान्य है या समर्थित फॉर्मेट का नहीं है।"
+
+#: src/seedsigner/views/scan_views.py src/seedsigner/views/view.py
+msgid "Back to Main Menu"
+msgstr "मुख्य मेन्यू पर वापस जाएं"
+
+#. This is on the opening splash screen, displayed above the HRF logo
+#: src/seedsigner/views/screensaver.py
+msgid "With support from:"
+msgstr "इनके समर्थन से:"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Load a seed"
+msgstr "सीड लोड करें"
+
+#: src/seedsigner/views/seed_views.py
+msgid "In-Memory Seeds"
+msgstr "मेमोरी में मौजूद सीड्स"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Load the seed to verify"
+msgstr "सत्यापन के लिए सीड लोड करें"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Select seed to verify"
+msgstr "सत्यापन के लिए सीड चुनें"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Sign Message"
+msgstr "संदेश पर हस्ताक्षर करें"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Load the seed to sign with"
+msgstr "हस्ताक्षर के लिए सीड लोड करें"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Select seed to sign with"
+msgstr "हस्ताक्षर के लिए सीड चुनें"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Scan a SeedQR"
+msgstr "सीडQR स्कैन करें"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Create a seed"
+msgstr "सीड बनाएं"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Load A Seed"
+msgstr "सीड लोड करें"
+
+#. Inserts the word number (e.g. "Seed Word #6")
+#: src/seedsigner/views/seed_views.py
+msgid "Seed Word #{}"
+msgstr "सीड शब्द #{}"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Review & edit"
+msgstr "जाँचें और बदलें"
+
+#: src/seedsigner/views/seed_views.py src/seedsigner/views/tools_views.py
+msgid "Discard"
+msgstr " हटाएं"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Invalid Mnemonic!"
+msgstr "अमान्य निमोनिक!"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Checksum failure; not a valid seed phrase."
+msgstr "चेकसम विफल; यह मान्य सीड फ़्रेज़ नहीं है।"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Done"
+msgstr "हो गया"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Edit passphrase"
+msgstr "पासफ्रेज़ बदलें"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Discard passphrase"
+msgstr "पासफ्रेज़ हटाएं"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Skip passphrase"
+msgstr "पासफ्रेज़ छोड़ें"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Discard passphrase?"
+msgstr "पासफ्रेज़ हटाएं?"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Your current passphrase entry will be erased."
+msgstr "आपके द्वारा दर्ज की गई पासफ़्रेज़ हटा दी जाएगी।"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Skip passphrase?"
+msgstr "पासफ्रेज़ छोड़ दें?"
+
+#: src/seedsigner/views/seed_views.py
+msgid "You have not entered a passphrase yet."
+msgstr "आपने अभी तक पासफ्रेज़ दर्ज नहीं किया है।"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Keep seed"
+msgstr "सीड रखें"
+
+#. Inserts the seed fingerprint
+#: src/seedsigner/views/seed_views.py
+msgid "Wipe seed {} from the device?"
+msgstr "डिवाइस से सीड {} मिटा दें?"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Discard Seed?"
+msgstr "सीड हटाएं?"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Electrum warning"
+msgstr "इलेक्ट्रम चेतावनी"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Some features are disabled for Electrum seeds."
+msgstr "इलेक्ट्रम सीड्स के लिए कुछ सुविधाएँ अक्षम हैं।"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Scan transaction"
+msgstr "लेन-देन स्कैन करें"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Verify addr"
+msgstr "पता सत्यापित करें"
+
+#: src/seedsigner/views/seed_views.py src/seedsigner/views/tools_views.py
+msgid "Address explorer"
+msgstr "पता एक्सप्लोरर"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Backup seed"
+msgstr "सीड का बैकअप लें"
+
+#: src/seedsigner/views/seed_views.py
+msgid "BIP-85 child seed"
+msgstr "BIP-85 चाइल्ड सीड"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Discard seed"
+msgstr "सीड हटाएं"
+
+#: src/seedsigner/views/seed_views.py
+msgid "View seed words"
+msgstr "सीड शब्द देखें"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Export as SeedQR"
+msgstr "SeedQR के रूप में एक्सपोर्ट करें"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Export Xpub"
+msgstr "Xpub एक्सपोर्ट"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Xpub can be used to view all future transactions."
+msgstr "Xpub का उपयोग भविष्य के सभी लेन-देन देखने के लिए किया जा सकता है।"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Generating xpub..."
+msgstr "Xpub बनाया जा रहा है..."
+
+#: src/seedsigner/views/seed_views.py
+msgid "You must keep your seed words private & away from all online devices."
+msgstr "आपको अपने सीड शब्द गोपनीय और सभी ऑनलाइन डिवाइस से दूर रखने होंगे।"
+
+#. Inserts the child index (e.g. "Child #0")
+#: src/seedsigner/views/seed_views.py
+msgid "Child #{}"
+msgstr "चाइल्ड #{}"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Seed Words"
+msgstr "सीड शब्द"
+
+#: src/seedsigner/views/seed_views.py
+msgid "12 Words"
+msgstr "12 शब्द"
+
+#: src/seedsigner/views/seed_views.py
+msgid "24 Words"
+msgstr "24 शब्द"
+
+#: src/seedsigner/views/seed_views.py
+msgid "BIP-85 Num Words"
+msgstr "BIP-85 शब्दों की संख्या"
+
+#: src/seedsigner/views/seed_views.py
+msgid "BIP-85 Index Error"
+msgstr "BIP-85 इंडेक्स त्रुटि"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Invalid Child Index"
+msgstr "अमान्य चाइल्ड इंडेक्स"
+
+#: src/seedsigner/views/seed_views.py
+msgid "BIP-85 Child Index must be between 0 and 2^31-1."
+msgstr "BIP-85 चाइल्ड इंडेक्स 0 और 2^31-1 के बीच होना चाहिए।"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Try again"
+msgstr "पुनः प्रयास करें"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Verify"
+msgstr "सत्यापित करें"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Skip"
+msgstr "इस चरण को छोड़ें"
+
+#. Inserts the word number (e.g. "Verify Word #1")
+#: src/seedsigner/views/seed_views.py
+msgid "Verify Word #{}"
+msgstr "शब्द #{} सत्यापित करें"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Review seed words"
+msgstr "सीड शब्द जाँचें"
+
+#. Inserts the word number and the word (e.g. "Word #1 is not "apple"!")
+#: src/seedsigner/views/seed_views.py
+msgid "Word #{} is not \"{}\"!"
+msgstr "शब्द #{} \"{}\" नहीं है!"
+
+#. User selected the wrong word during the mnemonic backup test (e.g.
+#. incorrectly said the 5th word was "zoo")
+#: src/seedsigner/views/seed_views.py
+msgid "Wrong Word!"
+msgstr "गलत शब्द!"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Verification Error"
+msgstr "सत्यापन त्रुटि"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Backup Verified"
+msgstr "बैकअप सत्यापित"
+
+#: src/seedsigner/views/seed_views.py
+msgid "All mnemonic backup words were successfully verified!"
+msgstr "सभी निमोनिक बैकअप शब्द सफलतापूर्वक सत्यापित हो गए!"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Standard: 25x25"
+msgstr "स्टैंडर्ड: 25x25"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Compact: 21x21"
+msgstr "कॉम्पैक्ट: 21x21"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Standard: 29x29"
+msgstr "स्टैंडर्ड: 29x29"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Compact: 25x25"
+msgstr "कॉम्पैक्ट: 25x25"
+
+#: src/seedsigner/views/seed_views.py
+msgid "SeedQR Format"
+msgstr "SeedQR प्रारूप"
+
+#: src/seedsigner/views/seed_views.py
+msgid "SeedQR is your private key!"
+msgstr "SeedQR आपकी निजी कुंजी है!"
+
+#: src/seedsigner/views/seed_views.py
+msgid ""
+"Never photograph or scan it into a device that connects to the internet."
+msgstr ""
+"इसे कभी भी फोटोग्राफ न करें या इंटरनेट से जुड़े डिवाइस में स्कैन न करें।"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Confirm SeedQR"
+msgstr "SeedQR की पुष्टि करें"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Confirm SeedQR?"
+msgstr "SeedQR की पुष्टि करें?"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Scan your SeedQR"
+msgstr "अपने SeedQR को स्कैन करें"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Error!"
+msgstr "त्रुटि!"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Your transcribed SeedQR does not match your original seed!"
+msgstr "आपका लिखा हुआ SeedQR आपके मूल सीड से मेल नहीं खाता!"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Review SeedQR"
+msgstr "SeedQR जाँचें"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Your transcribed SeedQR could not be read!"
+msgstr "आपका लिखा हुआ SeedQR पढ़ा नहीं जा सका!"
+
+#: src/seedsigner/views/seed_views.py
+msgid ""
+"Your transcribed SeedQR successfully scanned and yielded the same seed."
+msgstr "आपका लिखा हुआ SeedQR सफलतापूर्वक स्कैन हुआ और वही सीड मिला।"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Sig type can't be auto-detected from this address. Please specify:"
+msgstr ""
+"इस पते से हस्ताक्षर प्रकार स्वचालित रूप से पहचाना नहीं जा सकता। कृपया "
+"निर्दिष्ट करें:"
+
+#. Option when scanning for a matching address; skips ten addresses ahead
+#: src/seedsigner/views/seed_views.py
+msgid "Skip 10"
+msgstr "10 छोड़ें"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Cancel"
+msgstr "रद्द करें"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Return to transaction"
+msgstr "लेन-देन पर वापस जाएं"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Signing messages for custom derivation paths not supported"
+msgstr "कस्टम डेरिवेशन पाथ के लिए संदेशों पर हस्ताक्षर समर्थित नहीं है"
+
+#: src/seedsigner/views/settings_views.py
+msgid "Advanced"
+msgstr "उन्नत"
+
+#: src/seedsigner/views/settings_views.py
+msgid "Hardware"
+msgstr "हार्डवेयर"
+
+#: src/seedsigner/views/settings_views.py
+msgid "I/O test"
+msgstr "इनपुट/आउटपुट जाँच"
+
+#: src/seedsigner/views/settings_views.py
+msgid "Dev Options"
+msgstr "डेवलपर विकल्प"
+
+#: src/seedsigner/views/settings_views.py
+msgid "Persistent Settings enabled. Settings saved to SD card."
+msgstr "स्थायी सेटिंग सक्षम। सेटिंग SD कार्ड में सहेजी गई।"
+
+#: src/seedsigner/views/settings_views.py
+msgid "Settings updated in temporary memory"
+msgstr "अस्थायी मेमोरी में सेटिंग अपडेट हुईं"
+
+#: src/seedsigner/views/tools_views.py
+msgid "New seed"
+msgstr "नया सीड"
+
+#: src/seedsigner/views/tools_views.py
+msgid "Calc 12th/24th word"
+msgstr "12वाँ/24वाँ शब्द निकालें"
+
+#: src/seedsigner/views/tools_views.py
+msgid "Verify address"
+msgstr "पता सत्यापित करें"
+
+#: src/seedsigner/views/tools_views.py src/seedsigner/views/view.py
+msgid "Tools"
+msgstr "टूल्स"
+
+#: src/seedsigner/views/tools_views.py
+msgid "12 words"
+msgstr "12 शब्द"
+
+#: src/seedsigner/views/tools_views.py
+msgid "24 words"
+msgstr "24 शब्द"
+
+#: src/seedsigner/views/tools_views.py
+msgid "Mnemonic Length?"
+msgstr "निमोनिक की लंबाई?"
+
+#: src/seedsigner/views/tools_views.py
+msgid "Calculating..."
+msgstr "गणना जारी है..."
+
+#. Inserts the number of dice rolls needed for a 12-word mnemonic
+#: src/seedsigner/views/tools_views.py
+msgid "12 words ({} rolls)"
+msgstr "12 शब्द ({} पासा फेंक)"
+
+#. Inserts the number of dice rolls needed for a 24-word mnemonic
+#: src/seedsigner/views/tools_views.py
+msgid "24 words ({} rolls)"
+msgstr "24 शब्द ({} पासा फेंक)"
+
+#: src/seedsigner/views/tools_views.py
+msgid "Mnemonic Length"
+msgstr "निमोनिक की लंबाई"
+
+#. Label to gather entropy through coin tosses
+#: src/seedsigner/views/tools_views.py
+msgid "Coin flip entropy"
+msgstr "सिक्का उछाल एंट्रॉपी"
+
+#. Label to gather entropy through user specified BIP-39 word
+#: src/seedsigner/views/tools_views.py
+msgid "Word selection entropy"
+msgstr "शब्द चयन एंट्रॉपी"
+
+#. Label to allow user to default entropy as all-zeros
+#: src/seedsigner/views/tools_views.py
+msgid "Finalize with zeros"
+msgstr "शून्य के साथ अंतिम करें"
+
+#. label to calculate the last word of a BIP-39 mnemonic seed phrase
+#: src/seedsigner/views/tools_views.py
+msgid "Final Word Calc"
+msgstr "अंतिम शब्द की गणना"
+
+#: src/seedsigner/views/tools_views.py
+msgid "Load seed"
+msgstr "सीड लोड करें"
+
+#: src/seedsigner/views/tools_views.py
+msgid "Scan wallet descriptor"
+msgstr "वॉलेट डिस्क्रिप्टर स्कैन करें"
+
+#. label for addresses where others send us incoming payments
+#: src/seedsigner/views/tools_views.py
+msgid "Receive addresses"
+msgstr "प्राप्ति पते"
+
+#. label for addresses that collect the change from our own outgoing payments
+#: src/seedsigner/views/tools_views.py
+msgid "Change addresses"
+msgstr "चेंज पते"
+
+#. a status message that our payment addresses are being calculated
+#: src/seedsigner/views/tools_views.py
+msgid "Calculating addrs..."
+msgstr "पते की गणना जारी है..,"
+
+#: src/seedsigner/views/tools_views.py
+msgid "Custom Derivation address explorer not yet implemented"
+msgstr "कस्टम डेरिवेशन पता एक्सप्लोरर अभी लागू नहीं हुआ"
+
+#: src/seedsigner/views/tools_views.py
+msgid "Single sig descriptors not yet supported"
+msgstr "सिंगल सिग हस्ताक्षर डिस्क्रिप्टर अभी समर्थित नहीं हैं"
+
+#: src/seedsigner/views/tools_views.py
+msgid "Receive Addrs"
+msgstr "प्राप्ति पते"
+
+#: src/seedsigner/views/tools_views.py
+msgid "Change Addrs"
+msgstr "चेंज पते"
+
+#: src/seedsigner/views/view.py
+msgid "Scan"
+msgstr "स्कैन"
+
+#: src/seedsigner/views/view.py
+msgid "Seeds"
+msgstr "सीड्स"
+
+#: src/seedsigner/views/view.py
+msgid "Restart"
+msgstr "रीस्टार्ट"
+
+#: src/seedsigner/views/view.py
+msgid "Power off"
+msgstr "पावर बंद"
+
+#: src/seedsigner/views/view.py
+msgid "Reset / Power"
+msgstr "रीसेट / पावर"
+
+#: src/seedsigner/views/view.py
+msgid "This is still on our to-do list!"
+msgstr "आने वाले समय में आएगा"
+
+#: src/seedsigner/views/view.py
+msgid "Work In Progress"
+msgstr "विकास में है"
+
+#: src/seedsigner/views/view.py
+msgid "Not Yet Implemented"
+msgstr "अभी उपलब्ध नहीं है"
+
+#: src/seedsigner/views/view.py
+msgid "Back to main menu"
+msgstr "मुख्य मेन्यू पर वापस जाएं"
+
+#. The network setting (mainnet/testnet/regtest) doesn't match the provided
+#. derivation path
+#: src/seedsigner/views/view.py
+msgid "Network Mismatch"
+msgstr "नेटवर्क मेल नहीं खा रहा"
+
+#. Button option to alter a setting
+#: src/seedsigner/views/view.py
+msgid "Change Setting"
+msgstr "सेटिंग बदलें"
+
+#. Inserts mainnet/testnet/regtest and derivation path
+#: src/seedsigner/views/view.py
+msgid "Current network setting ({}) doesn't match {}."
+msgstr "मौजूदा नेटवर्क सेटिंग ({}) {} से मेल नहीं खाती।"
+
+#: src/seedsigner/views/view.py
+msgid "System Error"
+msgstr "सिस्टम त्रुटि"
+
+#: src/seedsigner/views/view.py
+msgid "Hardware Error"
+msgstr "हार्डवेयर त्रुटि"
+
+#: src/seedsigner/views/view.py
+msgid "Cannot access camera"
+msgstr "कैमरा उपलब्ध नहीं है"
+
+#: src/seedsigner/views/view.py
+msgid "Disconnect power and check for a loose camera connection."
+msgstr "पावर डिस्कनेक्ट करें और कैमरा का कनेक्शन चेक करें।"
+
+#: src/seedsigner/views/view.py
+msgid "Update setting"
+msgstr "सेटिंग अपडेट करें"
+
+#. Inserts the name of a settings option (e.g. "Persistent Settings" is
+#. currently...)
+#: src/seedsigner/views/view.py
+msgid "\"{}\" is currently disabled in Settings."
+msgstr "सेटिंग में \"{}\" अभी बंद है।"
+
+#: src/seedsigner/views/view.py
+msgid "Option Disabled"
+msgstr "विकल्प अक्षम है"
+
+#: src/seedsigner/views/view.py
+msgid "Action Required"
+msgstr "कार्रवाई आवश्यक है"
+
+#: src/seedsigner/views/view.py
+msgid ""
+"You must remove the\n"
+"MicroSD card to continue."
+msgstr "जारी रखने के लिए आपको MicroSD कार्ड हटाना होगा।"
