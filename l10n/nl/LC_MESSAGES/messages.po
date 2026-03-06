@@ -1,7 +1,7 @@
 # Translations template for seedsigner.
-# Copyright (C) 2025 ORGANIZATION
+# Copyright (C) 2026 ORGANIZATION
 # This file is distributed under the same license as the seedsigner project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
 # Rachid, 2025
@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: seedsigner 0.8.6\n"
+"Project-Id-Version: seedsigner 0.8.7\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-12-26 07:32-0600\n"
+"POT-Creation-Date: 2026-03-05 22:02+0000\n"
 "PO-Revision-Date: 2022-04-29 13:50+0000\n"
 "Last-Translator: Dirkson643, 2026\n"
 "Language-Team: Dutch (https://app.transifex.com/seedsigner/teams/135832/nl/)\n"
@@ -604,6 +604,21 @@ msgstr "Prompt"
 msgid "Required"
 msgstr "Vereist"
 
+#. QR code format option; "default" = this is the format most wallets use
+#: src/seedsigner/models/settings_definition.py
+msgid "Animated (default)"
+msgstr ""
+
+#. QR code format option (static = single frame, not animated)
+#: src/seedsigner/models/settings_definition.py
+msgid "Static"
+msgstr ""
+
+#. QR code format option: old format that Specter Desktop used to use
+#: src/seedsigner/models/settings_definition.py
+msgid "Specter legacy"
+msgstr ""
+
 #: src/seedsigner/models/settings_definition.py
 msgid "BTC"
 msgstr "BTC"
@@ -697,6 +712,17 @@ msgstr "Taproot"
 msgid "Custom Derivation"
 msgstr "Aangepast derivatiepad"
 
+#. MicroSD notification duration setting - Display notification for 5 seconds
+#: src/seedsigner/models/settings_definition.py
+msgid "5 seconds"
+msgstr ""
+
+#. MicroSD notification duration setting - Display notification until the SD
+#. card is removed
+#: src/seedsigner/models/settings_definition.py
+msgid "Until SD removed"
+msgstr ""
+
 #. Terminology used by Electrum seeds; equivalent to BIP-39 passphrase
 #: src/seedsigner/models/settings_definition.py
 msgid "Custom Extension"
@@ -715,10 +741,6 @@ msgid "Persistent settings"
 msgstr "Permanente instellingen"
 
 #: src/seedsigner/models/settings_definition.py
-msgid "Coordinator software"
-msgstr "Coördinatorsoftware"
-
-#: src/seedsigner/models/settings_definition.py
 msgid "Denomination display"
 msgstr "Denominatie weergave"
 
@@ -731,16 +753,16 @@ msgid "QR code density"
 msgstr "Dichtheid van QR-code"
 
 #: src/seedsigner/models/settings_definition.py
-msgid "Xpub export"
-msgstr "Xpub export"
-
-#: src/seedsigner/models/settings_definition.py
 msgid "Sig types"
 msgstr "Ondertekentypes"
 
 #: src/seedsigner/models/settings_definition.py
 msgid "Script types"
 msgstr "Script types"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Xpub QR format"
+msgstr ""
 
 #: src/seedsigner/models/settings_definition.py
 msgid "Show xpub details"
@@ -769,6 +791,10 @@ msgstr "Electrum-seeds"
 #: src/seedsigner/models/settings_definition.py
 msgid "Native Segwit only"
 msgstr "Alleen Native Segwit"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "MicroSD notification duration"
+msgstr ""
 
 #: src/seedsigner/models/settings_definition.py
 msgid "Message signing"
@@ -1164,6 +1190,10 @@ msgid "Export Xpub"
 msgstr "Exporteer Xpub"
 
 #: src/seedsigner/views/seed_views.py
+msgid "Xpub QR Format"
+msgstr ""
+
+#: src/seedsigner/views/seed_views.py
 msgid "Xpub can be used to view all future transactions."
 msgstr "Xpub kan worden gebruikt om alle transacties te bekijken."
 
@@ -1341,6 +1371,11 @@ msgstr "Keer terug naar transactie"
 msgid "Verify addr"
 msgstr "Verifieer adr"
 
+#. Multisig policy. For a "2 of 3" policy, "threshold" = 2; "n" = 3
+#: src/seedsigner/views/seed_views.py
+msgid "{threshold} of {n}"
+msgstr ""
+
 #: src/seedsigner/views/seed_views.py
 msgid "Signing messages for custom derivation paths not supported"
 msgstr ""
@@ -1362,6 +1397,24 @@ msgstr "I/O test"
 #: src/seedsigner/views/settings_views.py
 msgid "Dev Options"
 msgstr "Dev opties"
+
+#. Title of a warning dialog when configuring a setting that requires at least
+#. one option to be selected.
+#: src/seedsigner/views/settings_views.py
+msgid "Selection Required"
+msgstr ""
+
+#. The name of the setting being configured (e.g. "Script types") will be
+#. inserted.
+#: src/seedsigner/views/settings_views.py
+msgid "At least one option must be selected for \"{}\"."
+msgstr ""
+
+#. Text for the button that returns the user to the setting configuration
+#. screen.
+#: src/seedsigner/views/settings_views.py
+msgid "Return to setting"
+msgstr ""
 
 #: src/seedsigner/views/settings_views.py
 msgid "Persistent Settings enabled. Settings saved to SD card."
@@ -1452,6 +1505,11 @@ msgstr "Ontvangstadressen"
 msgid "Change addresses"
 msgstr "Wisselgeldadressen"
 
+#. Multisig policy. For a "2 / 3 multisig" policy, "threshold" = 2; "n" = 3
+#: src/seedsigner/views/tools_views.py
+msgid "{threshold} / {n} multisig"
+msgstr ""
+
 #. a status message that our payment addresses are being calculated
 #: src/seedsigner/views/tools_views.py
 msgid "Calculating addrs..."
@@ -1521,10 +1579,10 @@ msgstr "Netwerkmismatch"
 msgid "Change Setting"
 msgstr "Instelling aanpassen"
 
-#. Inserts mainnet/testnet/regtest and derivation path
+#. "network" will be mainnet/testnet/regtest.
 #: src/seedsigner/views/view.py
-msgid "Current network setting ({}) doesn't match {}."
-msgstr "Huidige netwerkinstelling ({}) komt niet overeen met {}."
+msgid "Current network setting ({network}) doesn't match {derivation_path}."
+msgstr ""
 
 #: src/seedsigner/views/view.py
 msgid "System Error"
