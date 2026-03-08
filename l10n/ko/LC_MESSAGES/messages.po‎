@@ -1,0 +1,1606 @@
+# Translations template for seedsigner.
+# Copyright (C) 2026 ORGANIZATION
+# This file is distributed under the same license as the seedsigner project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+# 
+# Translators:
+# Okami ., 2022
+# YOUNGHUN KIM, 2024
+# SPECTER Bitcoin, 2025
+# Nextmoney, 2025
+# bitcoin 1min, 2026
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: seedsigner 0.8.7\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-03-05 22:02+0000\n"
+"PO-Revision-Date: 2022-04-29 13:50+0000\n"
+"Last-Translator: bitcoin 1min, 2026\n"
+"Language-Team: Korean (https://app.transifex.com/seedsigner/teams/135832/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. Testnet bitcoin
+#: src/seedsigner/gui/components.py
+msgid "tBtc"
+msgstr "tBtc"
+
+#. Testnet sats
+#: src/seedsigner/gui/components.py
+msgid "tSats"
+msgstr "tSats"
+
+#: src/seedsigner/gui/components.py src/seedsigner/gui/screens/psbt_screens.py
+msgid "btc"
+msgstr "btc"
+
+#: src/seedsigner/gui/components.py src/seedsigner/gui/screens/psbt_screens.py
+#: src/seedsigner/models/settings_definition.py
+msgid "sats"
+msgstr "sats"
+
+#: src/seedsigner/gui/toast.py
+msgid ""
+"You can remove\n"
+"the SD card now"
+msgstr "SD 카드 제거 가능"
+
+#: src/seedsigner/gui/toast.py
+msgid "SD card removed"
+msgstr "SD 카드 제거됨"
+
+#: src/seedsigner/gui/toast.py
+msgid "SD card inserted"
+msgstr "SD 카드 삽입됨"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "Review Transaction"
+msgstr "트랜잭션 확인"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "Review details"
+msgstr "세부내용 확인"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "1 input"
+msgstr "입력 1개"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "input 1"
+msgstr "입력 1"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "input 2"
+msgstr "입력 2"
+
+#. Indicates that items have been omitted from a series: e.g. "1, 2, 3, [...],
+#. 8"
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "[ ... ]"
+msgstr "[ ... ]"
+
+#. Input number will be inserted (e.g. "input 3")
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "input {}"
+msgstr "입력 {}"
+
+#. Ellipsis ("...") characters used to truncate an address (e.g. "bc1qabc...")
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "..."
+msgstr "..."
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+#: src/seedsigner/views/psbt_views.py
+msgid "self-transfer"
+msgstr "나에게 송금"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "recipient 1"
+msgstr "수신자 1"
+
+#. Inserts the recipient number (e.g. the fifth one is: "recipient 5")
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "recipient {}"
+msgstr "수신자 {}"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "fee"
+msgstr "수수료"
+
+#. Technical term, should probably NOT be translated in most languages
+#: src/seedsigner/gui/screens/psbt_screens.py
+#: src/seedsigner/views/psbt_views.py
+msgid "OP_RETURN"
+msgstr "OP_RETURN"
+
+#. Label for a change output in the PSBT Overview flow diagram
+#: src/seedsigner/gui/screens/psbt_screens.py
+#: src/seedsigner/views/psbt_views.py
+msgid "change"
+msgstr "잔돈"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "Transaction Math"
+msgstr "트랜잭션 계산"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "Review recipients"
+msgstr "수신자 확인"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "input"
+msgid_plural "inputs"
+msgstr[0] "입력"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "recipient"
+msgid_plural "recipients"
+msgstr[0] "수신자"
+
+#. Denonination is inserted (e.g. your "btc change" or "sats change")
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "{} change"
+msgstr "{} 잔돈"
+
+#. Describes the address type (change or receive)
+#: src/seedsigner/gui/screens/psbt_screens.py
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "change address"
+msgstr "잔돈 주소"
+
+#. Describes the address type (change or receive)
+#: src/seedsigner/gui/screens/psbt_screens.py
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "receive address"
+msgstr "입금 주소"
+
+#. Symbol for index number, e.g. "address #3"
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "#"
+msgstr "#"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "Address verified!"
+msgstr "주소 검증 완료! "
+
+#. Shown when displaying OP_RETURN as non-human-readable hexadecimal data
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "raw hex data"
+msgstr "원시 16진수 데이터"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "Sign Transaction"
+msgstr "트랜잭션 서명"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "Click to approve this transaction"
+msgstr "클릭하여 거래에 서명하세요."
+
+#: src/seedsigner/gui/screens/scan_screens.py
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "back"
+msgstr "뒤로"
+
+#. Inserts the percentage value of the animated QR scan progress
+#: src/seedsigner/gui/screens/scan_screens.py
+msgid "{}%"
+msgstr "{}%"
+
+#. Increase QR code screen brightness
+#: src/seedsigner/gui/screens/screen.py
+msgid "Brighter"
+msgstr "밝게"
+
+#. Decrease QR code screen brightness
+#: src/seedsigner/gui/screens/screen.py
+msgid "Darker"
+msgstr "어둡게"
+
+#: src/seedsigner/gui/screens/screen.py
+#: src/seedsigner/gui/screens/seed_screens.py
+#: src/seedsigner/views/seed_views.py
+msgid "Success!"
+msgstr "성공!"
+
+#: src/seedsigner/gui/screens/screen.py
+#: src/seedsigner/gui/screens/seed_screens.py
+#: src/seedsigner/views/seed_views.py
+msgid "OK"
+msgstr "확인"
+
+#: src/seedsigner/gui/screens/screen.py
+msgid "Caution"
+msgstr "주의"
+
+#: src/seedsigner/gui/screens/screen.py src/seedsigner/views/seed_views.py
+msgid "Privacy Leak!"
+msgstr "프라이버시 위험!"
+
+#: src/seedsigner/gui/screens/screen.py
+msgid "I understand"
+msgstr "알겠습니다"
+
+#: src/seedsigner/gui/screens/screen.py
+msgid "Classified Info!"
+msgstr "기밀 정보!"
+
+#: src/seedsigner/gui/screens/screen.py src/seedsigner/views/scan_views.py
+#: src/seedsigner/views/view.py
+msgid "Error"
+msgstr "오류"
+
+#: src/seedsigner/gui/screens/screen.py
+msgid "Restarting"
+msgstr "재시작 중"
+
+#: src/seedsigner/gui/screens/screen.py
+msgid ""
+"SeedSigner is restarting.\n"
+"\n"
+"All in-memory data will be wiped."
+msgstr ""
+"시드사이너가 재시작됩니다. \n"
+"\n"
+"메모리에 있는 모든 데이터는 삭제됩니다."
+
+#: src/seedsigner/gui/screens/screen.py
+msgid "Just Unplug It"
+msgstr "전원을 뽑으세요"
+
+#: src/seedsigner/gui/screens/screen.py
+msgid "It is safe to disconnect power at any time."
+msgstr "언제든 전원을 분리해도 안전합니다."
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Finalize Seed"
+msgstr " 시드 확정"
+
+#. a label for the shortened Key-id of a BIP-32 master HD wallet
+#: src/seedsigner/gui/screens/seed_screens.py
+#: src/seedsigner/gui/screens/tools_screens.py
+#: src/seedsigner/views/seed_views.py
+msgid "fingerprint"
+msgstr "지갑 ID"
+
+#. Displays the page number and total: (e.g. page 1 of 6)
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Seed Words: {}/{}"
+msgstr "시드 단어: {}/{} "
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "BIP-85 Index"
+msgstr "BIP-85 인덱스"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Verify Backup?"
+msgstr "백업을 확인할까요?"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Optionally verify that your mnemonic backup is correct."
+msgstr "(선택) 니모닉 백업이 올바른지 확인합니다."
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Derivation Path"
+msgstr "파생 경로"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+#: src/seedsigner/views/seed_views.py
+msgid "Export xpub"
+msgstr "xpub 내보내기"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Xpub Details"
+msgstr "Xpub 상세 정보"
+
+#. Short for "BIP-32 Master Fingerprint"
+#. a label for the shortened Key-id of a BIP-32 master HD wallet
+#: src/seedsigner/gui/screens/seed_screens.py
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "Fingerprint"
+msgstr "지갑 ID"
+
+#. Short for "Derivation Path"
+#. a label for the derivation-path into a BIP-32 HD wallet
+#: src/seedsigner/gui/screens/seed_screens.py
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "Derivation"
+msgstr "파생 경로"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Xpub"
+msgstr "Xpub"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+#: src/seedsigner/models/settings_definition.py
+#: src/seedsigner/views/seed_views.py
+msgid "BIP-39 Passphrase"
+msgstr "BIP-39 패스프레이즈"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Verify Passphrase"
+msgstr "패스프레이즈 확인"
+
+#. Describes the effect of applying a BIP-39 passphrase; it changes the seed's
+#. fingerprint
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "changes fingerprint"
+msgstr "지갑 ID가 변경됨"
+
+#. Refers to the SeedQR type: Standard or Compact
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Standard"
+msgstr "표준"
+
+#. Briefly explains the Standard SeedQR data format
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "BIP-39 wordlist indices"
+msgstr "BIP-39 단어"
+
+#. Refers to the SeedQR type: Standard or Compact
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Compact"
+msgstr "콤팩트"
+
+#. Briefly explains the Compact SeedQR data format
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Raw entropy bits"
+msgstr "원시 엔트로피 비트"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Transcribe SeedQR"
+msgstr "시드QR 옮겨 적기"
+
+#. Refers to the QR code size: 21x21, 25x25, or 29x29
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Begin {}x{}"
+msgstr "{}x{} 시작"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "click to exit"
+msgstr "아무 버튼 누르면 종료"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid ""
+"Optionally scan your transcribed SeedQR to confirm that it reads back "
+"correctly."
+msgstr "(선택) 기록한 시드QR을 스캔해 올바른지 확인합니다."
+
+#: src/seedsigner/gui/screens/seed_screens.py
+#: src/seedsigner/views/seed_views.py
+msgid "Verify Address"
+msgstr "주소 검증"
+
+#. Inserts the nth address number (e.g. "Checking address 7")
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Checking address {}"
+msgstr "{}번째 주소 확인 중"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Address Verified"
+msgstr "주소 검증 완료"
+
+#. Describes the address index (e.g. "index 7")
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "index {}"
+msgstr "인덱스 {}"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Multisig Verification"
+msgstr "다중서명 검증"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid ""
+"Load your multisig wallet descriptor to verify your receive/self-transfer or"
+" change address."
+msgstr "다중서명 지갑 descriptor를 불러 '나에게 송금'을 포함한 입금·잔돈 주소를 확인합니다."
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Descriptor Loaded"
+msgstr "Descriptor 불러옴"
+
+#. Label for the multisig wallet's signing policy (e.g. 2-of-3)
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Policy"
+msgstr "필요 서명 수 / 총 서명자 수"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Signing Keys"
+msgstr "서명 시드"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Review Message"
+msgstr "메시지 확인"
+
+#. Short for "Next step"
+#: src/seedsigner/gui/screens/seed_screens.py
+#: src/seedsigner/views/psbt_views.py src/seedsigner/views/seed_views.py
+#: src/seedsigner/views/tools_views.py
+msgid "Next"
+msgstr "다음"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Confirm Address"
+msgstr "주소 확인"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+#: src/seedsigner/views/seed_views.py
+msgid "Sign message"
+msgstr "메시지 서명"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "derivation path"
+msgstr "파생 경로"
+
+#: src/seedsigner/gui/screens/settings_screens.py
+#: src/seedsigner/views/settings_views.py src/seedsigner/views/view.py
+msgid "Settings"
+msgstr "설정"
+
+#. Short for "Input/Output"; screen to make sure the buttons and camera are
+#. working properly
+#: src/seedsigner/gui/screens/settings_screens.py
+msgid "I/O Test"
+msgstr "입출력 테스트"
+
+#. Blank the screen
+#: src/seedsigner/gui/screens/settings_screens.py
+msgid "Clear"
+msgstr "지우기"
+
+#: src/seedsigner/gui/screens/settings_screens.py
+msgid "Exit"
+msgstr "종료"
+
+#: src/seedsigner/gui/screens/settings_screens.py
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "Capturing image..."
+msgstr "이미지 캡처 중..."
+
+#: src/seedsigner/gui/screens/settings_screens.py
+#: src/seedsigner/views/settings_views.py
+msgid "Donate"
+msgstr "기부하기"
+
+#. If your language uses the percent sign ("%"), your translation must also
+#. use
+#. two percent signs ("%%") due to python formatting oddities. "100%%" will be
+#. rendered as "100%".
+#: src/seedsigner/gui/screens/settings_screens.py
+#, python-format
+msgid ""
+"SeedSigner is 100%% free & open source, funded solely by the Bitcoin community.\n"
+"\n"
+"Donate onchain or LN at:"
+msgstr ""
+"시드사이너는 100%% 무료 오픈 소스이며, 비트코인 커뮤니티의 후원으로 운영됩니다.\n"
+"\n"
+"온체인 또는 LN 기부:"
+
+#: src/seedsigner/gui/screens/settings_screens.py
+#: src/seedsigner/views/settings_views.py
+msgid "Settings QR"
+msgstr "QR 설정"
+
+#: src/seedsigner/gui/screens/settings_screens.py
+msgid "Settings updated..."
+msgstr "설정 업데이트..."
+
+#: src/seedsigner/gui/screens/settings_screens.py src/seedsigner/views/view.py
+msgid "Home"
+msgstr "메뉴"
+
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "click a button"
+msgstr "버튼 클릭"
+
+#. A prompt to the user to either accept or reshoot the image
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "reshoot"
+msgstr "재촬영"
+
+#. A prompt to the user to either accept or reshoot the image
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "accept"
+msgstr "사용"
+
+#. current roll number vs total rolls (e.g. roll 7 of 50)
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "Dice Roll {}/{}"
+msgstr "주사위 던지기 {}/{}"
+
+#. Build the last word in a 12 or 24 word BIP-39 mnemonic seed phrase.
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "Build Final Word"
+msgstr "마지막 단어 선택"
+
+#. Final word calc. `mnemonic_length` = 12 or 24. `num_bits` = 7 or 3 (bits of
+#. entropy in final word).
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid ""
+"The {mnemonic_length}th word is built from {num_bits} more entropy bits plus"
+" auto-calculated checksum."
+msgstr "{mnemonic_length}번째 단어는 {num_bits}비트의 추가 엔트로피와 자동 계산된 체크섬으로 구성됩니다."
+
+#. current coin-flip number vs total flips (e.g. flip 3 of 4)
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "Coin Flip {}/{}"
+msgstr "동전 던지기 {}/{}"
+
+#. How we call the "front" side result during a coin toss.
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "Heads = 1"
+msgstr "앞면 = 1"
+
+#. How we call the "back" side result during a coin toss.
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "Tails = 0"
+msgstr "뒷면 = 0"
+
+#. The additional entropy the user supplied (e.g. coin flips)
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "Your input: \"{}\""
+msgstr "현재 입력: \"{}\""
+
+#. A function of "x" to be used for detecting errors in "x"
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "Checksum"
+msgstr "체크섬"
+
+#. labeled presentation of the last word in a BIP-39 mnemonic seed phrase.
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "Final Word: \"{}\""
+msgstr "마지막 단어: \"{}\""
+
+#. a label for the last word of a 12-word BIP-39 mnemonic seed phrase
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "12th Word"
+msgstr "12번째 단어"
+
+#. a label for the last word of a 24-word BIP-39 mnemonic seed phrase
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "24th Word"
+msgstr "24번째 단어"
+
+#. a label for the tool to explore public addresses for this seed.
+#: src/seedsigner/gui/screens/tools_screens.py
+#: src/seedsigner/views/seed_views.py src/seedsigner/views/tools_views.py
+msgid "Address Explorer"
+msgstr "주소 탐색기"
+
+#. a label for a BIP-380-ish Output Descriptor
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "Wallet descriptor"
+msgstr "지갑 descriptor"
+
+#. Insert the number of addrs displayed per screen (e.g. "Next 10")
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "Next {}"
+msgstr "다음 {}개"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Enabled"
+msgstr "켜기"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Disabled"
+msgstr "끄기"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Prompt"
+msgstr "항상 확인"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Required"
+msgstr "필수"
+
+#. QR code format option; "default" = this is the format most wallets use
+#: src/seedsigner/models/settings_definition.py
+msgid "Animated (default)"
+msgstr "연속 QR (기본값)"
+
+#. QR code format option (static = single frame, not animated)
+#: src/seedsigner/models/settings_definition.py
+msgid "Static"
+msgstr "고정 QR"
+
+#. QR code format option: old format that Specter Desktop used to use
+#: src/seedsigner/models/settings_definition.py
+msgid "Specter legacy"
+msgstr "Specter 레거시"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "BTC"
+msgstr "BTC"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Threshold at 0.01"
+msgstr "0.01 기준으로 전환"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "BTC | sats hybrid"
+msgstr "BTC・sats 병기"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "0°"
+msgstr "0°"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "90°"
+msgstr "90°"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "180°"
+msgstr "180°"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "270°"
+msgstr "270°"
+
+#. QR code density option: Low, Medium, High
+#: src/seedsigner/models/settings_definition.py
+msgid "Low"
+msgstr "낮음"
+
+#. QR code density option: Low, Medium, High
+#: src/seedsigner/models/settings_definition.py
+msgid "Medium"
+msgstr "중간"
+
+#. QR code density option: Low, Medium, High
+#: src/seedsigner/models/settings_definition.py
+msgid "High"
+msgstr "높음"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Mainnet"
+msgstr "메인넷"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Testnet"
+msgstr "테스트넷"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Regtest"
+msgstr "Regtest"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Store Settings on SD card"
+msgstr "설정을 SD 카드에 저장합니다"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Insert SD card to enable"
+msgstr "SD 카드를 삽입해야 활성화할 수 있습니다"
+
+#: src/seedsigner/models/settings_definition.py
+#: src/seedsigner/views/seed_views.py
+msgid "Single Sig"
+msgstr "단일 서명"
+
+#: src/seedsigner/models/settings_definition.py
+#: src/seedsigner/views/seed_views.py
+msgid "Multisig"
+msgstr "다중 서명"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Native Segwit"
+msgstr "네이티브 세그윗"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Nested Segwit"
+msgstr "네스티드 세그윗"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Legacy"
+msgstr "레거시"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Taproot"
+msgstr "탭루트"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Custom Derivation"
+msgstr "사용자 지정 파생 경로"
+
+#. MicroSD notification duration setting - Display notification for 5 seconds
+#: src/seedsigner/models/settings_definition.py
+msgid "5 seconds"
+msgstr "5초"
+
+#. MicroSD notification duration setting - Display notification until the SD
+#. card is removed
+#: src/seedsigner/models/settings_definition.py
+msgid "Until SD removed"
+msgstr "SD 카드 제거 시까지"
+
+#. Terminology used by Electrum seeds; equivalent to BIP-39 passphrase
+#: src/seedsigner/models/settings_definition.py
+msgid "Custom Extension"
+msgstr "사용자 지정 패스프레이즈"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Language"
+msgstr "언어"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Mnemonic language"
+msgstr "니모닉 언어"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Persistent settings"
+msgstr "설정 유지"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Denomination display"
+msgstr "단위 표기"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Bitcoin network"
+msgstr "비트코인 네트워크"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "QR code density"
+msgstr "QR코드 해상도"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Sig types"
+msgstr "서명 유형"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Script types"
+msgstr "스크립트 유형"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Xpub QR format"
+msgstr "Xpub QR 형식"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Show xpub details"
+msgstr "Xpub 상세 보기"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "BIP-39 passphrase"
+msgstr "BIP-39 패스프레이즈"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Camera rotation"
+msgstr "카메라 회전"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Compact SeedQR"
+msgstr "콤팩트 시드QR"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "BIP-85 child seeds"
+msgstr "BIP-85 자식 시드"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Electrum seeds"
+msgstr "일렉트럼 시드"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Native Segwit only"
+msgstr "네이티브 세그윗 전용"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "MicroSD notification duration"
+msgstr "MicroSD 알림 표시 시간"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Message signing"
+msgstr "메시지 서명"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Show privacy warnings"
+msgstr "프라이버시 경고 표시"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Show dire warnings"
+msgstr "심각한 경고 표시"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Show QR brightness tips"
+msgstr "QR 밝기 안내 표시"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Show partner logos"
+msgstr "파트너 로고 표시"
+
+#. Hardware settings option to specify the screen driver (e.g. st7789 vs
+#. ili9341)
+#: src/seedsigner/models/settings_definition.py
+msgid "Display type"
+msgstr "디스플레이 유형"
+
+#. Hardware settings option to invert how the screen driver displays colors.
+#: src/seedsigner/models/settings_definition.py
+msgid "Invert colors"
+msgstr "색상 반전"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "QR background color"
+msgstr "QR 배경색"
+
+#: src/seedsigner/views/psbt_views.py src/seedsigner/views/seed_views.py
+#: src/seedsigner/views/tools_views.py
+msgid "Scan a seed"
+msgstr "시드 스캔"
+
+#: src/seedsigner/views/psbt_views.py src/seedsigner/views/seed_views.py
+#: src/seedsigner/views/tools_views.py
+msgid "Enter 12-word seed"
+msgstr "12단어 시드 입력"
+
+#: src/seedsigner/views/psbt_views.py src/seedsigner/views/seed_views.py
+#: src/seedsigner/views/tools_views.py
+msgid "Enter 24-word seed"
+msgstr "24단어 시드 입력"
+
+#: src/seedsigner/views/psbt_views.py src/seedsigner/views/seed_views.py
+#: src/seedsigner/views/tools_views.py
+msgid "Enter Electrum seed"
+msgstr "일렉트럼 시드 입력"
+
+#. Inserts fingerprint w/"?" to indicate that this seed can't sign the current
+#. PSBT
+#: src/seedsigner/views/psbt_views.py
+msgid "{} (?)"
+msgstr "{} (?)"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Select Signer"
+msgstr "서명 키 선택"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Parsing PSBT..."
+msgstr "PSBT 분석 중..."
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Unsupported Script Type!"
+msgstr "미지원 스크립트 유형!"
+
+#: src/seedsigner/views/psbt_views.py
+msgid ""
+"Transaction has unsupported input script type, please verify your change "
+"addresses."
+msgstr "지원되지 않는 입력 스크립트가 있습니다. 잔돈 주소를 확인하세요."
+
+#: src/seedsigner/views/psbt_views.py src/seedsigner/views/view.py
+msgid "Continue"
+msgstr "계속"
+
+#. User will receive no change back; the inputs to this transaction are fully
+#. spent
+#: src/seedsigner/views/psbt_views.py
+msgid "Full Spend!"
+msgstr "전액 사용!"
+
+#: src/seedsigner/views/psbt_views.py
+msgid ""
+"This transaction spends its entire input value. No change is coming back to "
+"your wallet."
+msgstr "입력 값 전액을 사용하며, 잔돈은 없습니다."
+
+#. Future-tense used to indicate that this transaction will send this amount,
+#. as opposed to "Send" on its own which could be misread as an instant
+#. command
+#. (e.g. "Send Now").
+#: src/seedsigner/views/psbt_views.py
+msgid "Will Send"
+msgstr "보낼 금액"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Next recipient"
+msgstr "다음 수신자"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Skip verification"
+msgstr "검증 건너뛰기"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Verify multisig change"
+msgstr "다중 서명 잔돈 검증"
+
+#. The amount you're receiving back from the transaction
+#: src/seedsigner/views/psbt_views.py
+msgid "Your Change"
+msgstr "잔돈"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Self-Transfer"
+msgstr "나에게 송금"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Verify multisig addr"
+msgstr "다중 서명 주소 검증"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Verifying Change..."
+msgstr "잔돈 검증 중..."
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Verifying Self-Transfer..."
+msgstr "나에게 송금 검증 중..."
+
+#. Variable is either "change" or "self-transfer".
+#: src/seedsigner/views/psbt_views.py
+msgid "Transaction's {} address could not be verified from wallet descriptor."
+msgstr "지갑 descriptor에서 {} 주소를 검증할 수 없습니다."
+
+#. Variable is either "change" or "self-transfer".
+#: src/seedsigner/views/psbt_views.py
+msgid "Transaction's {} address could not be generated from your seed."
+msgstr "시드에서 {} 주소를 생성할 수 없습니다."
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Suspicious Transaction"
+msgstr "확인 필요 트랜잭션"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Address Verification Failed"
+msgstr "주소 검증 실패"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Discard transaction"
+msgstr "트랜잭션 삭제"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Approve transaction"
+msgstr "트랜잭션 승인"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Select different seed"
+msgstr "다른 시드 선택"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Transaction Error"
+msgstr "트랜잭션 오류"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Signing Failed"
+msgstr "서명 실패"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Signing with this seed did not add a valid signature."
+msgstr "이 시드로 서명했지만 유효하지 않습니다."
+
+#: src/seedsigner/views/scan_views.py
+msgid "Scan a QR code"
+msgstr "QR 코드 스캔"
+
+#: src/seedsigner/views/scan_views.py
+msgid "QRCode not recognized or not yet supported."
+msgstr "인식할 수 없거나 아직 지원되지 않는 QR 코드입니다."
+
+#: src/seedsigner/views/scan_views.py
+msgid "Wrong QR Type"
+msgstr "잘못된 QR 형식"
+
+#: src/seedsigner/views/scan_views.py
+msgid "Scan Transaction"
+msgstr "트랜잭션 스캔"
+
+#: src/seedsigner/views/scan_views.py
+msgid "Expected a transaction"
+msgstr "트랜잭션 QR이 아닙니다."
+
+#: src/seedsigner/views/scan_views.py
+msgid "Scan SeedQR"
+msgstr "시드QR 스캔"
+
+#: src/seedsigner/views/scan_views.py
+msgid "Expected a SeedQR"
+msgstr "시드QR이 아닙니다."
+
+#: src/seedsigner/views/scan_views.py src/seedsigner/views/seed_views.py
+msgid "Scan descriptor"
+msgstr "descriptor 스캔"
+
+#: src/seedsigner/views/scan_views.py
+msgid "Expected a wallet descriptor QR"
+msgstr "지갑 descriptor QR이 아닙니다."
+
+#: src/seedsigner/views/scan_views.py
+msgid "Scan address QR"
+msgstr "주소 QR 스캔"
+
+#: src/seedsigner/views/scan_views.py
+msgid "Expected an address QR"
+msgstr "주소 QR이 아닙니다."
+
+#: src/seedsigner/views/scan_views.py
+msgid "Unknown QR Type"
+msgstr "알 수 없는 QR 유형"
+
+#: src/seedsigner/views/scan_views.py
+msgid "QRCode is invalid or is a data format not yet supported."
+msgstr "QR코드가 유효하지 않거나 아직 지원되지 않는 형식입니다."
+
+#: src/seedsigner/views/scan_views.py src/seedsigner/views/view.py
+msgid "Back to Main Menu"
+msgstr "메뉴로 돌아가기"
+
+#. This is on the opening splash screen, displayed above the HRF logo
+#: src/seedsigner/views/screensaver.py
+msgid "With support from:"
+msgstr "후원에 감사드립니다"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Load a seed"
+msgstr "시드 불러오기"
+
+#: src/seedsigner/views/seed_views.py
+msgid "In-Memory Seeds"
+msgstr "메모리 내 시드"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Load the seed to verify"
+msgstr "시드를 불러와 확인하세요"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Select seed to verify"
+msgstr "확인할 시드를 선택하세요"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Sign Message"
+msgstr "메시지 서명"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Load the seed to sign with"
+msgstr "시드를 불러와 서명하세요"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Select seed to sign with"
+msgstr "서명할 시드를 선택하세요"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Scan a SeedQR"
+msgstr "시드QR 스캔"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Create a seed"
+msgstr "시드 만들기"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Load a Seed"
+msgstr "시드 불러오기"
+
+#. Inserts the word number (e.g. "Seed Word #6")
+#: src/seedsigner/views/seed_views.py
+msgid "Seed Word #{}"
+msgstr "시드 단어 #{}"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Review & edit"
+msgstr "검토 및 편집"
+
+#: src/seedsigner/views/seed_views.py src/seedsigner/views/tools_views.py
+msgid "Discard"
+msgstr "폐기"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Invalid Mnemonic!"
+msgstr "잘못된 니모닉!"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Checksum failure; not a valid seed phrase."
+msgstr "체크섬 오류; 유효한 시드가 아닙니다"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Done"
+msgstr "완료"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Edit passphrase"
+msgstr "편집"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Discard passphrase"
+msgstr "폐기"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Skip passphrase"
+msgstr "패스프레이즈 건너뛰기"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Discard passphrase?"
+msgstr "폐기할까요?"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Your current passphrase entry will be erased."
+msgstr "입력한 패스프레이즈가 삭제됩니다."
+
+#: src/seedsigner/views/seed_views.py
+msgid "Skip passphrase?"
+msgstr "패스프레이즈를 건너뛸까요?"
+
+#: src/seedsigner/views/seed_views.py
+msgid "You have not entered a passphrase yet."
+msgstr "아직 패스프레이즈를 입력하지 않았습니다"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Keep seed"
+msgstr "시드 유지"
+
+#. Inserts the seed fingerprint
+#: src/seedsigner/views/seed_views.py
+msgid "Wipe seed {} from the device?"
+msgstr "기기에서 시드 {}를 삭제할까요?"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Discard Seed?"
+msgstr "폐기할까요?"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Electrum Warning"
+msgstr "일렉트럼 경고"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Some features are disabled for Electrum seeds."
+msgstr "일렉트럼 시드의 경우 일부 기능이 비활성화됩니다."
+
+#: src/seedsigner/views/seed_views.py
+msgid "Scan transaction"
+msgstr "트랜잭션 스캔"
+
+#: src/seedsigner/views/seed_views.py src/seedsigner/views/tools_views.py
+msgid "Address explorer"
+msgstr "주소 탐색기"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Backup seed"
+msgstr "시드 백업"
+
+#: src/seedsigner/views/seed_views.py
+msgid "BIP-85 child seed"
+msgstr "BIP-85 자식 시드"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Discard seed"
+msgstr "시드 폐기"
+
+#: src/seedsigner/views/seed_views.py
+msgid "View seed words"
+msgstr "시드 단어 보기"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Export as SeedQR"
+msgstr "시드QR 내보내기"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Backup Seed"
+msgstr "시드 백업"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Export Xpub"
+msgstr "Xpub 내보내기"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Xpub QR Format"
+msgstr "Xpub QR 형식"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Xpub can be used to view all future transactions."
+msgstr "제3자가 Xpub을 알게 되면, 모든 거래 내역을 볼 수 있습니다."
+
+#: src/seedsigner/views/seed_views.py
+msgid "Generating xpub..."
+msgstr "Xpub 생성중..."
+
+#: src/seedsigner/views/seed_views.py
+msgid "You must keep your seed words private & away from all online devices."
+msgstr "시드 단어는 외부에 노출되지 않도록 하고 온라인 기기에 저장하지 마세요."
+
+#. Inserts the child index (e.g. "Child #0")
+#: src/seedsigner/views/seed_views.py
+msgid "Child #{}"
+msgstr "자식 #{}"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Seed Words"
+msgstr "시드 단어"
+
+#: src/seedsigner/views/seed_views.py
+msgid "12 Words"
+msgstr "12개 단어"
+
+#: src/seedsigner/views/seed_views.py
+msgid "24 Words"
+msgstr "24개 단어"
+
+#: src/seedsigner/views/seed_views.py
+msgid "BIP-85 Num Words"
+msgstr "BIP-85 단어 수"
+
+#: src/seedsigner/views/seed_views.py
+msgid "BIP-85 Index Error"
+msgstr "BIP-85 인덱스 오류"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Invalid Child Index"
+msgstr "잘못된 자식 인덱스"
+
+#: src/seedsigner/views/seed_views.py
+msgid "BIP-85 Child Index must be between 0 and 2^31-1."
+msgstr "BIP-85 자식 인덱스는 0에서 2^31-1 사이여야 합니다."
+
+#: src/seedsigner/views/seed_views.py
+msgid "Try again"
+msgstr "다시 시도"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Verify"
+msgstr "검증"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Skip"
+msgstr "건너뛰기"
+
+#. Inserts the word number (e.g. "Verify Word #1")
+#: src/seedsigner/views/seed_views.py
+msgid "Verify Word #{}"
+msgstr "단어 검증 #{}"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Review seed words"
+msgstr "시드 단어 확인"
+
+#. Inserts the word number and the word (e.g. "Word #1 is not "apple"!")
+#: src/seedsigner/views/seed_views.py
+msgid "Word #{} is not \"{}\"!"
+msgstr "#{} 단어는 \"{}\"이(가) 아닙니다!"
+
+#. User selected the wrong word during the mnemonic backup test (e.g.
+#. incorrectly said the 5th word was "zoo")
+#: src/seedsigner/views/seed_views.py
+msgid "Wrong Word!"
+msgstr "틀린 단어!"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Verification Error"
+msgstr "검증 오류"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Backup Verified"
+msgstr "백업 검증"
+
+#: src/seedsigner/views/seed_views.py
+msgid "All mnemonic backup words were successfully verified!"
+msgstr "니모닉 백업 단어가 모두 올바르게 확인되었습니다!"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Standard: 25x25"
+msgstr "표준: 25x25"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Compact: 21x21"
+msgstr "콤팩트: 21x21"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Standard: 29x29"
+msgstr "표준: 29x29"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Compact: 25x25"
+msgstr "콤팩트: 25x25"
+
+#: src/seedsigner/views/seed_views.py
+msgid "SeedQR Format"
+msgstr "시드QR 형식"
+
+#: src/seedsigner/views/seed_views.py
+msgid "SeedQR is your private key!"
+msgstr "시드QR은 곧 개인키입니다!"
+
+#: src/seedsigner/views/seed_views.py
+msgid ""
+"Never photograph or scan it into a device that connects to the internet."
+msgstr "인터넷에 연결되는 기기로는 절대 촬영하거나 스캔하지 마세요"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Confirm SeedQR"
+msgstr "시드QR 확인"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Confirm SeedQR?"
+msgstr "시드QR 확인할까요?"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Scan your SeedQR"
+msgstr "SeedQR를 스캔하세요"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Error!"
+msgstr "오류!"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Your transcribed SeedQR does not match your original seed!"
+msgstr "기록한 시드QR이 원본과 일치하지 않습니다!"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Review SeedQR"
+msgstr "시드QR 확인"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Your transcribed SeedQR could not be read!"
+msgstr "기록한 시드QR을 읽을 수 없습니다!"
+
+#: src/seedsigner/views/seed_views.py
+msgid ""
+"Your transcribed SeedQR successfully scanned and yielded the same seed."
+msgstr "기록한 시드QR이 성공적으로 스캔되었으며, 원본 시드와 일치합니다."
+
+#: src/seedsigner/views/seed_views.py
+msgid "Sig type can't be auto-detected from this address. Please specify:"
+msgstr "이 주소에서 서명 유형을 자동으로 감지할 수 없습니다. 아래에서 선택하세요:"
+
+#. Option when scanning for a matching address; skips ten addresses ahead
+#: src/seedsigner/views/seed_views.py
+msgid "Skip 10"
+msgstr "다음 10개"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Cancel"
+msgstr "취소"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Return to transaction"
+msgstr "트랜잭션으로 돌아가기"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Verify addr"
+msgstr "주소 검증"
+
+#. Multisig policy. For a "2 of 3" policy, "threshold" = 2; "n" = 3
+#: src/seedsigner/views/seed_views.py
+msgid "{threshold} of {n}"
+msgstr "{n}개 중 {threshold}개"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Signing messages for custom derivation paths not supported"
+msgstr "사용자 지정 파생 경로로 메시지를 서명하는 기능은 지원되지 않습니다."
+
+#: src/seedsigner/views/settings_views.py
+msgid "Advanced"
+msgstr "고급"
+
+#: src/seedsigner/views/settings_views.py
+msgid "Hardware"
+msgstr "하드웨어"
+
+#: src/seedsigner/views/settings_views.py
+msgid "I/O test"
+msgstr "입출력 테스트"
+
+#: src/seedsigner/views/settings_views.py
+msgid "Dev Options"
+msgstr "개발 옵션"
+
+#. Title of a warning dialog when configuring a setting that requires at least
+#. one option to be selected.
+#: src/seedsigner/views/settings_views.py
+msgid "Selection Required"
+msgstr "옵션 선택 필수"
+
+#. The name of the setting being configured (e.g. "Script types") will be
+#. inserted.
+#: src/seedsigner/views/settings_views.py
+msgid "At least one option must be selected for \"{}\"."
+msgstr "\"{}\"에서 옵션을 하나 이상 선택하세요."
+
+#. Text for the button that returns the user to the setting configuration
+#. screen.
+#: src/seedsigner/views/settings_views.py
+msgid "Return to setting"
+msgstr "설정으로 돌아가기"
+
+#: src/seedsigner/views/settings_views.py
+msgid "Persistent Settings enabled. Settings saved to SD card."
+msgstr "설정 유지 기능이 활성화되었습니다. 설정값이 SD 카드에 저장됩니다."
+
+#: src/seedsigner/views/settings_views.py
+msgid "Settings updated in temporary memory"
+msgstr "임시 메모리에서 설정이 업데이트되었습니다."
+
+#: src/seedsigner/views/tools_views.py
+msgid "New seed"
+msgstr "새로운 시드"
+
+#: src/seedsigner/views/tools_views.py
+msgid "Calc 12th/24th word"
+msgstr "12·24번째 단어 계산"
+
+#: src/seedsigner/views/tools_views.py
+msgid "Verify address"
+msgstr "주소 검증"
+
+#: src/seedsigner/views/tools_views.py src/seedsigner/views/view.py
+msgid "Tools"
+msgstr "도구"
+
+#: src/seedsigner/views/tools_views.py
+msgid "12 words"
+msgstr "12개 단어"
+
+#: src/seedsigner/views/tools_views.py
+msgid "24 words"
+msgstr "24개 단어"
+
+#: src/seedsigner/views/tools_views.py
+msgid "Mnemonic Length"
+msgstr "니모닉 단어 수"
+
+#: src/seedsigner/views/tools_views.py
+msgid "Calculating..."
+msgstr "계산 중..."
+
+#. Inserts the number of dice rolls needed for a 12-word mnemonic
+#: src/seedsigner/views/tools_views.py
+msgid "12 words ({} rolls)"
+msgstr "12개 단어 ({}회)"
+
+#. Inserts the number of dice rolls needed for a 24-word mnemonic
+#: src/seedsigner/views/tools_views.py
+msgid "24 words ({} rolls)"
+msgstr "24개 단어 ({}회)"
+
+#. Label to gather entropy through coin tosses
+#: src/seedsigner/views/tools_views.py
+msgid "Coin flip entropy"
+msgstr "동전 던지기"
+
+#. Label to gather entropy through user specified BIP-39 word
+#: src/seedsigner/views/tools_views.py
+msgid "Word selection entropy"
+msgstr "단어 선택"
+
+#. Label to allow user to default entropy as all-zeros
+#: src/seedsigner/views/tools_views.py
+msgid "Finalize with zeros"
+msgstr "0으로 채워 완료"
+
+#. label to calculate the last word of a BIP-39 mnemonic seed phrase
+#: src/seedsigner/views/tools_views.py
+msgid "Final Word Calc"
+msgstr "마지막 단어 계산"
+
+#: src/seedsigner/views/tools_views.py
+msgid "Load seed"
+msgstr "시드 불러오기"
+
+#: src/seedsigner/views/tools_views.py
+msgid "Scan wallet descriptor"
+msgstr "지갑 descriptor 스캔"
+
+#. label for addresses where others send us incoming payments
+#: src/seedsigner/views/tools_views.py
+msgid "Receive addresses"
+msgstr "입금 주소"
+
+#. label for addresses that collect the change from our own outgoing payments
+#: src/seedsigner/views/tools_views.py
+msgid "Change addresses"
+msgstr "잔돈 주소"
+
+#. Multisig policy. For a "2 / 3 multisig" policy, "threshold" = 2; "n" = 3
+#: src/seedsigner/views/tools_views.py
+msgid "{threshold} / {n} multisig"
+msgstr "{threshold} / {n} 다중 서명"
+
+#. a status message that our payment addresses are being calculated
+#: src/seedsigner/views/tools_views.py
+msgid "Calculating addrs..."
+msgstr "주소 계산 중..."
+
+#: src/seedsigner/views/tools_views.py
+msgid "Custom Derivation address explorer not yet implemented"
+msgstr "사용자 지정 파생 경로용 주소 탐색기는 아직 지원되지 않습니다."
+
+#: src/seedsigner/views/tools_views.py
+msgid "Single sig descriptors not yet supported"
+msgstr "단일 서명 discriptor는 아직 지원되지 않습니다."
+
+#: src/seedsigner/views/tools_views.py
+msgid "Receive Addrs"
+msgstr "입금 주소"
+
+#: src/seedsigner/views/tools_views.py
+msgid "Change Addrs"
+msgstr "잔돈 주소"
+
+#: src/seedsigner/views/view.py
+msgid "Scan"
+msgstr "스캔"
+
+#: src/seedsigner/views/view.py
+msgid "Seeds"
+msgstr "시드"
+
+#: src/seedsigner/views/view.py
+msgid "Restart"
+msgstr "재시작"
+
+#: src/seedsigner/views/view.py
+msgid "Power off"
+msgstr "전원 끄기"
+
+#: src/seedsigner/views/view.py
+msgid "Reset / Power"
+msgstr "재시작 / 전원"
+
+#: src/seedsigner/views/view.py
+msgid "This is still on our to-do list!"
+msgstr "추후 구현 예정입니다!"
+
+#: src/seedsigner/views/view.py
+msgid "Work In Progress"
+msgstr "작업중"
+
+#: src/seedsigner/views/view.py
+msgid "Not Yet Implemented"
+msgstr "아직 구현되지 않았습니다"
+
+#: src/seedsigner/views/view.py
+msgid "Back to main menu"
+msgstr "메뉴로 돌아가기"
+
+#. The network setting (mainnet/testnet/regtest) doesn't match the provided
+#. derivation path
+#: src/seedsigner/views/view.py
+msgid "Network Mismatch"
+msgstr "네트워크 불일치"
+
+#. Button option to alter a setting
+#: src/seedsigner/views/view.py
+msgid "Change Setting"
+msgstr "설정 변경"
+
+#. "network" will be mainnet/testnet/regtest.
+#: src/seedsigner/views/view.py
+msgid "Current network setting ({network}) doesn't match {derivation_path}."
+msgstr "현재 네트워크({network})이(가) {derivation_path}와 맞지 않습니다."
+
+#: src/seedsigner/views/view.py
+msgid "System Error"
+msgstr "시스템 오류"
+
+#: src/seedsigner/views/view.py
+msgid "Hardware Error"
+msgstr "하드웨어 오류"
+
+#: src/seedsigner/views/view.py
+msgid "Cannot access camera"
+msgstr "카메라 접근 불가"
+
+#: src/seedsigner/views/view.py
+msgid "Disconnect power and check for a loose camera connection."
+msgstr "전원을 끄고 카메라 연결 상태를 확인하세요."
+
+#: src/seedsigner/views/view.py
+msgid "Update setting"
+msgstr "설정 변경"
+
+#. Inserts the name of a settings option (e.g. "Persistent Settings" is
+#. currently...)
+#: src/seedsigner/views/view.py
+msgid "\"{}\" is currently disabled in Settings."
+msgstr "“{}\"는 현재 비활성화되어 있습니다."
+
+#: src/seedsigner/views/view.py
+msgid "Option Disabled"
+msgstr "옵션 비활성화"
+
+#: src/seedsigner/views/view.py
+msgid "Action Required"
+msgstr "조치 필요"
+
+#: src/seedsigner/views/view.py
+msgid ""
+"You must remove the\n"
+"MicroSD card to continue."
+msgstr "계속하려면 MicroSD 카드를 제거해야 합니다."
