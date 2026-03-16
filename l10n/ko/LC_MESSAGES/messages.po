@@ -167,7 +167,7 @@ msgstr "#"
 
 #: src/seedsigner/gui/screens/psbt_screens.py
 msgid "Address verified!"
-msgstr "주소 검증 완료! "
+msgstr "주소 검증 완료!"
 
 #. Shown when displaying OP_RETURN as non-human-readable hexadecimal data
 #: src/seedsigner/gui/screens/psbt_screens.py
@@ -180,12 +180,12 @@ msgstr "트랜잭션 서명"
 
 #: src/seedsigner/gui/screens/psbt_screens.py
 msgid "Click to approve this transaction"
-msgstr "클릭하여 거래에 서명하세요."
+msgstr "이 트랜잭션을 승인하려면 클릭하세요."
 
 #: src/seedsigner/gui/screens/scan_screens.py
 #: src/seedsigner/gui/screens/tools_screens.py
 msgid "back"
-msgstr "뒤로"
+msgstr "뒤로 가기"
 
 #. Inserts the percentage value of the animated QR scan progress
 #: src/seedsigner/gui/screens/scan_screens.py
@@ -259,7 +259,7 @@ msgstr "언제든 전원을 분리해도 안전합니다."
 
 #: src/seedsigner/gui/screens/seed_screens.py
 msgid "Finalize Seed"
-msgstr " 시드 확정"
+msgstr "시드 확정"
 
 #. a label for the shortened Key-id of a BIP-32 master HD wallet
 #: src/seedsigner/gui/screens/seed_screens.py
@@ -271,7 +271,7 @@ msgstr "지갑 ID"
 #. Displays the page number and total: (e.g. page 1 of 6)
 #: src/seedsigner/gui/screens/seed_screens.py
 msgid "Seed Words: {}/{}"
-msgstr "시드 단어: {}/{} "
+msgstr "시드 단어: {}/{}"
 
 #: src/seedsigner/gui/screens/seed_screens.py
 msgid "BIP-85 Index"
@@ -402,7 +402,7 @@ msgstr "다중서명 지갑 descriptor를 불러 '나에게 송금'을 포함한
 
 #: src/seedsigner/gui/screens/seed_screens.py
 msgid "Descriptor Loaded"
-msgstr "Descriptor 불러옴"
+msgstr "디스크립터 불러오기 완료"
 
 #. Label for the multisig wallet's signing policy (e.g. 2-of-3)
 #: src/seedsigner/gui/screens/seed_screens.py
@@ -576,7 +576,7 @@ msgstr "주소 탐색기"
 #. a label for a BIP-380-ish Output Descriptor
 #: src/seedsigner/gui/screens/tools_screens.py
 msgid "Wallet descriptor"
-msgstr "지갑 descriptor"
+msgstr "지갑 디스크립터"
 
 #. Insert the number of addrs displayed per screen (e.g. "Next 10")
 #: src/seedsigner/gui/screens/tools_screens.py
@@ -656,7 +656,7 @@ msgstr "Regtest"
 
 #: src/seedsigner/models/settings_definition.py
 msgid "Store Settings on SD card"
-msgstr "설정을 SD 카드에 저장합니다"
+msgstr "설정을 SD 카드에 저장"
 
 #: src/seedsigner/models/settings_definition.py
 msgid "Insert SD card to enable"
@@ -904,7 +904,7 @@ msgstr "나에게 송금 검증 중..."
 #. Variable is either "change" or "self-transfer".
 #: src/seedsigner/views/psbt_views.py
 msgid "Transaction's {} address could not be verified from wallet descriptor."
-msgstr "지갑 descriptor에서 {} 주소를 검증할 수 없습니다."
+msgstr "지갑 디스크립터에서 {} 주소를 검증할 수 없습니다."
 
 #. Variable is either "change" or "self-transfer".
 #: src/seedsigner/views/psbt_views.py
@@ -973,11 +973,11 @@ msgstr "시드QR이 아닙니다."
 
 #: src/seedsigner/views/scan_views.py src/seedsigner/views/seed_views.py
 msgid "Scan descriptor"
-msgstr "descriptor 스캔"
+msgstr "디스크립터 스캔"
 
 #: src/seedsigner/views/scan_views.py
 msgid "Expected a wallet descriptor QR"
-msgstr "지갑 descriptor QR이 아닙니다."
+msgstr "지갑 디스크립터 QR이 아닙니다."
 
 #: src/seedsigner/views/scan_views.py
 msgid "Scan address QR"
@@ -1063,7 +1063,7 @@ msgstr "잘못된 니모닉!"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Checksum failure; not a valid seed phrase."
-msgstr "체크섬 오류; 유효한 시드가 아닙니다"
+msgstr "체크섬 오류로 유효한 시드 문구가 아닙니다."
 
 #: src/seedsigner/views/seed_views.py
 msgid "Done"
@@ -1095,7 +1095,7 @@ msgstr "패스프레이즈를 건너뛸까요?"
 
 #: src/seedsigner/views/seed_views.py
 msgid "You have not entered a passphrase yet."
-msgstr "아직 패스프레이즈를 입력하지 않았습니다"
+msgstr "아직 패스프레이즈를 입력하지 않았습니다."
 
 #: src/seedsigner/views/seed_views.py
 msgid "Keep seed"
@@ -1282,7 +1282,7 @@ msgstr "시드QR 확인할까요?"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Scan your SeedQR"
-msgstr "SeedQR를 스캔하세요"
+msgstr "SeedQR을 스캔하세요"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Error!"
@@ -1422,7 +1422,7 @@ msgstr "시드 불러오기"
 
 #: src/seedsigner/views/tools_views.py
 msgid "Scan wallet descriptor"
-msgstr "지갑 descriptor 스캔"
+msgstr "지갑 디스크립터 스캔"
 
 #. label for addresses where others send us incoming payments
 #: src/seedsigner/views/tools_views.py
@@ -1445,7 +1445,7 @@ msgstr "사용자 지정 파생 경로용 주소 탐색기는 아직 지원되�
 
 #: src/seedsigner/views/tools_views.py
 msgid "Single sig descriptors not yet supported"
-msgstr "단일 서명 discriptor는 아직 지원되지 않습니다."
+msgstr "단일 서명 디스크립터는 아직 지원되지 않습니다."
 
 #: src/seedsigner/views/tools_views.py
 msgid "Receive Addrs"
@@ -1531,7 +1531,7 @@ msgstr "설정 변경"
 #. currently...)
 #: src/seedsigner/views/view.py
 msgid "\"{}\" is currently disabled in Settings."
-msgstr "“{}\"는 현재 비활성화되어 있습니다."
+msgstr "\"{}\"는 현재 설정에서 비활성화되어 있습니다."
 
 #: src/seedsigner/views/view.py
 msgid "Option Disabled"
