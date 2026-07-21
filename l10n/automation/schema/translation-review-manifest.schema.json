@@ -1,0 +1,189 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/SeedSigner/seedsigner-translations/dev/l10n/automation/schema/translation-review-manifest.schema.json",
+  "title": "SeedSigner translation review manifest",
+  "description": "Summary of a translation PR's screenshot diff and check results, produced by the read-only review workflow and consumed by the trusted report workflow. The producing job runs untrusted PR code, so this manifest is treated as untrusted data: the consumer validates it against this schema and its trust anchors, and only touches artifact files whose names this manifest lists.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "stream",
+    "generated_at",
+    "repository",
+    "pr",
+    "screenshots",
+    "checks"
+  ],
+  "properties": {
+    "schema_version": {
+      "description": "Manifest format version. Consumers must reject versions they do not understand.",
+      "const": "1.0"
+    },
+    "stream": {
+      "const": "translation-review"
+    },
+    "generated_at": {
+      "type": "string",
+      "maxLength": 40
+    },
+    "repository": {
+      "description": "owner/name of the repo the producing run executed in; must equal the consumer's own repository.",
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$",
+      "maxLength": 140
+    },
+    "pr": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["number", "head_sha", "base_ref"],
+      "properties": {
+        "number": { "type": "integer", "minimum": 1 },
+        "head_sha": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+        "base_ref": { "type": "string", "minLength": 1, "maxLength": 200 }
+      }
+    },
+    "screenshots": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["added", "removed", "changed", "counts"],
+      "properties": {
+        "added": { "$ref": "#/$defs/fragmentList" },
+        "removed": { "$ref": "#/$defs/fragmentList" },
+        "changed": { "$ref": "#/$defs/fragmentList" },
+        "counts": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["added", "removed", "changed", "total_before", "total_after"],
+          "properties": {
+            "added": { "$ref": "#/$defs/count" },
+            "removed": { "$ref": "#/$defs/count" },
+            "changed": { "$ref": "#/$defs/count" },
+            "total_before": { "$ref": "#/$defs/count" },
+            "total_after": { "$ref": "#/$defs/count" }
+          }
+        }
+      }
+    },
+    "checks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["placeholder", "overflow"],
+      "properties": {
+        "placeholder": {
+          "oneOf": [
+            { "type": "null" },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["issues", "checked_locales", "counts"],
+              "properties": {
+                "issues": {
+                  "type": "array",
+                  "maxItems": 1000,
+                  "items": { "$ref": "#/$defs/placeholderIssue" }
+                },
+                "checked_locales": {
+                  "type": "array",
+                  "maxItems": 100,
+                  "items": { "$ref": "#/$defs/locale" }
+                },
+                "counts": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["issues", "locales_with_issues"],
+                  "properties": {
+                    "issues": { "$ref": "#/$defs/count" },
+                    "locales_with_issues": { "$ref": "#/$defs/count" }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "overflow": {
+          "description": "Overflow scan output: locale -> list of overflow events.",
+          "oneOf": [
+            { "type": "null" },
+            {
+              "type": "object",
+              "maxProperties": 100,
+              "propertyNames": { "pattern": "^[A-Za-z][A-Za-z0-9_]{0,19}$" },
+              "additionalProperties": {
+                "type": "array",
+                "maxItems": 1000,
+                "items": { "$ref": "#/$defs/overflowEvent" }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "notes": {
+      "type": "array",
+      "maxItems": 20,
+      "items": { "type": "string", "maxLength": 1000 }
+    }
+  },
+  "$defs": {
+    "count": { "type": "integer", "minimum": 0 },
+    "locale": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_]{0,19}$"
+    },
+    "fragment": {
+      "description": "Screenshot path fragment: <locale>/<section>/<ScreenshotName>.png. The character allowlist is what makes manifest-listed names safe to use as file paths.",
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_]{0,19}/[a-z0-9_]{1,60}/[A-Za-z0-9_.-]{1,120}\\.png$",
+      "maxLength": 200
+    },
+    "fragmentList": {
+      "type": "array",
+      "maxItems": 5000,
+      "items": { "$ref": "#/$defs/fragment" }
+    },
+    "placeholderIssue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["locale", "msgctxt", "msgid", "form", "problem", "expected", "found", "fuzzy"],
+      "properties": {
+        "locale": { "$ref": "#/$defs/locale" },
+        "msgctxt": {
+          "oneOf": [{ "type": "null" }, { "type": "string", "maxLength": 500 }]
+        },
+        "msgid": { "type": "string", "maxLength": 5000 },
+        "form": { "type": "string", "pattern": "^msgstr(\\[[0-9]{1,3}\\])?$" },
+        "problem": { "enum": ["mismatch", "malformed"] },
+        "expected": {
+          "type": "array",
+          "maxItems": 50,
+          "items": { "type": "string", "maxLength": 200 }
+        },
+        "found": {
+          "oneOf": [
+            { "type": "null" },
+            { "type": "array", "maxItems": 50, "items": { "type": "string", "maxLength": 200 } }
+          ]
+        },
+        "fuzzy": { "type": "boolean" }
+      }
+    },
+    "overflowEvent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["event_type", "screen_name", "locale", "component_text", "overflow_px",
+                   "component_type", "screen_y", "effective_height", "msgid", "msgstr"],
+      "properties": {
+        "event_type": { "enum": ["bounds", "collision"] },
+        "screen_name": { "type": "string", "pattern": "^[A-Za-z0-9_.-]{1,120}$" },
+        "locale": { "$ref": "#/$defs/locale" },
+        "component_text": { "type": "string", "maxLength": 5000 },
+        "overflow_px": { "type": "integer", "minimum": 0, "maximum": 10000 },
+        "component_type": { "type": "string", "maxLength": 100 },
+        "screen_y": { "type": "integer", "minimum": -10000, "maximum": 10000 },
+        "effective_height": { "type": "integer", "minimum": 0, "maximum": 100000 },
+        "msgid": { "type": "string", "maxLength": 5000 },
+        "msgstr": { "type": "string", "maxLength": 5000 }
+      }
+    }
+  }
+}
