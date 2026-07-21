@@ -1,4 +1,15 @@
-# l10n translations bridge: operator setup
+# l10n automation: operator setup
+
+Two independent pieces, configured in different places:
+
+- **The translations bridge** (`l10n-translations-bridge.yml`) runs in a
+  bot-owned fork; all of its configuration lives on the BOT FORK.
+- **The translation review** (`l10n-translation-review.yml` and
+  `l10n-translation-review-report.yml`) runs in this repository on every
+  translation PR; its configuration lives HERE (and stays empty on forks,
+  where the report workflow then no-ops).
+
+## Part 1: the translations bridge
 
 `l10n-translations-bridge.yml` brings Transifex translations into this repository
 as one pull request per locale. It runs in a bot-owned fork of this repo, never in
@@ -6,9 +17,9 @@ this repo itself: it stays inert here because it activates only when
 `L10N_TRANSLATIONS_UPSTREAM` is set and a push lands on the Transifex write branch,
 neither of which is true upstream.
 
-All configuration below therefore lives on the BOT FORK, never on this repository.
-Setting these on the upstream repo would make it try to open pull requests into
-itself.
+All configuration in Part 1 therefore lives on the BOT FORK, never on this
+repository. Setting these on the upstream repo would make it try to open pull
+requests into itself.
 
 ## Topology
 
@@ -115,6 +126,62 @@ read-only-producer / trusted-consumer split the other workflows use.
 
 ## First-time PR CI approval
 
-This repo's `tests.yml` runs on `pull_request`. The first PR from the bot fork hits
-GitHub's first-time-contributor gate; a maintainer approves it once in the Actions
-tab, after which runs from that fork proceed automatically.
+This repo's `pull_request` workflows (`tests.yml` and the review) run on every
+PR. The first PR from the bot fork hits GitHub's first-time-contributor gate; a
+maintainer approves it once in the Actions tab, after which runs from that fork
+proceed automatically.
+
+## Part 2: the translation review
+
+The review pair runs in this repository. The producer
+(`l10n-translation-review.yml`) needs no configuration at all: it has no
+secrets, and it resolves the main repo as `<this repo's owner>/seedsigner`,
+which points at the production repo here and at the matching fork in a test
+topology. It does require the overflow scanner to be present on that repo's
+`dev` branch.
+
+The report workflow (`l10n-translation-review-report.yml`) publishes each PR's
+review page to a bot fork's `gh-pages` branch and maintains the PR comment. It
+no-ops until the variable and secrets below are set, so forks of this repo
+stay inert.
+
+### Pages fork (one-time)
+
+The per-PR pages are hosted on the bot fork so that this repository never
+carries a `contents: write` credential:
+
+1. On the bot fork (`<bot>/seedsigner-translations`), the report workflow
+   creates and maintains the `gh-pages` branch by itself; nothing to create by
+   hand.
+2. After the first deploy, enable Pages on the bot fork: Settings -> Pages ->
+   Deploy from a branch -> `gh-pages` / root. Pages served from a public fork
+   are public; that is fine, they contain only rendered screenshots of public
+   translations.
+3. Each PR's page then appears at
+   `https://<bot>.github.io/seedsigner-translations/pr-<n>/`.
+
+### Repository variable (on this repo)
+
+| Variable | Example | Notes |
+| --- | --- | --- |
+| `L10N_PAGES_FORK` | `<bot>/seedsigner-translations` | The fork whose `gh-pages` hosts the review pages. Empty means the report workflow no-ops. |
+
+### Repository secrets (on this repo)
+
+The page deploy authenticates as a GitHub App and mints a short-lived token
+scoped to `contents: write` on the Pages fork only. The PR comment needs no
+App at all: it uses the workflow's own default token (`pull-requests: write`).
+
+| Secret | Value |
+| --- | --- |
+| `L10N_PAGES_CLIENT_ID` | Pages App Client ID |
+| `L10N_PAGES_PRIVATE_KEY` | Pages App private key (`.pem` contents) |
+
+In production this is its own App carrying only `Contents: Read & write`,
+installed on the bot fork only. For testing you may reuse the bridge's Fork
+App (it already has `contents: write` on the bot fork) and put its Client ID
+and key in these secrets; the minted token is down-scoped either way.
+
+Note the split: the bridge's secrets live on the bot fork (the bridge runs
+there); the review's secrets live here (the report workflow runs here). The
+two do not share configuration even when they share an App.
