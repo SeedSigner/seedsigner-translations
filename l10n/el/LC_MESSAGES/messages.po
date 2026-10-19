@@ -5,6 +5,7 @@
 # 
 # Translators:
 # BTC Husband, 2025
+# j vasilo <tlauncher@corpz.aleeas.com>, 2026
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-03-05 22:02+0000\n"
 "PO-Revision-Date: 2022-04-29 13:50+0000\n"
-"Last-Translator: BTC Husband, 2025\n"
+"Last-Translator: j vasilo <tlauncher@corpz.aleeas.com>, 2026\n"
 "Language-Team: Greek (https://app.transifex.com/seedsigner/teams/135832/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -57,11 +58,11 @@ msgstr "Η κάρτα SD τοποθετήθηκε"
 
 #: src/seedsigner/gui/screens/psbt_screens.py
 msgid "Review Transaction"
-msgstr ""
+msgstr "Έλεγχος Συναλλαγής"
 
 #: src/seedsigner/gui/screens/psbt_screens.py
 msgid "Review details"
-msgstr ""
+msgstr "Έλεγχος στοιχείων"
 
 #: src/seedsigner/gui/screens/psbt_screens.py
 msgid "1 input"
@@ -123,11 +124,11 @@ msgstr "ρέστα-διεύθυνση ρέστων"
 
 #: src/seedsigner/gui/screens/psbt_screens.py
 msgid "Transaction Math"
-msgstr ""
+msgstr "Υπολογισμός Συναλλαγής "
 
 #: src/seedsigner/gui/screens/psbt_screens.py
 msgid "Review recipients"
-msgstr ""
+msgstr "Επανεξέταση παραληπτών"
 
 #: src/seedsigner/gui/screens/psbt_screens.py
 msgid "input"
@@ -144,7 +145,7 @@ msgstr[1] "παραλήπτες"
 #. Denonination is inserted (e.g. your "btc change" or "sats change")
 #: src/seedsigner/gui/screens/psbt_screens.py
 msgid "{} change"
-msgstr "{} ρέστα-διεύθυνση ρέστων"
+msgstr "{} διεύθυνση ρέστων"
 
 #. Describes the address type (change or receive)
 #: src/seedsigner/gui/screens/psbt_screens.py
@@ -161,7 +162,7 @@ msgstr "διεύθυνσης παραλαβής"
 #. Symbol for index number, e.g. "address #3"
 #: src/seedsigner/gui/screens/psbt_screens.py
 msgid "#"
-msgstr ""
+msgstr "#"
 
 #: src/seedsigner/gui/screens/psbt_screens.py
 msgid "Address verified!"
@@ -174,7 +175,7 @@ msgstr "δεδομένα raw hex"
 
 #: src/seedsigner/gui/screens/psbt_screens.py
 msgid "Sign Transaction"
-msgstr ""
+msgstr "Υπογράψτε τη συναλλαγή"
 
 #: src/seedsigner/gui/screens/psbt_screens.py
 msgid "Click to approve this transaction"
@@ -222,7 +223,7 @@ msgstr "Διαρροή ιδιωτικότητας!"
 
 #: src/seedsigner/gui/screens/screen.py
 msgid "I understand"
-msgstr ""
+msgstr "Κατανοώ"
 
 #: src/seedsigner/gui/screens/screen.py
 msgid "Classified Info!"
@@ -245,7 +246,7 @@ msgid ""
 msgstr ""
 "Το SeedSigner επανεκκινείται.\n"
 "\n"
-"Όλα τα δεδομένα στην μνήμη θα διαγραφούν"
+"Όλα τα δεδομένα στην μνήμη θα διαγραφούν."
 
 #: src/seedsigner/gui/screens/screen.py
 msgid "Just Unplug It"
@@ -290,7 +291,7 @@ msgstr "Διαδρομή παραγώγισης-Derivation Path"
 #: src/seedsigner/gui/screens/seed_screens.py
 #: src/seedsigner/views/seed_views.py
 msgid "Export xpub"
-msgstr ""
+msgstr "Εξαγωγή xpub"
 
 #: src/seedsigner/gui/screens/seed_screens.py
 msgid "Xpub Details"
@@ -433,7 +434,7 @@ msgstr "Επιβεβαίωση διεύθυνσης"
 #: src/seedsigner/gui/screens/seed_screens.py
 #: src/seedsigner/views/seed_views.py
 msgid "Sign message"
-msgstr ""
+msgstr "Υπογραφή μηνύματος"
 
 #: src/seedsigner/gui/screens/seed_screens.py
 msgid "derivation path"
@@ -606,17 +607,17 @@ msgstr "Απαιτείται"
 #. QR code format option; "default" = this is the format most wallets use
 #: src/seedsigner/models/settings_definition.py
 msgid "Animated (default)"
-msgstr ""
+msgstr "Κινούμενο (προεπιλογή)"
 
 #. QR code format option (static = single frame, not animated)
 #: src/seedsigner/models/settings_definition.py
 msgid "Static"
-msgstr ""
+msgstr "Στατικό"
 
 #. QR code format option: old format that Specter Desktop used to use
 #: src/seedsigner/models/settings_definition.py
 msgid "Specter legacy"
-msgstr ""
+msgstr "Specter legacy"
 
 #: src/seedsigner/models/settings_definition.py
 msgid "BTC"
@@ -714,13 +715,13 @@ msgstr "Προσαρμοσμένη παραγώγιση"
 #. MicroSD notification duration setting - Display notification for 5 seconds
 #: src/seedsigner/models/settings_definition.py
 msgid "5 seconds"
-msgstr ""
+msgstr "5 Δευτερόλεπτα"
 
 #. MicroSD notification duration setting - Display notification until the SD
 #. card is removed
 #: src/seedsigner/models/settings_definition.py
 msgid "Until SD removed"
-msgstr ""
+msgstr "Έως την εξαγωγή της SD"
 
 #. Terminology used by Electrum seeds; equivalent to BIP-39 passphrase
 #: src/seedsigner/models/settings_definition.py
@@ -761,7 +762,7 @@ msgstr "Τύποι script"
 
 #: src/seedsigner/models/settings_definition.py
 msgid "Xpub QR format"
-msgstr ""
+msgstr "Xpub QR Format"
 
 #: src/seedsigner/models/settings_definition.py
 msgid "Show xpub details"
@@ -793,7 +794,7 @@ msgstr "Μόνο Native SegWit"
 
 #: src/seedsigner/models/settings_definition.py
 msgid "MicroSD notification duration"
-msgstr ""
+msgstr "Διάρκεια ειδοποιήσεων MicroSD"
 
 #: src/seedsigner/models/settings_definition.py
 msgid "Message signing"
@@ -819,12 +820,12 @@ msgstr "Εμφάνιση λογοτύπων συνεργατών"
 #. ili9341)
 #: src/seedsigner/models/settings_definition.py
 msgid "Display type"
-msgstr ""
+msgstr "Τύπος προβολής"
 
 #. Hardware settings option to invert how the screen driver displays colors.
 #: src/seedsigner/models/settings_definition.py
 msgid "Invert colors"
-msgstr ""
+msgstr "Αναστροφή χρωμάτων"
 
 #: src/seedsigner/models/settings_definition.py
 msgid "QR background color"
@@ -866,13 +867,15 @@ msgstr "Ανάλυση PSBT…"
 
 #: src/seedsigner/views/psbt_views.py
 msgid "Unsupported Script Type!"
-msgstr "Μη υποστηριζόμενος τύπος script!"
+msgstr "Μη υποστηριζόμενος Type Script!"
 
 #: src/seedsigner/views/psbt_views.py
 msgid ""
 "Transaction has unsupported input script type, please verify your change "
 "addresses."
 msgstr ""
+"Μη υποστηριζόμενος τύπος input script. Παρακαλούμε ελέγξτε τις διευθύνσεις "
+"ρέστων."
 
 #: src/seedsigner/views/psbt_views.py src/seedsigner/views/view.py
 msgid "Continue"
@@ -888,7 +891,7 @@ msgstr "Πλήρης δαπάνη!"
 msgid ""
 "This transaction spends its entire input value. No change is coming back to "
 "your wallet."
-msgstr ""
+msgstr "Αυτή η συναλλαγή ξοδεύει όλο το ποσό input. Δεν θα υπάρξουν ρέστα."
 
 #. Future-tense used to indicate that this transaction will send this amount,
 #. as opposed to "Send" on its own which could be misread as an instant
@@ -900,15 +903,15 @@ msgstr "Θα σταλεί"
 
 #: src/seedsigner/views/psbt_views.py
 msgid "Next recipient"
-msgstr ""
+msgstr "Επόμενος παραληπτής"
 
 #: src/seedsigner/views/psbt_views.py
 msgid "Skip verification"
-msgstr ""
+msgstr "Παράλειψη επαλήθευσης"
 
 #: src/seedsigner/views/psbt_views.py
 msgid "Verify multisig change"
-msgstr ""
+msgstr "Επαλήθευση ρέστων multisig"
 
 #. The amount you're receiving back from the transaction
 #: src/seedsigner/views/psbt_views.py
@@ -921,7 +924,7 @@ msgstr "Μεταφορά στον εαυτό μου"
 
 #: src/seedsigner/views/psbt_views.py
 msgid "Verify multisig addr"
-msgstr ""
+msgstr "Επαλήθευση διευθ. multisig"
 
 #: src/seedsigner/views/psbt_views.py
 msgid "Verifying Change..."
@@ -935,15 +938,18 @@ msgstr "Επαλήθευση μεταφοράς στον εαυτό μου…"
 #: src/seedsigner/views/psbt_views.py
 msgid "Transaction's {} address could not be verified from wallet descriptor."
 msgstr ""
+"Η διεύθυνση {} της συναλλαγής δεν μπόρεσε να επαληθευτεί από το wallet "
+"descriptor."
 
 #. Variable is either "change" or "self-transfer".
 #: src/seedsigner/views/psbt_views.py
 msgid "Transaction's {} address could not be generated from your seed."
 msgstr ""
+"Η διεύθυνση {} της συναλλαγής δεν μπόρεσε να δημιουργηθεί από το seed σας."
 
 #: src/seedsigner/views/psbt_views.py
 msgid "Suspicious Transaction"
-msgstr ""
+msgstr "Ύποπτη συναλλαγή"
 
 #: src/seedsigner/views/psbt_views.py
 msgid "Address Verification Failed"
@@ -951,19 +957,19 @@ msgstr "Αποτυχία επαλήθευσης διεύθυνσης"
 
 #: src/seedsigner/views/psbt_views.py
 msgid "Discard transaction"
-msgstr ""
+msgstr "Ακύρωση συναλλαγής"
 
 #: src/seedsigner/views/psbt_views.py
 msgid "Approve transaction"
-msgstr ""
+msgstr "Έγκριση συναλλαγής"
 
 #: src/seedsigner/views/psbt_views.py
 msgid "Select different seed"
-msgstr ""
+msgstr "Επιλογή άλλου seed"
 
 #: src/seedsigner/views/psbt_views.py
 msgid "Transaction Error"
-msgstr ""
+msgstr "Σφάλμα συναλλαγής"
 
 #: src/seedsigner/views/psbt_views.py
 msgid "Signing Failed"
@@ -987,11 +993,11 @@ msgstr "Λανθασμένος τύπος QR"
 
 #: src/seedsigner/views/scan_views.py
 msgid "Scan Transaction"
-msgstr ""
+msgstr "Σάρωση Συναλλαγής"
 
 #: src/seedsigner/views/scan_views.py
 msgid "Expected a transaction"
-msgstr ""
+msgstr "Αναμένεται συναλλαγή"
 
 #: src/seedsigner/views/scan_views.py
 msgid "Scan SeedQR"
@@ -1029,7 +1035,7 @@ msgstr ""
 
 #: src/seedsigner/views/scan_views.py src/seedsigner/views/view.py
 msgid "Back to Main Menu"
-msgstr ""
+msgstr "Πίσω στην αρχική"
 
 #. This is on the opening splash screen, displayed above the HRF logo
 #: src/seedsigner/views/screensaver.py
@@ -1074,7 +1080,7 @@ msgstr "Δημιουργία seed"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Load a Seed"
-msgstr ""
+msgstr "Φόρτωση seed"
 
 #. Inserts the word number (e.g. "Seed Word #6")
 #: src/seedsigner/views/seed_views.py
@@ -1083,7 +1089,7 @@ msgstr "Λέξη seed #{}"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Review & edit"
-msgstr ""
+msgstr "Έλεγχος και επεξεργασία"
 
 #: src/seedsigner/views/seed_views.py src/seedsigner/views/tools_views.py
 msgid "Discard"
@@ -1111,7 +1117,7 @@ msgstr "Απόρριψη συνθηματικής φράσης"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Skip passphrase"
-msgstr ""
+msgstr "Παράλειψη passphrase"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Discard passphrase?"
@@ -1119,19 +1125,19 @@ msgstr "Να απορριφθεί η συνθηματική φράση;"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Your current passphrase entry will be erased."
-msgstr ""
+msgstr "Το τρέχον passphrase θα διαγραφεί."
 
 #: src/seedsigner/views/seed_views.py
 msgid "Skip passphrase?"
-msgstr ""
+msgstr "Παράλειψη του passphrase;"
 
 #: src/seedsigner/views/seed_views.py
 msgid "You have not entered a passphrase yet."
-msgstr ""
+msgstr "Δεν έχετε εισαγάγει passphrase ακόμα."
 
 #: src/seedsigner/views/seed_views.py
 msgid "Keep seed"
-msgstr ""
+msgstr "Κρατήστε το seed"
 
 #. Inserts the seed fingerprint
 #: src/seedsigner/views/seed_views.py
@@ -1144,7 +1150,7 @@ msgstr "Απόρριψη seed;"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Electrum Warning"
-msgstr ""
+msgstr "Electrum Warning"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Some features are disabled for Electrum seeds."
@@ -1152,27 +1158,27 @@ msgstr "Ορισμένες λειτουργίες είναι απενεργοπ�
 
 #: src/seedsigner/views/seed_views.py
 msgid "Scan transaction"
-msgstr ""
+msgstr " Σάρωση συναλλαγής"
 
 #: src/seedsigner/views/seed_views.py src/seedsigner/views/tools_views.py
 msgid "Address explorer"
-msgstr ""
+msgstr "Εξερεύνηση διευθύνσεων"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Backup seed"
-msgstr ""
+msgstr "Αντιγραφή seed"
 
 #: src/seedsigner/views/seed_views.py
 msgid "BIP-85 child seed"
-msgstr ""
+msgstr "BIP-85 child seed"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Discard seed"
-msgstr ""
+msgstr "Απόρριψη seed"
 
 #: src/seedsigner/views/seed_views.py
 msgid "View seed words"
-msgstr ""
+msgstr "Εμφάνιση λέξεων seed"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Export as SeedQR"
@@ -1188,7 +1194,7 @@ msgstr "Εξαγωγή Xpub"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Xpub QR Format"
-msgstr ""
+msgstr "Xpub QR Format"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Xpub can be used to view all future transactions."
@@ -1241,7 +1247,7 @@ msgstr "Ο δείκτης παραγώγων BIP-85 πρέπει να είναι
 
 #: src/seedsigner/views/seed_views.py
 msgid "Try again"
-msgstr ""
+msgstr "Δοκιμάστε ξανά"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Verify"
@@ -1258,7 +1264,7 @@ msgstr "Επαλήθευση λέξης #{}"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Review seed words"
-msgstr ""
+msgstr "Επανεξέταση λέξεων seed"
 
 #. Inserts the word number and the word (e.g. "Word #1 is not "apple"!")
 #: src/seedsigner/views/seed_views.py
@@ -1366,16 +1372,16 @@ msgstr "Άκυρο"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Return to transaction"
-msgstr ""
+msgstr "Επιστροφή στη συναλλαγή"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Verify addr"
-msgstr ""
+msgstr "Επαλήθευση διεύθ."
 
 #. Multisig policy. For a "2 of 3" policy, "threshold" = 2; "n" = 3
 #: src/seedsigner/views/seed_views.py
 msgid "{threshold} of {n}"
-msgstr ""
+msgstr "{threshold} από {n}"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Signing messages for custom derivation paths not supported"
@@ -1389,7 +1395,7 @@ msgstr "Προχωρημένες ρυθμίσεις"
 
 #: src/seedsigner/views/settings_views.py
 msgid "Hardware"
-msgstr ""
+msgstr "Hardware"
 
 #: src/seedsigner/views/settings_views.py
 msgid "I/O test"
@@ -1403,19 +1409,19 @@ msgstr "Επιλογές προγραμματιστών"
 #. one option to be selected.
 #: src/seedsigner/views/settings_views.py
 msgid "Selection Required"
-msgstr ""
+msgstr "Απαιτείται επιλογή"
 
 #. The name of the setting being configured (e.g. "Script types") will be
 #. inserted.
 #: src/seedsigner/views/settings_views.py
 msgid "At least one option must be selected for \"{}\"."
-msgstr ""
+msgstr "Επιλέξτε τουλάχιστον μία επιλογή στο \"{}\""
 
 #. Text for the button that returns the user to the setting configuration
 #. screen.
 #: src/seedsigner/views/settings_views.py
 msgid "Return to setting"
-msgstr ""
+msgstr "Επιστροφή στις ρυθμίσεις"
 
 #: src/seedsigner/views/settings_views.py
 msgid "Persistent Settings enabled. Settings saved to SD card."
@@ -1437,7 +1443,7 @@ msgstr "Υπολογισμός 12ης/24ης λέξης"
 
 #: src/seedsigner/views/tools_views.py
 msgid "Verify address"
-msgstr ""
+msgstr "Επαλήθευση διεύθυνσης"
 
 #: src/seedsigner/views/tools_views.py src/seedsigner/views/view.py
 msgid "Tools"
@@ -1457,7 +1463,7 @@ msgstr "Μήκος μνημονικού"
 
 #: src/seedsigner/views/tools_views.py
 msgid "Calculating..."
-msgstr ""
+msgstr "Υπολογισμός..."
 
 #. Inserts the number of dice rolls needed for a 12-word mnemonic
 #: src/seedsigner/views/tools_views.py
@@ -1500,17 +1506,17 @@ msgstr "Σάρωση περιγραφέα πορτοφολιού"
 #. label for addresses where others send us incoming payments
 #: src/seedsigner/views/tools_views.py
 msgid "Receive addresses"
-msgstr ""
+msgstr "Διευθύνσεις λήψης"
 
 #. label for addresses that collect the change from our own outgoing payments
 #: src/seedsigner/views/tools_views.py
 msgid "Change addresses"
-msgstr ""
+msgstr "Διευθύνσεις ρέστων"
 
 #. Multisig policy. For a "2 / 3 multisig" policy, "threshold" = 2; "n" = 3
 #: src/seedsigner/views/tools_views.py
 msgid "{threshold} / {n} multisig"
-msgstr ""
+msgstr "{threshold} / {n} multisig"
 
 #. a status message that our payment addresses are being calculated
 #: src/seedsigner/views/tools_views.py
@@ -1549,7 +1555,7 @@ msgstr "Επανεκκίνηση"
 
 #: src/seedsigner/views/view.py
 msgid "Power off"
-msgstr ""
+msgstr "Απενεργοποίηση"
 
 #: src/seedsigner/views/view.py
 msgid "Reset / Power"
@@ -1569,7 +1575,7 @@ msgstr "Δεν έχει υλοποιηθεί ακόμα"
 
 #: src/seedsigner/views/view.py
 msgid "Back to main menu"
-msgstr ""
+msgstr "Κύριο μενού"
 
 #. The network setting (mainnet/testnet/regtest) doesn't match the provided
 #. derivation path
@@ -1585,7 +1591,7 @@ msgstr "Αλλαγή ρύθμισης"
 #. "network" will be mainnet/testnet/regtest.
 #: src/seedsigner/views/view.py
 msgid "Current network setting ({network}) doesn't match {derivation_path}."
-msgstr ""
+msgstr "Ασυμφωνία δικτύου ({network}) και derivation path {derivation_path}."
 
 #: src/seedsigner/views/view.py
 msgid "System Error"
@@ -1593,19 +1599,19 @@ msgstr "Σφάλμα συστήματος"
 
 #: src/seedsigner/views/view.py
 msgid "Hardware Error"
-msgstr ""
+msgstr "Hardware Error"
 
 #: src/seedsigner/views/view.py
 msgid "Cannot access camera"
-msgstr ""
+msgstr "Αδυναμία πρόσβασης στη κάμερα"
 
 #: src/seedsigner/views/view.py
 msgid "Disconnect power and check for a loose camera connection."
-msgstr ""
+msgstr "Αποσυνδέστε την τροφοδοσία & ελέγξτε τη σύνδεσης κάμερας."
 
 #: src/seedsigner/views/view.py
 msgid "Update setting"
-msgstr ""
+msgstr "Ενημέρωση ρυθμίσεων"
 
 #. Inserts the name of a settings option (e.g. "Persistent Settings" is
 #. currently...)
@@ -1619,10 +1625,12 @@ msgstr "Η επιλογή είναι απενεργοποιημένη"
 
 #: src/seedsigner/views/view.py
 msgid "Action Required"
-msgstr ""
+msgstr "Απαιτείται ενέργεια"
 
 #: src/seedsigner/views/view.py
 msgid ""
 "You must remove the\n"
 "MicroSD card to continue."
 msgstr ""
+"Αφαιρέστε την κάρτα \n"
+"MicroSD για να συνεχίσετε."
