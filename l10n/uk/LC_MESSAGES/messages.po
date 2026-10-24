@@ -100,12 +100,12 @@ msgstr "переказ собі"
 
 #: src/seedsigner/gui/screens/psbt_screens.py
 msgid "recipient 1"
-msgstr "отримувач 1"
+msgstr "отримув. 1"
 
 #. Inserts the recipient number (e.g. the fifth one is: "recipient 5")
 #: src/seedsigner/gui/screens/psbt_screens.py
 msgid "recipient {}"
-msgstr "отримувач {}"
+msgstr "отримув. {}"
 
 #: src/seedsigner/gui/screens/psbt_screens.py
 msgid "fee"
@@ -142,10 +142,10 @@ msgstr[3] "входи"
 #: src/seedsigner/gui/screens/psbt_screens.py
 msgid "recipient"
 msgid_plural "recipients"
-msgstr[0] "отримувач"
-msgstr[1] "отримувачі"
-msgstr[2] "отримувачів"
-msgstr[3] "отримувача"
+msgstr[0] "отримув."
+msgstr[1] "отримув."
+msgstr[2] "отримув."
+msgstr[3] "отримув."
 
 #. Denonination is inserted (e.g. your "btc change" or "sats change")
 #: src/seedsigner/gui/screens/psbt_screens.py
@@ -241,7 +241,7 @@ msgstr "Помилка"
 
 #: src/seedsigner/gui/screens/screen.py
 msgid "Restarting"
-msgstr "Перезапуск"
+msgstr "Перезап."
 
 #: src/seedsigner/gui/screens/screen.py
 msgid ""
@@ -328,7 +328,7 @@ msgstr "Кодова фраза BIP-39"
 
 #: src/seedsigner/gui/screens/seed_screens.py
 msgid "Verify Passphrase"
-msgstr "Перевірити кодову фразу"
+msgstr "Перевір. кодову фразу"
 
 #. Describes the effect of applying a BIP-39 passphrase; it changes the seed's
 #. fingerprint
@@ -374,13 +374,13 @@ msgid ""
 "Optionally scan your transcribed SeedQR to confirm that it reads back "
 "correctly."
 msgstr ""
-"За бажанням відскануйте переписаний SeedQR, щоб переконатися, що він "
-"зчитується правильно."
+"За бажанням скануйте переписаний SeedQR, щоб переконатися, що він зчитується"
+" правильно."
 
 #: src/seedsigner/gui/screens/seed_screens.py
 #: src/seedsigner/views/seed_views.py
 msgid "Verify Address"
-msgstr "Перевірити адресу"
+msgstr "Перевір. адресу"
 
 #. Inserts the nth address number (e.g. "Checking address 7")
 #: src/seedsigner/gui/screens/seed_screens.py
@@ -439,7 +439,7 @@ msgstr "Підтвердити адресу"
 #: src/seedsigner/gui/screens/seed_screens.py
 #: src/seedsigner/views/seed_views.py
 msgid "Sign message"
-msgstr "Підписати повідомлення"
+msgstr "Підпис. повідомл."
 
 #: src/seedsigner/gui/screens/seed_screens.py
 msgid "derivation path"
@@ -448,7 +448,7 @@ msgstr "шлях деривації"
 #: src/seedsigner/gui/screens/settings_screens.py
 #: src/seedsigner/views/settings_views.py src/seedsigner/views/view.py
 msgid "Settings"
-msgstr "Налаштування"
+msgstr "Налашт."
 
 #. Short for "Input/Output"; screen to make sure the buttons and camera are
 #. working properly
@@ -534,8 +534,8 @@ msgid ""
 "The {mnemonic_length}th word is built from {num_bits} more entropy bits plus"
 " auto-calculated checksum."
 msgstr ""
-"{mnemonic_length}-те слово складається з {num_bits} додаткових біт ентропії "
-"та автоматично обчисленої контрольної суми."
+"{mnemonic_length}-те слово складається з {num_bits} додатк. біт ентропії та "
+"автоматично обчисл. контрольної суми."
 
 #. current coin-flip number vs total flips (e.g. flip 3 of 4)
 #: src/seedsigner/gui/screens/tools_screens.py
@@ -612,7 +612,7 @@ msgstr "Обов'язково"
 #. QR code format option; "default" = this is the format most wallets use
 #: src/seedsigner/models/settings_definition.py
 msgid "Animated (default)"
-msgstr "Анімований (за замовч.)"
+msgstr "Анімов. (за замовч.)"
 
 #. QR code format option (static = single frame, not animated)
 #: src/seedsigner/models/settings_definition.py
@@ -726,7 +726,7 @@ msgstr "5 секунд"
 #. card is removed
 #: src/seedsigner/models/settings_definition.py
 msgid "Until SD removed"
-msgstr "Доки SD не вилучено"
+msgstr "Доки SD не вилуч."
 
 #. Terminology used by Electrum seeds; equivalent to BIP-39 passphrase
 #: src/seedsigner/models/settings_definition.py
@@ -743,11 +743,11 @@ msgstr "Мова мнемоніки"
 
 #: src/seedsigner/models/settings_definition.py
 msgid "Persistent settings"
-msgstr "Постійні налаштування"
+msgstr "Постійні налаштуван."
 
 #: src/seedsigner/models/settings_definition.py
 msgid "Denomination display"
-msgstr "Одиниці відображення"
+msgstr "Одиниці відображ."
 
 #: src/seedsigner/models/settings_definition.py
 msgid "Bitcoin network"
@@ -844,12 +844,12 @@ msgstr "Сканувати seed"
 #: src/seedsigner/views/psbt_views.py src/seedsigner/views/seed_views.py
 #: src/seedsigner/views/tools_views.py
 msgid "Enter 12-word seed"
-msgstr "Ввести seed з 12 слів"
+msgstr "Ввести seed з 12 сл."
 
 #: src/seedsigner/views/psbt_views.py src/seedsigner/views/seed_views.py
 #: src/seedsigner/views/tools_views.py
 msgid "Enter 24-word seed"
-msgstr "Ввести seed з 24 слів"
+msgstr "Ввести seed з 24 сл."
 
 #: src/seedsigner/views/psbt_views.py src/seedsigner/views/seed_views.py
 #: src/seedsigner/views/tools_views.py
@@ -872,14 +872,13 @@ msgstr "Розбір PSBT..."
 
 #: src/seedsigner/views/psbt_views.py
 msgid "Unsupported Script Type!"
-msgstr "Непідтримуваний тип скрипта!"
+msgstr "Непідтрим. тип скрипта!"
 
 #: src/seedsigner/views/psbt_views.py
 msgid ""
 "Transaction has unsupported input script type, please verify your change "
 "addresses."
-msgstr ""
-"Транзакція має непідтримуваний тип скрипта входу. Перевірте адреси решти."
+msgstr "Транзакція має непідтр. тип скрипта входу. Перевірте адреси решти."
 
 #: src/seedsigner/views/psbt_views.py src/seedsigner/views/view.py
 msgid "Continue"
@@ -930,7 +929,7 @@ msgstr "Переказ собі"
 
 #: src/seedsigner/views/psbt_views.py
 msgid "Verify multisig addr"
-msgstr "Перевірити адресу multisig"
+msgstr "Перев. адресу multisig"
 
 #: src/seedsigner/views/psbt_views.py
 msgid "Verifying Change..."
@@ -956,7 +955,7 @@ msgstr "Підозріла транзакція"
 
 #: src/seedsigner/views/psbt_views.py
 msgid "Address Verification Failed"
-msgstr "Перевірка адреси не вдалася"
+msgstr "Перевірка адр. не вдалася"
 
 #: src/seedsigner/views/psbt_views.py
 msgid "Discard transaction"
@@ -996,7 +995,7 @@ msgstr "Неправильний тип QR"
 
 #: src/seedsigner/views/scan_views.py
 msgid "Scan Transaction"
-msgstr "Відсканувати транзакцію"
+msgstr "Сканувати транзакцію"
 
 #: src/seedsigner/views/scan_views.py
 msgid "Expected a transaction"
@@ -1004,7 +1003,7 @@ msgstr "Очікувалася транзакція"
 
 #: src/seedsigner/views/scan_views.py
 msgid "Scan SeedQR"
-msgstr "Відсканувати SeedQR"
+msgstr "Сканувати SeedQR"
 
 #: src/seedsigner/views/scan_views.py
 msgid "Expected a SeedQR"
@@ -1012,7 +1011,7 @@ msgstr "Очікувався SeedQR"
 
 #: src/seedsigner/views/scan_views.py src/seedsigner/views/seed_views.py
 msgid "Scan descriptor"
-msgstr "Відсканувати дескриптор"
+msgstr "Сканув. дескриптор"
 
 #: src/seedsigner/views/scan_views.py
 msgid "Expected a wallet descriptor QR"
@@ -1020,7 +1019,7 @@ msgstr "Очікувався QR дескриптора гаманця"
 
 #: src/seedsigner/views/scan_views.py
 msgid "Scan address QR"
-msgstr "Відсканувати QR адреси"
+msgstr "Сканувати QR адреси"
 
 #: src/seedsigner/views/scan_views.py
 msgid "Expected an address QR"
@@ -1036,7 +1035,7 @@ msgstr "QR-код недійсний або має формат даних, як
 
 #: src/seedsigner/views/scan_views.py src/seedsigner/views/view.py
 msgid "Back to Main Menu"
-msgstr "Назад до головного меню"
+msgstr "Назад до головн. меню"
 
 #. This is on the opening splash screen, displayed above the HRF logo
 #: src/seedsigner/views/screensaver.py
@@ -1073,7 +1072,7 @@ msgstr "Виберіть seed для підпису"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Scan a SeedQR"
-msgstr "Відсканувати SeedQR"
+msgstr "Cканувати SeedQR"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Create a seed"
@@ -1090,11 +1089,11 @@ msgstr "Слово Seed #{}"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Review & edit"
-msgstr "Переглянути й редагувати"
+msgstr "Перегл. й редагувати"
 
 #: src/seedsigner/views/seed_views.py src/seedsigner/views/tools_views.py
 msgid "Discard"
-msgstr "Скасувати"
+msgstr "Видалити"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Invalid Mnemonic!"
@@ -1110,11 +1109,11 @@ msgstr "Готово"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Edit passphrase"
-msgstr "Редагувати кодову фразу"
+msgstr "Редаг. кодову фразу"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Discard passphrase"
-msgstr "Скасувати кодову фразу"
+msgstr "Скасув. кодову фразу"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Skip passphrase"
@@ -1151,7 +1150,7 @@ msgstr "Видалити Seed?"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Electrum Warning"
-msgstr "Попередження щодо Electrum"
+msgstr "Попер. щодо Electrum"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Some features are disabled for Electrum seeds."
@@ -1159,7 +1158,7 @@ msgstr "Деякі функції вимкнено для seed Electrum."
 
 #: src/seedsigner/views/seed_views.py
 msgid "Scan transaction"
-msgstr "Відсканувати транзакцію"
+msgstr "Сканувати транзакцію"
 
 #: src/seedsigner/views/seed_views.py src/seedsigner/views/tools_views.py
 msgid "Address explorer"
@@ -1183,7 +1182,7 @@ msgstr "Переглянути слова seed"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Export as SeedQR"
-msgstr "Експортувати як SeedQR"
+msgstr "Експорт як SeedQR"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Backup Seed"
@@ -1208,8 +1207,8 @@ msgstr "Генерація xpub..."
 #: src/seedsigner/views/seed_views.py
 msgid "You must keep your seed words private & away from all online devices."
 msgstr ""
-"Ви повинні тримати слова seed у таємниці та подалі від усіх пристроїв, "
-"підключених до інтернету."
+"Тримайте слова seed у таємниці та подалі від пристроїв, підключених до "
+"інтернету."
 
 #. Inserts the child index (e.g. "Child #0")
 #: src/seedsigner/views/seed_views.py
@@ -1230,7 +1229,7 @@ msgstr "24 слова"
 
 #: src/seedsigner/views/seed_views.py
 msgid "BIP-85 Num Words"
-msgstr "Кількість слів BIP-85"
+msgstr "Кіль-сть слів BIP-85"
 
 #: src/seedsigner/views/seed_views.py
 msgid "BIP-85 Index Error"
@@ -1263,7 +1262,7 @@ msgstr "Перевірити слово #{}"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Review seed words"
-msgstr "Переглянути слова seed"
+msgstr "Переглян. слова seed"
 
 #. Inserts the word number and the word (e.g. "Word #1 is not "apple"!")
 #: src/seedsigner/views/seed_views.py
@@ -1282,7 +1281,7 @@ msgstr "Помилка перевірки"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Backup Verified"
-msgstr "Резервну копію перевірено"
+msgstr "Рез. копію перевірено"
 
 #: src/seedsigner/views/seed_views.py
 msgid "All mnemonic backup words were successfully verified!"
@@ -1310,13 +1309,13 @@ msgstr "Формат SeedQR"
 
 #: src/seedsigner/views/seed_views.py
 msgid "SeedQR is your private key!"
-msgstr "SeedQR — це ваш приватний ключ!"
+msgstr "SeedQR це ваш приватн. ключ!"
 
 #: src/seedsigner/views/seed_views.py
 msgid ""
 "Never photograph or scan it into a device that connects to the internet."
 msgstr ""
-"Ніколи не фотографуйте його й не скануйте на пристрої, що підключається до "
+"Ніколи не фотографуйте й не скануйте на пристрої, що підключається до "
 "інтернету."
 
 #: src/seedsigner/views/seed_views.py
@@ -1329,7 +1328,7 @@ msgstr "Підтвердити SeedQR?"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Scan your SeedQR"
-msgstr "Відскануйте ваш SeedQR"
+msgstr "Скануйте ваш SeedQR"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Error!"
@@ -1432,7 +1431,7 @@ msgstr "Новий seed"
 
 #: src/seedsigner/views/tools_views.py
 msgid "Calc 12th/24th word"
-msgstr "Обчислити 12-те/24-те слово"
+msgstr "Обчисл. 12/24 слово"
 
 #: src/seedsigner/views/tools_views.py
 msgid "Verify address"
@@ -1440,7 +1439,7 @@ msgstr "Перевірити адресу"
 
 #: src/seedsigner/views/tools_views.py src/seedsigner/views/view.py
 msgid "Tools"
-msgstr "Інструменти"
+msgstr "Інстр."
 
 #: src/seedsigner/views/tools_views.py
 msgid "12 words"
@@ -1452,7 +1451,7 @@ msgstr "24 слова"
 
 #: src/seedsigner/views/tools_views.py
 msgid "Mnemonic Length"
-msgstr "Довжина мнемоніки"
+msgstr "Довж. мнемоніки"
 
 #: src/seedsigner/views/tools_views.py
 msgid "Calculating..."
@@ -1534,7 +1533,7 @@ msgstr "Адреси решти"
 
 #: src/seedsigner/views/view.py
 msgid "Scan"
-msgstr "Сканувати"
+msgstr "Сканув."
 
 #: src/seedsigner/views/view.py
 msgid "Seeds"
@@ -1546,7 +1545,7 @@ msgstr "Перезапустити"
 
 #: src/seedsigner/views/view.py
 msgid "Power off"
-msgstr "Вимкнути"
+msgstr "Вимкн."
 
 #: src/seedsigner/views/view.py
 msgid "Reset / Power"
@@ -1566,7 +1565,7 @@ msgstr "Ще не реалізовано"
 
 #: src/seedsigner/views/view.py
 msgid "Back to main menu"
-msgstr "Назад до головного меню"
+msgstr "Назад до головн. меню"
 
 #. The network setting (mainnet/testnet/regtest) doesn't match the provided
 #. derivation path
@@ -1577,7 +1576,7 @@ msgstr "Невідповідність мережі"
 #. Button option to alter a setting
 #: src/seedsigner/views/view.py
 msgid "Change Setting"
-msgstr "Змінити налаштування"
+msgstr "Змінити налашт."
 
 #. "network" will be mainnet/testnet/regtest.
 #: src/seedsigner/views/view.py
@@ -1603,7 +1602,7 @@ msgstr "Відключіть живлення та перевірте, чи на
 
 #: src/seedsigner/views/view.py
 msgid "Update setting"
-msgstr "Оновити налаштування"
+msgstr "Оновити налашт."
 
 #. Inserts the name of a settings option (e.g. "Persistent Settings" is
 #. currently...)
