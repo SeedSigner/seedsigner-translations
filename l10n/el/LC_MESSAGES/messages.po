@@ -477,9 +477,9 @@ msgid ""
 "\n"
 "Donate onchain or LN at:"
 msgstr ""
-"Το SeedSigner είναι 100%% δωρεάν & ανοικτού κώδικα, με αποκλειστική χρηματοδότηση από την κοινότητα του Bitcoin.\n"
+"Το SeedSigner είναι 100%% δωρεάν & ανοιχτού κώδικα, με χρηματοδότηση μόνο από την κοινότητα Bitcoin.\n"
 "\n"
-"Δωρεές onchain/LN στο:"
+"Δωρεές onchain/LN:"
 
 #: src/seedsigner/gui/screens/settings_screens.py
 #: src/seedsigner/views/settings_views.py
@@ -887,9 +887,7 @@ msgstr "Πλήρης δαπάνη!"
 msgid ""
 "This transaction spends its entire input value. No change is coming back to "
 "your wallet."
-msgstr ""
-"Αυτή η συναλλαγή καταναλώνει όλη την αξία input. Δεν επιστρέφονται ρέστα στο"
-" πορτοφόλι σας."
+msgstr "Η συναλλαγή καταναλώνει όλο το input. Δεν επιστρέφονται ρέστα."
 
 #. Future-tense used to indicate that this transaction will send this amount,
 #. as opposed to "Send" on its own which could be misread as an instant
@@ -935,8 +933,7 @@ msgstr "Επαλήθευση μεταφοράς στον εαυτό μου…"
 #. Variable is either "change" or "self-transfer".
 #: src/seedsigner/views/psbt_views.py
 msgid "Transaction's {} address could not be verified from wallet descriptor."
-msgstr ""
-"Η διεύθυνση {} της συναλλαγής δεν επαληθεύτηκε από το wallet descriptor."
+msgstr "Αδυναμία επαλήθευσης διεύθυνσης {} από wallet descriptor."
 
 #. Variable is either "change" or "self-transfer".
 #: src/seedsigner/views/psbt_views.py
@@ -1606,7 +1603,7 @@ msgstr "Ενημέρωση ρυθμίσεων"
 #. currently...)
 #: src/seedsigner/views/view.py
 msgid "\"{}\" is currently disabled in Settings."
-msgstr "Το \"{}\" είναι απενεργοποιημένο στις Ρυθμίσεις."
+msgstr "\"{}\" είναι απενεργοποιημένο στις Ρυθμίσεις."
 
 #: src/seedsigner/views/view.py
 msgid "Option Disabled"
