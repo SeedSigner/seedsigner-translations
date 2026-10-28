@@ -1,0 +1,1631 @@
+# Translations template for seedsigner.
+# Copyright (C) 2026 ORGANIZATION
+# This file is distributed under the same license as the seedsigner project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+# 
+# Translators:
+# bonjur, 2026
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: seedsigner 0.8.7\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-03-05 22:02+0000\n"
+"PO-Revision-Date: 2022-04-29 13:50+0000\n"
+"Last-Translator: bonjur, 2026\n"
+"Language-Team: Hungarian (https://app.transifex.com/seedsigner/teams/135832/hu/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: hu\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Testnet bitcoin
+#: src/seedsigner/gui/components.py
+msgid "tBtc"
+msgstr "tBtc"
+
+#. Testnet sats
+#: src/seedsigner/gui/components.py
+msgid "tSats"
+msgstr "tSat-ok"
+
+#: src/seedsigner/gui/components.py src/seedsigner/gui/screens/psbt_screens.py
+msgid "btc"
+msgstr "btc"
+
+#: src/seedsigner/gui/components.py src/seedsigner/gui/screens/psbt_screens.py
+#: src/seedsigner/models/settings_definition.py
+msgid "sats"
+msgstr "sat-ok"
+
+#: src/seedsigner/gui/toast.py
+msgid ""
+"You can remove\n"
+"the SD card now"
+msgstr "Eltávolíthatja az SD kártyát"
+
+#: src/seedsigner/gui/toast.py
+msgid "SD card removed"
+msgstr "SD kártya eltávolítva"
+
+#: src/seedsigner/gui/toast.py
+msgid "SD card inserted"
+msgstr "SD kártya észlelve"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "Review Transaction"
+msgstr "Tranzakció áttekintése"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "Review details"
+msgstr "Részletek áttekintése"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "1 input"
+msgstr "1 bemenet"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "input 1"
+msgstr "bemenet 1"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "input 2"
+msgstr "bemenet 2"
+
+#. Indicates that items have been omitted from a series: e.g. "1, 2, 3, [...],
+#. 8"
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "[ ... ]"
+msgstr "[ ... ]"
+
+#. Input number will be inserted (e.g. "input 3")
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "input {}"
+msgstr "bemenet {}"
+
+#. Ellipsis ("...") characters used to truncate an address (e.g. "bc1qabc...")
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "..."
+msgstr "..."
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+#: src/seedsigner/views/psbt_views.py
+msgid "self-transfer"
+msgstr "öntranszfer"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "recipient 1"
+msgstr "címzett 1"
+
+#. Inserts the recipient number (e.g. the fifth one is: "recipient 5")
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "recipient {}"
+msgstr "címzett {}"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "fee"
+msgstr "díj"
+
+#. Technical term, should probably NOT be translated in most languages
+#: src/seedsigner/gui/screens/psbt_screens.py
+#: src/seedsigner/views/psbt_views.py
+msgid "OP_RETURN"
+msgstr "OP_RETURN"
+
+#. Label for a change output in the PSBT Overview flow diagram
+#: src/seedsigner/gui/screens/psbt_screens.py
+#: src/seedsigner/views/psbt_views.py
+msgid "change"
+msgstr "visszajáró"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "Transaction Math"
+msgstr "Tranzakció számítás"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "Review recipients"
+msgstr "Címzettek áttekintése"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "input"
+msgid_plural "inputs"
+msgstr[0] "bemenet"
+msgstr[1] "bemenetek"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "recipient"
+msgid_plural "recipients"
+msgstr[0] "címzett"
+msgstr[1] "címzettek"
+
+#. Denonination is inserted (e.g. your "btc change" or "sats change")
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "{} change"
+msgstr "{} visszajáró"
+
+#. Describes the address type (change or receive)
+#: src/seedsigner/gui/screens/psbt_screens.py
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "change address"
+msgstr "visszajáró címe"
+
+#. Describes the address type (change or receive)
+#: src/seedsigner/gui/screens/psbt_screens.py
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "receive address"
+msgstr "címzett címe"
+
+#. Symbol for index number, e.g. "address #3"
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "#"
+msgstr "#"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "Address verified!"
+msgstr "Cím hitelesítve!"
+
+#. Shown when displaying OP_RETURN as non-human-readable hexadecimal data
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "raw hex data"
+msgstr "nyers hex adat"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "Sign Transaction"
+msgstr "Tranzakció aláírása"
+
+#: src/seedsigner/gui/screens/psbt_screens.py
+msgid "Click to approve this transaction"
+msgstr "Kattintson a tranzakció jóváhagyásához"
+
+#: src/seedsigner/gui/screens/scan_screens.py
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "back"
+msgstr "vissza"
+
+#. Inserts the percentage value of the animated QR scan progress
+#: src/seedsigner/gui/screens/scan_screens.py
+msgid "{}%"
+msgstr "{}%"
+
+#. Increase QR code screen brightness
+#: src/seedsigner/gui/screens/screen.py
+msgid "Brighter"
+msgstr "Világosabb"
+
+#. Decrease QR code screen brightness
+#: src/seedsigner/gui/screens/screen.py
+msgid "Darker"
+msgstr "Sötétebb"
+
+#: src/seedsigner/gui/screens/screen.py
+#: src/seedsigner/gui/screens/seed_screens.py
+#: src/seedsigner/views/seed_views.py
+msgid "Success!"
+msgstr "Siker!"
+
+#: src/seedsigner/gui/screens/screen.py
+#: src/seedsigner/gui/screens/seed_screens.py
+#: src/seedsigner/views/seed_views.py
+msgid "OK"
+msgstr "Rendben"
+
+#: src/seedsigner/gui/screens/screen.py
+msgid "Caution"
+msgstr "Vigyázat"
+
+#: src/seedsigner/gui/screens/screen.py src/seedsigner/views/seed_views.py
+msgid "Privacy Leak!"
+msgstr "Adatvédelmi szivárgás!"
+
+#: src/seedsigner/gui/screens/screen.py
+msgid "I understand"
+msgstr "Értem"
+
+#: src/seedsigner/gui/screens/screen.py
+msgid "Classified Info!"
+msgstr "Bizalmas Információ!"
+
+#: src/seedsigner/gui/screens/screen.py src/seedsigner/views/scan_views.py
+#: src/seedsigner/views/view.py
+msgid "Error"
+msgstr "Hiba"
+
+#: src/seedsigner/gui/screens/screen.py
+msgid "Restarting"
+msgstr "Újraindítás"
+
+#: src/seedsigner/gui/screens/screen.py
+msgid ""
+"SeedSigner is restarting.\n"
+"\n"
+"All in-memory data will be wiped."
+msgstr ""
+"SeedSigner újraindul.\n"
+"Minden memóriában\n"
+"tárolt adat törlődik."
+
+#: src/seedsigner/gui/screens/screen.py
+msgid "Just Unplug It"
+msgstr "Csak húzza ki"
+
+#: src/seedsigner/gui/screens/screen.py
+msgid "It is safe to disconnect power at any time."
+msgstr "Az áramellátás bármely pillanatban biztonságosan megszüntethető."
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Finalize Seed"
+msgstr "Seed véglegesítése"
+
+#. a label for the shortened Key-id of a BIP-32 master HD wallet
+#: src/seedsigner/gui/screens/seed_screens.py
+#: src/seedsigner/gui/screens/tools_screens.py
+#: src/seedsigner/views/seed_views.py
+msgid "fingerprint"
+msgstr "ujjlenyomat"
+
+#. Displays the page number and total: (e.g. page 1 of 6)
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Seed Words: {}/{}"
+msgstr "Seed szavak: {}/{}"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "BIP-85 Index"
+msgstr "BIP-85 indeksz"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Verify Backup?"
+msgstr "Biztonsági mentés ellenőrzése?"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Optionally verify that your mnemonic backup is correct."
+msgstr ""
+"Opcionálisan ellenőrizze, hogy a emlékezeterősítő biztonság mentése helyes."
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Derivation Path"
+msgstr "Származtatási út"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+#: src/seedsigner/views/seed_views.py
+msgid "Export xpub"
+msgstr "Xpub exportálása"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Xpub Details"
+msgstr "Xpub részletek"
+
+#. Short for "BIP-32 Master Fingerprint"
+#. a label for the shortened Key-id of a BIP-32 master HD wallet
+#: src/seedsigner/gui/screens/seed_screens.py
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "Fingerprint"
+msgstr "Ujjlenyomat"
+
+#. Short for "Derivation Path"
+#. a label for the derivation-path into a BIP-32 HD wallet
+#: src/seedsigner/gui/screens/seed_screens.py
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "Derivation"
+msgstr "Származtatás"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Xpub"
+msgstr "Xpub"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+#: src/seedsigner/models/settings_definition.py
+#: src/seedsigner/views/seed_views.py
+msgid "BIP-39 Passphrase"
+msgstr "BIP-39 jelszó"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Verify Passphrase"
+msgstr "Jelszó ellenőrzése"
+
+#. Describes the effect of applying a BIP-39 passphrase; it changes the seed's
+#. fingerprint
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "changes fingerprint"
+msgstr "megváltoztatja az ujjlenyomatot"
+
+#. Refers to the SeedQR type: Standard or Compact
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Standard"
+msgstr "Standard"
+
+#. Briefly explains the Standard SeedQR data format
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "BIP-39 wordlist indices"
+msgstr "BIP-39 szólista kitevők"
+
+#. Refers to the SeedQR type: Standard or Compact
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Compact"
+msgstr "Kompakt"
+
+#. Briefly explains the Compact SeedQR data format
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Raw entropy bits"
+msgstr "Nyers entrópia bitek"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Transcribe SeedQR"
+msgstr "SeedQR átírása"
+
+#. Refers to the QR code size: 21x21, 25x25, or 29x29
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Begin {}x{}"
+msgstr "{}x{} kezdése"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "click to exit"
+msgstr "Kattintson a kilépéshez"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid ""
+"Optionally scan your transcribed SeedQR to confirm that it reads back "
+"correctly."
+msgstr ""
+"Opcionálisan szkennelje a lemásolt SeedQR-t és igazolja annak hitelességét."
+
+#: src/seedsigner/gui/screens/seed_screens.py
+#: src/seedsigner/views/seed_views.py
+msgid "Verify Address"
+msgstr "Cím ellenőrzése"
+
+#. Inserts the nth address number (e.g. "Checking address 7")
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Checking address {}"
+msgstr "{}. cím ellenőrzése"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Address Verified"
+msgstr "Cím ellenőrizve"
+
+#. Describes the address index (e.g. "index 7")
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "index {}"
+msgstr "{}. kitevő"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Multisig Verification"
+msgstr "Többaláírás ellenőrzése"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid ""
+"Load your multisig wallet descriptor to verify your receive/self-transfer or"
+" change address."
+msgstr ""
+"Töltse be a többaláírásos tárca leírót a címzett/öntranszfer vagy visszajáró"
+" cím hitelesítéséhez."
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Descriptor Loaded"
+msgstr "Tárcaleíró betöltve"
+
+#. Label for the multisig wallet's signing policy (e.g. 2-of-3)
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Policy"
+msgstr "Szabály"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Signing Keys"
+msgstr "Aláíró kulcsok"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Review Message"
+msgstr "Üzenet áttekintése"
+
+#. Short for "Next step"
+#: src/seedsigner/gui/screens/seed_screens.py
+#: src/seedsigner/views/psbt_views.py src/seedsigner/views/seed_views.py
+#: src/seedsigner/views/tools_views.py
+msgid "Next"
+msgstr "Következő"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "Confirm Address"
+msgstr "Cím megerősítése"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+#: src/seedsigner/views/seed_views.py
+msgid "Sign message"
+msgstr "Üzenet aláírása"
+
+#: src/seedsigner/gui/screens/seed_screens.py
+msgid "derivation path"
+msgstr "származtatási út"
+
+#: src/seedsigner/gui/screens/settings_screens.py
+#: src/seedsigner/views/settings_views.py src/seedsigner/views/view.py
+msgid "Settings"
+msgstr "Beállítások"
+
+#. Short for "Input/Output"; screen to make sure the buttons and camera are
+#. working properly
+#: src/seedsigner/gui/screens/settings_screens.py
+msgid "I/O Test"
+msgstr "I/O teszt"
+
+#. Blank the screen
+#: src/seedsigner/gui/screens/settings_screens.py
+msgid "Clear"
+msgstr "Tisztitás"
+
+#: src/seedsigner/gui/screens/settings_screens.py
+msgid "Exit"
+msgstr "Kilépés"
+
+#: src/seedsigner/gui/screens/settings_screens.py
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "Capturing image..."
+msgstr "Kép készítése..."
+
+#: src/seedsigner/gui/screens/settings_screens.py
+#: src/seedsigner/views/settings_views.py
+msgid "Donate"
+msgstr "Adományozás"
+
+#. If your language uses the percent sign ("%"), your translation must also
+#. use
+#. two percent signs ("%%") due to python formatting oddities. "100%%" will be
+#. rendered as "100%".
+#: src/seedsigner/gui/screens/settings_screens.py
+#, python-format
+msgid ""
+"SeedSigner is 100%% free & open source, funded solely by the Bitcoin community.\n"
+"\n"
+"Donate onchain or LN at:"
+msgstr ""
+"SeedSigner 100%%-ban nyílt forráskódú,\n"
+"kizárólag a Bitcoin közösség által van támogatva.\n"
+"\n"
+"Támogasson láncon vagy LN-en:"
+
+#: src/seedsigner/gui/screens/settings_screens.py
+#: src/seedsigner/views/settings_views.py
+msgid "Settings QR"
+msgstr "Beállítások QR"
+
+#: src/seedsigner/gui/screens/settings_screens.py
+msgid "Settings updated..."
+msgstr "Beállítások frissítve..."
+
+#: src/seedsigner/gui/screens/settings_screens.py src/seedsigner/views/view.py
+msgid "Home"
+msgstr "Otthon"
+
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "click a button"
+msgstr "nyomjon egy gombot"
+
+#. A prompt to the user to either accept or reshoot the image
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "reshoot"
+msgstr "ismétlés"
+
+#. A prompt to the user to either accept or reshoot the image
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "accept"
+msgstr "elfogadás"
+
+#. current roll number vs total rolls (e.g. roll 7 of 50)
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "Dice Roll {}/{}"
+msgstr "Kockadobás {}/{}"
+
+#. Build the last word in a 12 or 24 word BIP-39 mnemonic seed phrase.
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "Build Final Word"
+msgstr "Utolsó szó építése"
+
+#. Final word calc. `mnemonic_length` = 12 or 24. `num_bits` = 7 or 3 (bits of
+#. entropy in final word).
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid ""
+"The {mnemonic_length}th word is built from {num_bits} more entropy bits plus"
+" auto-calculated checksum."
+msgstr ""
+"A {mnemonic_length}. szó még {num_bits} entrópia bitből és a kiszámított "
+"ellenőrzőösszegből épül."
+
+#. current coin-flip number vs total flips (e.g. flip 3 of 4)
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "Coin Flip {}/{}"
+msgstr "Érmedobás {}/{}"
+
+#. How we call the "front" side result during a coin toss.
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "Heads = 1"
+msgstr "Fej = 1"
+
+#. How we call the "back" side result during a coin toss.
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "Tails = 0"
+msgstr "Írás = 0"
+
+#. The additional entropy the user supplied (e.g. coin flips)
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "Your input: \"{}\""
+msgstr "Bemeneted: \"{}\""
+
+#. A function of "x" to be used for detecting errors in "x"
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "Checksum"
+msgstr "Ellenőrző összeg"
+
+#. labeled presentation of the last word in a BIP-39 mnemonic seed phrase.
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "Final Word: \"{}\""
+msgstr "Utolsó szó: \"{}\""
+
+#. a label for the last word of a 12-word BIP-39 mnemonic seed phrase
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "12th Word"
+msgstr "12. szó"
+
+#. a label for the last word of a 24-word BIP-39 mnemonic seed phrase
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "24th Word"
+msgstr "24. szó"
+
+#. a label for the tool to explore public addresses for this seed.
+#: src/seedsigner/gui/screens/tools_screens.py
+#: src/seedsigner/views/seed_views.py src/seedsigner/views/tools_views.py
+msgid "Address Explorer"
+msgstr "Címböngésző"
+
+#. a label for a BIP-380-ish Output Descriptor
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "Wallet descriptor"
+msgstr "Tárca leírása"
+
+#. Insert the number of addrs displayed per screen (e.g. "Next 10")
+#: src/seedsigner/gui/screens/tools_screens.py
+msgid "Next {}"
+msgstr "Következő {}"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Enabled"
+msgstr "Bekapcsolva"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Disabled"
+msgstr "Kikapcsolva"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Prompt"
+msgstr "Bemenet"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Required"
+msgstr "Kötelező"
+
+#. QR code format option; "default" = this is the format most wallets use
+#: src/seedsigner/models/settings_definition.py
+msgid "Animated (default)"
+msgstr "Animált (alapértelmezett)"
+
+#. QR code format option (static = single frame, not animated)
+#: src/seedsigner/models/settings_definition.py
+msgid "Static"
+msgstr "Statikus"
+
+#. QR code format option: old format that Specter Desktop used to use
+#: src/seedsigner/models/settings_definition.py
+msgid "Specter legacy"
+msgstr "Specter régi"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "BTC"
+msgstr "BTC"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Threshold at 0.01"
+msgstr "Küszöb 0.01-nél"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "BTC | sats hybrid"
+msgstr "BTC | sat-ok hibrid"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "0°"
+msgstr "0°"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "90°"
+msgstr "90°"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "180°"
+msgstr "180°"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "270°"
+msgstr "270°"
+
+#. QR code density option: Low, Medium, High
+#: src/seedsigner/models/settings_definition.py
+msgid "Low"
+msgstr "Alacsony"
+
+#. QR code density option: Low, Medium, High
+#: src/seedsigner/models/settings_definition.py
+msgid "Medium"
+msgstr "Közepes"
+
+#. QR code density option: Low, Medium, High
+#: src/seedsigner/models/settings_definition.py
+msgid "High"
+msgstr "Magas"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Mainnet"
+msgstr "Mainnet"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Testnet"
+msgstr "Testnet"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Regtest"
+msgstr "Regtest"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Store Settings on SD card"
+msgstr "Beállítások mentése az SD kártyára"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Insert SD card to enable"
+msgstr "Helyezzen be SD kártyát az engedélyezéshez"
+
+#: src/seedsigner/models/settings_definition.py
+#: src/seedsigner/views/seed_views.py
+msgid "Single Sig"
+msgstr "Egyaláírásos"
+
+#: src/seedsigner/models/settings_definition.py
+#: src/seedsigner/views/seed_views.py
+msgid "Multisig"
+msgstr "Tőbbaláírásos"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Native Segwit"
+msgstr "Native Segwit"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Nested Segwit"
+msgstr "Nested Segwit"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Legacy"
+msgstr "Legacy"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Taproot"
+msgstr "Taproot"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Custom Derivation"
+msgstr "Saját származtatás"
+
+#. MicroSD notification duration setting - Display notification for 5 seconds
+#: src/seedsigner/models/settings_definition.py
+msgid "5 seconds"
+msgstr "5 másodperc"
+
+#. MicroSD notification duration setting - Display notification until the SD
+#. card is removed
+#: src/seedsigner/models/settings_definition.py
+msgid "Until SD removed"
+msgstr "Amíg az SD kártya nincs eltávolítva"
+
+#. Terminology used by Electrum seeds; equivalent to BIP-39 passphrase
+#: src/seedsigner/models/settings_definition.py
+msgid "Custom Extension"
+msgstr "Saját kiterjesztés"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Language"
+msgstr "Nyelv"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Mnemonic language"
+msgstr "Emlékezeterősítő nyelv"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Persistent settings"
+msgstr "Megmaradó beállítások"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Denomination display"
+msgstr "Címletkijelző"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Bitcoin network"
+msgstr "Bitcoin hálózat"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "QR code density"
+msgstr "QR kód sűrűsége"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Sig types"
+msgstr "Aláírástípusok"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Script types"
+msgstr "Szkripttípusok"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Xpub QR format"
+msgstr "Xpub QR formátum"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Show xpub details"
+msgstr "Xpub részletei megjelenítése"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "BIP-39 passphrase"
+msgstr "BIP-39 jelszó"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Camera rotation"
+msgstr "Kamera elforgatás"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Compact SeedQR"
+msgstr "Kompakt SeedQR"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "BIP-85 child seeds"
+msgstr "BIP-85 gyermek seed-ek"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Electrum seeds"
+msgstr "Electrum seed-ek"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Native Segwit only"
+msgstr "Kizárólag Native Segwit"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "MicroSD notification duration"
+msgstr "MicroSD értesítés időtartama"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Message signing"
+msgstr "Üzenet aláírása"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Show privacy warnings"
+msgstr "Adatvédelmi figyelmeztetések megjelenítése"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Show dire warnings"
+msgstr "Komoly figyelmeztetések megjelenítése"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Show QR brightness tips"
+msgstr "QR fényerejének tippjei megjelenítése"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "Show partner logos"
+msgstr "Partnerlogók megjelenítése"
+
+#. Hardware settings option to specify the screen driver (e.g. st7789 vs
+#. ili9341)
+#: src/seedsigner/models/settings_definition.py
+msgid "Display type"
+msgstr "Kijelzőtípus"
+
+#. Hardware settings option to invert how the screen driver displays colors.
+#: src/seedsigner/models/settings_definition.py
+msgid "Invert colors"
+msgstr "Színek megfordítása"
+
+#: src/seedsigner/models/settings_definition.py
+msgid "QR background color"
+msgstr "QR hátterének színe"
+
+#: src/seedsigner/views/psbt_views.py src/seedsigner/views/seed_views.py
+#: src/seedsigner/views/tools_views.py
+msgid "Scan a seed"
+msgstr "Seed szkennelése"
+
+#: src/seedsigner/views/psbt_views.py src/seedsigner/views/seed_views.py
+#: src/seedsigner/views/tools_views.py
+msgid "Enter 12-word seed"
+msgstr "Írja be a 12 szavas seed-et"
+
+#: src/seedsigner/views/psbt_views.py src/seedsigner/views/seed_views.py
+#: src/seedsigner/views/tools_views.py
+msgid "Enter 24-word seed"
+msgstr "Írja be a 24 szavas seed-et"
+
+#: src/seedsigner/views/psbt_views.py src/seedsigner/views/seed_views.py
+#: src/seedsigner/views/tools_views.py
+msgid "Enter Electrum seed"
+msgstr "Adja meg az Electrum seed-et"
+
+#. Inserts fingerprint w/"?" to indicate that this seed can't sign the current
+#. PSBT
+#: src/seedsigner/views/psbt_views.py
+msgid "{} (?)"
+msgstr "{} (?)"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Select Signer"
+msgstr "Aláíró kiválasztása"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Parsing PSBT..."
+msgstr "PSBT elemzése..."
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Unsupported Script Type!"
+msgstr "Nem támogatott szkript típus!"
+
+#: src/seedsigner/views/psbt_views.py
+msgid ""
+"Transaction has unsupported input script type, please verify your change "
+"addresses."
+msgstr ""
+"A tranzakció nem támogatott beviteli szkriptet tartalmaz. Ellenőrizze a "
+"visszajáró címet."
+
+#: src/seedsigner/views/psbt_views.py src/seedsigner/views/view.py
+msgid "Continue"
+msgstr "Tovább"
+
+#. User will receive no change back; the inputs to this transaction are fully
+#. spent
+#: src/seedsigner/views/psbt_views.py
+msgid "Full Spend!"
+msgstr "Teljes költés!"
+
+#: src/seedsigner/views/psbt_views.py
+msgid ""
+"This transaction spends its entire input value. No change is coming back to "
+"your wallet."
+msgstr ""
+"Ez a tranzakció az egész beviteli értéket elkölti. Nem kap visszajárót."
+
+#. Future-tense used to indicate that this transaction will send this amount,
+#. as opposed to "Send" on its own which could be misread as an instant
+#. command
+#. (e.g. "Send Now").
+#: src/seedsigner/views/psbt_views.py
+msgid "Will Send"
+msgstr "Küldeni fog"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Next recipient"
+msgstr "Következő befogadó"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Skip verification"
+msgstr "Igazolás átugrása"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Verify multisig change"
+msgstr "Többaláírásos visszajáró hitelesítése"
+
+#. The amount you're receiving back from the transaction
+#: src/seedsigner/views/psbt_views.py
+msgid "Your Change"
+msgstr "A visszajárója"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Self-Transfer"
+msgstr "Öntranszfer"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Verify multisig addr"
+msgstr "Többaláírásos cím hitelesítése"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Verifying Change..."
+msgstr "Visszajáró ellenőrzése..."
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Verifying Self-Transfer..."
+msgstr "Öntranszfer ellenőrzése..."
+
+#. Variable is either "change" or "self-transfer".
+#: src/seedsigner/views/psbt_views.py
+msgid "Transaction's {} address could not be verified from wallet descriptor."
+msgstr ""
+"A tranzakció {} címét nem lehetett leellenőrizni a tárca leíró segítségével."
+
+#. Variable is either "change" or "self-transfer".
+#: src/seedsigner/views/psbt_views.py
+msgid "Transaction's {} address could not be generated from your seed."
+msgstr "A tranzakció {} címét nem lehetett megépíteni a seed-ből."
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Suspicious Transaction"
+msgstr "Gyanús tranzakció"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Address Verification Failed"
+msgstr "Cím igazolása sikertelen"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Discard transaction"
+msgstr "Tranzakció elvetése"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Approve transaction"
+msgstr "Tranzakció jöváhagyása"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Select different seed"
+msgstr "Válasszon egy másik seed-et"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Transaction Error"
+msgstr "Tranzakciós hiba"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Signing Failed"
+msgstr "Aláírás sikertelen"
+
+#: src/seedsigner/views/psbt_views.py
+msgid "Signing with this seed did not add a valid signature."
+msgstr "Ezzel a seed-el való aláírás nem eredményezett helyes aláírást."
+
+#: src/seedsigner/views/scan_views.py
+msgid "Scan a QR code"
+msgstr "QR kód szkennelése"
+
+#: src/seedsigner/views/scan_views.py
+msgid "QRCode not recognized or not yet supported."
+msgstr "A QR kód nem lett felismerve vagy még nem támogatott."
+
+#: src/seedsigner/views/scan_views.py
+msgid "Wrong QR Type"
+msgstr "Hibás QR típus"
+
+#: src/seedsigner/views/scan_views.py
+msgid "Scan Transaction"
+msgstr "Tranzakció szkennelése"
+
+#: src/seedsigner/views/scan_views.py
+msgid "Expected a transaction"
+msgstr "Tranzakció elvárva"
+
+#: src/seedsigner/views/scan_views.py
+msgid "Scan SeedQR"
+msgstr "SeedQR szkennelése"
+
+#: src/seedsigner/views/scan_views.py
+msgid "Expected a SeedQR"
+msgstr "SeedQR elvárva"
+
+#: src/seedsigner/views/scan_views.py src/seedsigner/views/seed_views.py
+msgid "Scan descriptor"
+msgstr "Tárca leírása szkennelése"
+
+#: src/seedsigner/views/scan_views.py
+msgid "Expected a wallet descriptor QR"
+msgstr "Tárca leíró QR elvárva"
+
+#: src/seedsigner/views/scan_views.py
+msgid "Scan address QR"
+msgstr "Cím QR szkennelése"
+
+#: src/seedsigner/views/scan_views.py
+msgid "Expected an address QR"
+msgstr "Cím QR elvárva"
+
+#: src/seedsigner/views/scan_views.py
+msgid "Unknown QR Type"
+msgstr "Ismeretlen QR típus"
+
+#: src/seedsigner/views/scan_views.py
+msgid "QRCode is invalid or is a data format not yet supported."
+msgstr "A QR-kód érvénytelen, vagy ez a formátum még nem támogatott."
+
+#: src/seedsigner/views/scan_views.py src/seedsigner/views/view.py
+msgid "Back to Main Menu"
+msgstr "Vissza a főmenübe"
+
+#. This is on the opening splash screen, displayed above the HRF logo
+#: src/seedsigner/views/screensaver.py
+msgid "With support from:"
+msgstr "Támogatásával:"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Load a seed"
+msgstr "Seed betöltése"
+
+#: src/seedsigner/views/seed_views.py
+msgid "In-Memory Seeds"
+msgstr "Memóriában lévő seed-ek"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Load the seed to verify"
+msgstr "Töltsön be egy seed-et annak igazolásához"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Select seed to verify"
+msgstr "Válasszon ki egy seed-et annak igazolásához"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Sign Message"
+msgstr "Üzenet aláírása"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Load the seed to sign with"
+msgstr "Töltsön be egy seed-et amivel aláír"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Select seed to sign with"
+msgstr "Válasszon ki egy seed-et amivel aláír"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Scan a SeedQR"
+msgstr "SeedQR szkennelése"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Create a seed"
+msgstr "Seed készítése"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Load a Seed"
+msgstr "Seed betöltése"
+
+#. Inserts the word number (e.g. "Seed Word #6")
+#: src/seedsigner/views/seed_views.py
+msgid "Seed Word #{}"
+msgstr "{}. seed szó"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Review & edit"
+msgstr "Áttekintés és módosítás"
+
+#: src/seedsigner/views/seed_views.py src/seedsigner/views/tools_views.py
+msgid "Discard"
+msgstr "Elvetés"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Invalid Mnemonic!"
+msgstr "Helytelen emlékezeterősítő!"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Checksum failure; not a valid seed phrase."
+msgstr "Ellenőrzőösszegi hiba; helytelen seed kifejezés."
+
+#: src/seedsigner/views/seed_views.py
+msgid "Done"
+msgstr "Kész"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Edit passphrase"
+msgstr "Jelszó megváltoztatása"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Discard passphrase"
+msgstr "Jelszó elvetése"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Skip passphrase"
+msgstr "Jelszó átugrása"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Discard passphrase?"
+msgstr "Jelszó elvetése?"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Your current passphrase entry will be erased."
+msgstr "A jelenlegi jelszó megsemmisítésre kerül."
+
+#: src/seedsigner/views/seed_views.py
+msgid "Skip passphrase?"
+msgstr "Jelszó átugrása?"
+
+#: src/seedsigner/views/seed_views.py
+msgid "You have not entered a passphrase yet."
+msgstr "Még nem adott meg jelszavat."
+
+#: src/seedsigner/views/seed_views.py
+msgid "Keep seed"
+msgstr "Seed megtartása"
+
+#. Inserts the seed fingerprint
+#: src/seedsigner/views/seed_views.py
+msgid "Wipe seed {} from the device?"
+msgstr "Kitörli a {} seed-et a készülékről?"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Discard Seed?"
+msgstr "Seed elvetése?"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Electrum Warning"
+msgstr "Electrum figyelmeztetés"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Some features are disabled for Electrum seeds."
+msgstr "Valamely funkciók nem elérhetőek Electrum seed-ekhez."
+
+#: src/seedsigner/views/seed_views.py
+msgid "Scan transaction"
+msgstr "Tranzakció szkennelése"
+
+#: src/seedsigner/views/seed_views.py src/seedsigner/views/tools_views.py
+msgid "Address explorer"
+msgstr "Cím böngésző"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Backup seed"
+msgstr "Seed biztonsági mentése"
+
+#: src/seedsigner/views/seed_views.py
+msgid "BIP-85 child seed"
+msgstr "BIP-85 gyermek seed"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Discard seed"
+msgstr "Seed elvetése"
+
+#: src/seedsigner/views/seed_views.py
+msgid "View seed words"
+msgstr "Seed szavak megtekintése"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Export as SeedQR"
+msgstr "Exportálás SeedQR-ként"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Backup Seed"
+msgstr "Seed biztonsági mentése"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Export Xpub"
+msgstr "Xpub exportálása"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Xpub QR Format"
+msgstr "Xpub QR formátumban"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Xpub can be used to view all future transactions."
+msgstr "Az xpub segítségével az összes jövendőbeli tranzakció látható."
+
+#: src/seedsigner/views/seed_views.py
+msgid "Generating xpub..."
+msgstr "xpub létrehozása..."
+
+#: src/seedsigner/views/seed_views.py
+msgid "You must keep your seed words private & away from all online devices."
+msgstr ""
+"Titokban kell tartania a seed szavakat és tartsa messze bármilyen online "
+"ezköztől."
+
+#. Inserts the child index (e.g. "Child #0")
+#: src/seedsigner/views/seed_views.py
+msgid "Child #{}"
+msgstr "{}. gyermek"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Seed Words"
+msgstr "Seed szavak"
+
+#: src/seedsigner/views/seed_views.py
+msgid "12 Words"
+msgstr "12 szó"
+
+#: src/seedsigner/views/seed_views.py
+msgid "24 Words"
+msgstr "24 szó"
+
+#: src/seedsigner/views/seed_views.py
+msgid "BIP-85 Num Words"
+msgstr "BIP-85 Num szavak"
+
+#: src/seedsigner/views/seed_views.py
+msgid "BIP-85 Index Error"
+msgstr "BIP-85 kitevő hiba"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Invalid Child Index"
+msgstr "Helytelen gyermek kitevő"
+
+#: src/seedsigner/views/seed_views.py
+msgid "BIP-85 Child Index must be between 0 and 2^31-1."
+msgstr "A BIP-85 gyermek kitevője kötelezően 0 és 2^31-1 között kell legyen."
+
+#: src/seedsigner/views/seed_views.py
+msgid "Try again"
+msgstr "Próbálja újra"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Verify"
+msgstr "Ellenőrzés"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Skip"
+msgstr "Átugrás"
+
+#. Inserts the word number (e.g. "Verify Word #1")
+#: src/seedsigner/views/seed_views.py
+msgid "Verify Word #{}"
+msgstr "{}. szó ellenőrzése"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Review seed words"
+msgstr "Seed szavak áttekintése"
+
+#. Inserts the word number and the word (e.g. "Word #1 is not "apple"!")
+#: src/seedsigner/views/seed_views.py
+msgid "Word #{} is not \"{}\"!"
+msgstr "A {}. szó nem \"{}\"!"
+
+#. User selected the wrong word during the mnemonic backup test (e.g.
+#. incorrectly said the 5th word was "zoo")
+#: src/seedsigner/views/seed_views.py
+msgid "Wrong Word!"
+msgstr "Helytelen szó!"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Verification Error"
+msgstr "Igazolási hiba"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Backup Verified"
+msgstr "Biztonsági mentés ellenőrizve"
+
+#: src/seedsigner/views/seed_views.py
+msgid "All mnemonic backup words were successfully verified!"
+msgstr "Minden emlékezeterősítő tartalékszó sikeresen igazolva lett!"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Standard: 25x25"
+msgstr "Standard: 25x25"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Compact: 21x21"
+msgstr "Kompakt: 21x21"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Standard: 29x29"
+msgstr "Standard: 29x29"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Compact: 25x25"
+msgstr "Kompakt: 25x25"
+
+#: src/seedsigner/views/seed_views.py
+msgid "SeedQR Format"
+msgstr "SeedQR formátum"
+
+#: src/seedsigner/views/seed_views.py
+msgid "SeedQR is your private key!"
+msgstr "A SeedQR a privát kulcsa!"
+
+#: src/seedsigner/views/seed_views.py
+msgid ""
+"Never photograph or scan it into a device that connects to the internet."
+msgstr ""
+"Soha ne fotózza le vagy szkennelje be egy internetre csatlakoztatott "
+"eszközzel."
+
+#: src/seedsigner/views/seed_views.py
+msgid "Confirm SeedQR"
+msgstr "SeedQR megerősítése"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Confirm SeedQR?"
+msgstr "Megerősíti a SeedQR-t?"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Scan your SeedQR"
+msgstr "Szkennelje be a SeedQR-t"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Error!"
+msgstr "Hiba!"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Your transcribed SeedQR does not match your original seed!"
+msgstr "Az átírt SeedQR nem egyezik meg az eredeti seed-el!"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Review SeedQR"
+msgstr "SeedQR áttekintése"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Your transcribed SeedQR could not be read!"
+msgstr "Az átírt SeedQR nem olvasható!"
+
+#: src/seedsigner/views/seed_views.py
+msgid ""
+"Your transcribed SeedQR successfully scanned and yielded the same seed."
+msgstr ""
+"Az átírt SeedQR sikeresen szkennelve lett és ugyan azt a seed-et teremtette."
+
+#: src/seedsigner/views/seed_views.py
+msgid "Sig type can't be auto-detected from this address. Please specify:"
+msgstr ""
+"Az aláírás típusa nem kideríthető automatikusan ebből a címből. Kérem "
+"pontosítsa:"
+
+#. Option when scanning for a matching address; skips ten addresses ahead
+#: src/seedsigner/views/seed_views.py
+msgid "Skip 10"
+msgstr "Átugrás 10-zel"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Cancel"
+msgstr "Mégsem"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Return to transaction"
+msgstr "Vissza a tranzakcióhoz"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Verify addr"
+msgstr "Cím ellenőrzése"
+
+#. Multisig policy. For a "2 of 3" policy, "threshold" = 2; "n" = 3
+#: src/seedsigner/views/seed_views.py
+msgid "{threshold} of {n}"
+msgstr "{threshold} a {n} közül"
+
+#: src/seedsigner/views/seed_views.py
+msgid "Signing messages for custom derivation paths not supported"
+msgstr ""
+"Üzenetek aláírása saját származtatási útak segítségével nem támogatott"
+
+#: src/seedsigner/views/settings_views.py
+msgid "Advanced"
+msgstr "Haladó"
+
+#: src/seedsigner/views/settings_views.py
+msgid "Hardware"
+msgstr "Hardver"
+
+#: src/seedsigner/views/settings_views.py
+msgid "I/O test"
+msgstr "I/O teszt"
+
+#: src/seedsigner/views/settings_views.py
+msgid "Dev Options"
+msgstr "Dev Opciók"
+
+#. Title of a warning dialog when configuring a setting that requires at least
+#. one option to be selected.
+#: src/seedsigner/views/settings_views.py
+msgid "Selection Required"
+msgstr "Kiválasztás szükséges"
+
+#. The name of the setting being configured (e.g. "Script types") will be
+#. inserted.
+#: src/seedsigner/views/settings_views.py
+msgid "At least one option must be selected for \"{}\"."
+msgstr "Legalább egy lehetőséget ki kell válaszatni ehhez: \"{}\"."
+
+#. Text for the button that returns the user to the setting configuration
+#. screen.
+#: src/seedsigner/views/settings_views.py
+msgid "Return to setting"
+msgstr "Visszalépés a beállításokba"
+
+#: src/seedsigner/views/settings_views.py
+msgid "Persistent Settings enabled. Settings saved to SD card."
+msgstr ""
+"Állandó beállítások bekapcsolva. A beállítások az SD kártyára kerülnek "
+"mentésre."
+
+#: src/seedsigner/views/settings_views.py
+msgid "Settings updated in temporary memory"
+msgstr "Beállítások frissítve az ideiglenes memóriában"
+
+#: src/seedsigner/views/tools_views.py
+msgid "New seed"
+msgstr "Új seed"
+
+#: src/seedsigner/views/tools_views.py
+msgid "Calc 12th/24th word"
+msgstr "12./24. szó számítása"
+
+#: src/seedsigner/views/tools_views.py
+msgid "Verify address"
+msgstr "Cím ellenőrzése"
+
+#: src/seedsigner/views/tools_views.py src/seedsigner/views/view.py
+msgid "Tools"
+msgstr "Ezközök"
+
+#: src/seedsigner/views/tools_views.py
+msgid "12 words"
+msgstr "12 szó"
+
+#: src/seedsigner/views/tools_views.py
+msgid "24 words"
+msgstr "24 szó"
+
+#: src/seedsigner/views/tools_views.py
+msgid "Mnemonic Length"
+msgstr "Emlékezeterősítő hossza"
+
+#: src/seedsigner/views/tools_views.py
+msgid "Calculating..."
+msgstr "Számítás..."
+
+#. Inserts the number of dice rolls needed for a 12-word mnemonic
+#: src/seedsigner/views/tools_views.py
+msgid "12 words ({} rolls)"
+msgstr "12 szó ({} dobás)"
+
+#. Inserts the number of dice rolls needed for a 24-word mnemonic
+#: src/seedsigner/views/tools_views.py
+msgid "24 words ({} rolls)"
+msgstr "24 szó ({} dobás)"
+
+#. Label to gather entropy through coin tosses
+#: src/seedsigner/views/tools_views.py
+msgid "Coin flip entropy"
+msgstr "Érmefeldobás entrópia"
+
+#. Label to gather entropy through user specified BIP-39 word
+#: src/seedsigner/views/tools_views.py
+msgid "Word selection entropy"
+msgstr "Szóválasztó entrópia"
+
+#. Label to allow user to default entropy as all-zeros
+#: src/seedsigner/views/tools_views.py
+msgid "Finalize with zeros"
+msgstr "Véglegesítés nullákkal"
+
+#. label to calculate the last word of a BIP-39 mnemonic seed phrase
+#: src/seedsigner/views/tools_views.py
+msgid "Final Word Calc"
+msgstr "Utolsó szó kiszámítása"
+
+#: src/seedsigner/views/tools_views.py
+msgid "Load seed"
+msgstr "Seed betöltése"
+
+#: src/seedsigner/views/tools_views.py
+msgid "Scan wallet descriptor"
+msgstr "Tárca leírása szkennelése"
+
+#. label for addresses where others send us incoming payments
+#: src/seedsigner/views/tools_views.py
+msgid "Receive addresses"
+msgstr "címzett címek"
+
+#. label for addresses that collect the change from our own outgoing payments
+#: src/seedsigner/views/tools_views.py
+msgid "Change addresses"
+msgstr "visszajáró címek"
+
+#. Multisig policy. For a "2 / 3 multisig" policy, "threshold" = 2; "n" = 3
+#: src/seedsigner/views/tools_views.py
+msgid "{threshold} / {n} multisig"
+msgstr "{threshold} / {n} többaláírás"
+
+#. a status message that our payment addresses are being calculated
+#: src/seedsigner/views/tools_views.py
+msgid "Calculating addrs..."
+msgstr "Címek számítása..."
+
+#: src/seedsigner/views/tools_views.py
+msgid "Custom Derivation address explorer not yet implemented"
+msgstr "Saját származtatási cím böngésző még nincs megvalósítva"
+
+#: src/seedsigner/views/tools_views.py
+msgid "Single sig descriptors not yet supported"
+msgstr "Egy aláírásos leírások még nincsenek témogatva"
+
+#: src/seedsigner/views/tools_views.py
+msgid "Receive Addrs"
+msgstr "címzett címek"
+
+#: src/seedsigner/views/tools_views.py
+msgid "Change Addrs"
+msgstr "visszajáró címek"
+
+#: src/seedsigner/views/view.py
+msgid "Scan"
+msgstr "Szkennelés"
+
+#: src/seedsigner/views/view.py
+msgid "Seeds"
+msgstr "Seed-ek"
+
+#: src/seedsigner/views/view.py
+msgid "Restart"
+msgstr "Újraindítás"
+
+#: src/seedsigner/views/view.py
+msgid "Power off"
+msgstr "Kikapcsolás"
+
+#: src/seedsigner/views/view.py
+msgid "Reset / Power"
+msgstr "Visszaállítás / Áram"
+
+#: src/seedsigner/views/view.py
+msgid "This is still on our to-do list!"
+msgstr "Ez még mindíg a to-do listánkon van!"
+
+#: src/seedsigner/views/view.py
+msgid "Work In Progress"
+msgstr "Folyamatban lévő munka"
+
+#: src/seedsigner/views/view.py
+msgid "Not Yet Implemented"
+msgstr "Még nincs megvalósítva"
+
+#: src/seedsigner/views/view.py
+msgid "Back to main menu"
+msgstr "Vissza a főmenübe"
+
+#. The network setting (mainnet/testnet/regtest) doesn't match the provided
+#. derivation path
+#: src/seedsigner/views/view.py
+msgid "Network Mismatch"
+msgstr "Hálózati eltérés"
+
+#. Button option to alter a setting
+#: src/seedsigner/views/view.py
+msgid "Change Setting"
+msgstr "Beállítás megváltoztatása"
+
+#. "network" will be mainnet/testnet/regtest.
+#: src/seedsigner/views/view.py
+msgid "Current network setting ({network}) doesn't match {derivation_path}."
+msgstr ""
+"A jelenlegi hálózati beállítás ({network}) nem egyezik ezzel: "
+"{derivation_path}."
+
+#: src/seedsigner/views/view.py
+msgid "System Error"
+msgstr "Rendszerhiba"
+
+#: src/seedsigner/views/view.py
+msgid "Hardware Error"
+msgstr "Hardverhiba"
+
+#: src/seedsigner/views/view.py
+msgid "Cannot access camera"
+msgstr "A kamera nem elérhető"
+
+#: src/seedsigner/views/view.py
+msgid "Disconnect power and check for a loose camera connection."
+msgstr ""
+"Kapcsolja ki a tápellátást, és ellenőrizze, hogy nincs-e meglazult "
+"kameracsatlakozás."
+
+#: src/seedsigner/views/view.py
+msgid "Update setting"
+msgstr "Beállítás frissítése"
+
+#. Inserts the name of a settings option (e.g. "Persistent Settings" is
+#. currently...)
+#: src/seedsigner/views/view.py
+msgid "\"{}\" is currently disabled in Settings."
+msgstr "\"{}\" beállítás jelenleg le van tiltva."
+
+#: src/seedsigner/views/view.py
+msgid "Option Disabled"
+msgstr "Lehetőség letiltva"
+
+#: src/seedsigner/views/view.py
+msgid "Action Required"
+msgstr "intézkedés szükséges"
+
+#: src/seedsigner/views/view.py
+msgid ""
+"You must remove the\n"
+"MicroSD card to continue."
+msgstr ""
+"Távolítsa el a MicroSD\n"
+"Kártyát a folytatáshoz."
