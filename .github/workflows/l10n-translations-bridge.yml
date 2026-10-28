@@ -1,0 +1,259 @@
+# Bridges Transifex translations into per-locale upstream PRs.
+#
+# Transifex writes translated catalogs to the bot fork's write branch in
+# direct-commit mode. This workflow runs in the bot fork, compares those
+# catalogs against the upstream branch, and for each locale whose translations
+# changed it force-pushes a rolling branch and opens or updates one PR into
+# upstream. Locales that have converged with upstream get their rolling PR
+# closed. Branch writes use the bot fork's own short-lived GitHub App token
+# (contents:write on the fork); PRs use a separate token scoped to
+# pull-requests:write on upstream. Upstream is never granted contents:write.
+#
+# The job no-ops unless vars.L10N_TRANSLATIONS_UPSTREAM is set and the push is on
+# the configured write branch, so the same file is inert in the upstream repo
+# (which has neither the var nor the write branch). GitHub Actions cannot
+# template `on:` with vars, so the branch filter below is a literal that must
+# equal vars.L10N_TRANSLATIONS_WRITE_BRANCH; the job gate validates the match.
+name: l10n translations bridge
+
+on:
+  push:
+    branches: [transifex-writes]
+    paths:
+      - "l10n/**/LC_MESSAGES/messages.po"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: l10n-translations-bridge
+  cancel-in-progress: false
+
+jobs:
+  bridge:
+    if: >-
+      ${{ vars.L10N_TRANSLATIONS_UPSTREAM != ''
+          && github.ref_name == vars.L10N_TRANSLATIONS_WRITE_BRANCH }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Resolve and validate configuration
+        id: prep
+        env:
+          UPSTREAM: ${{ vars.L10N_TRANSLATIONS_UPSTREAM }}
+          BASE: ${{ vars.L10N_TRANSLATIONS_BRANCH }}
+          WRITE_BRANCH: ${{ vars.L10N_TRANSLATIONS_WRITE_BRANCH }}
+        run: |
+          set -euo pipefail
+          : "${BASE:?set repository variable L10N_TRANSLATIONS_BRANCH}"
+          : "${WRITE_BRANCH:?set repository variable L10N_TRANSLATIONS_WRITE_BRANCH}"
+          echo "up_owner=${UPSTREAM%%/*}" >> "$GITHUB_OUTPUT"
+          echo "up_repo=${UPSTREAM##*/}" >> "$GITHUB_OUTPUT"
+
+      - name: Checkout write branch
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 1
+          persist-credentials: false
+          submodules: false
+
+      - name: Fetch upstream base branch
+        env:
+          UPSTREAM: ${{ vars.L10N_TRANSLATIONS_UPSTREAM }}
+          BASE: ${{ vars.L10N_TRANSLATIONS_BRANCH }}
+        run: |
+          set -euo pipefail
+          git remote add upstream "https://github.com/${UPSTREAM}.git"
+          git fetch --quiet --depth 1 upstream "$BASE"
+
+      - name: Set up Python
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        # Babel is the bridge's only dependency (it reads .po catalogs); pinned
+        # inline since this workflow is its sole consumer in this repo.
+        run: python -m pip install --quiet "Babel==2.16.0"
+
+      - name: Detect changed locales
+        id: detect
+        env:
+          BASE: ${{ vars.L10N_TRANSLATIONS_BRANCH }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git worktree add --quiet --detach .l10n-base "upstream/${BASE}"
+          trap 'git worktree remove --force .l10n-base 2>/dev/null || true' EXIT
+          git diff --name-only "upstream/${BASE}" HEAD > changed.txt
+
+          # changed_locales.py guards the changed paths (exit 2 on anything
+          # outside the translation catalogs) and then prints the reconcile plan.
+          set +e
+          python l10n/automation/changed_locales.py \
+            --head-root . --base-root .l10n-base --changed-paths changed.txt \
+            > plan.json 2> detect.err
+          rc=$?
+          set -e
+          if [ "$rc" -ne 0 ]; then
+            {
+              echo "## l10n bridge refused"
+              echo ""
+              echo "A Transifex commit changed paths outside the translation allowlist:"
+              echo '```'
+              cat detect.err
+              echo '```'
+            } >> "$GITHUB_STEP_SUMMARY"
+            exit 1
+          fi
+
+          echo "write_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+          # Act when a locale changed, OR when rolling branches already exist
+          # (so converged locales get their PR closed and branch removed even on a
+          # run with no fresh change). Branch existence is read with the job's own
+          # token; no privileged App token is minted for a true no-op.
+          existing="$(git ls-remote --heads \
+            "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" \
+            'refs/heads/automation/translations/*' | wc -l | tr -d ' ')"
+          if [ -n "$(jq -r '.changed[]' plan.json)" ] || [ "$existing" != "0" ]; then
+            echo "any_action=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "any_action=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      # Privileged tokens are minted only when there is work: a changed locale to
+      # publish, or an existing rolling branch to reconcile (close + delete). A
+      # header-only commit with nothing outstanding mints none.
+      - name: Mint app token (bot fork, contents write)
+        id: app_fork
+        if: steps.detect.outputs.any_action == 'true'
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        with:
+          client-id: ${{ secrets.L10N_TR_FORK_CLIENT_ID }}
+          private-key: ${{ secrets.L10N_TR_FORK_PRIVATE_KEY }}
+          permission-contents: write
+
+      - name: Mint app token (upstream, pull-requests write)
+        id: app_pr
+        if: steps.detect.outputs.any_action == 'true'
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        with:
+          client-id: ${{ secrets.L10N_TR_PR_CLIENT_ID }}
+          private-key: ${{ secrets.L10N_TR_PR_PRIVATE_KEY }}
+          owner: ${{ steps.prep.outputs.up_owner }}
+          repositories: ${{ steps.prep.outputs.up_repo }}
+          permission-pull-requests: write
+
+      - name: Push per-locale rolling branches
+        if: steps.detect.outputs.any_action == 'true'
+        env:
+          FORK_TOKEN: ${{ steps.app_fork.outputs.token }}
+          APP_SLUG: ${{ steps.app_fork.outputs.app-slug }}
+          BASE: ${{ vars.L10N_TRANSLATIONS_BRANCH }}
+          WRITE_SHA: ${{ steps.detect.outputs.write_sha }}
+        run: |
+          set -euo pipefail
+          remote="https://x-access-token:${FORK_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git config user.name "${APP_SLUG}[bot]"
+          git config user.email "${APP_SLUG}[bot]@users.noreply.github.com"
+
+          # Each rolling branch is built base-relative: start from upstream base,
+          # overlay only this locale's catalog from the Transifex write commit, so
+          # every PR is a clean single-file diff regardless of write-branch drift.
+          for loc in $(jq -r '.changed[]' plan.json); do
+            branch="automation/translations/${loc}"
+            po="l10n/${loc}/LC_MESSAGES/messages.po"
+            git checkout --quiet -B "$branch" "upstream/${BASE}"
+            if git cat-file -e "${WRITE_SHA}:${po}" 2>/dev/null; then
+              git checkout "$WRITE_SHA" -- "$po"
+            else
+              git rm --quiet --ignore-unmatch "$po"
+            fi
+            if git diff --cached --quiet; then
+              continue
+            fi
+            git commit --quiet -m "l10n(${loc}): update translations from Transifex"
+            git push --force --quiet "$remote" "${branch}:refs/heads/${branch}"
+          done
+
+          # Converged locales: remove any stale rolling branch (idempotent).
+          for loc in $(jq -r '.converged[]' plan.json); do
+            branch="automation/translations/${loc}"
+            git push --quiet "$remote" --delete "$branch" 2>/dev/null || true
+          done
+
+      - name: Open, update, or close per-locale PRs
+        if: steps.detect.outputs.any_action == 'true'
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        env:
+          UPSTREAM: ${{ vars.L10N_TRANSLATIONS_UPSTREAM }}
+          BASE: ${{ vars.L10N_TRANSLATIONS_BRANCH }}
+          BOT_OWNER: ${{ github.repository_owner }}
+          BOT_REPO: ${{ github.event.repository.name }}
+        with:
+          github-token: ${{ steps.app_pr.outputs.token }}
+          script: |
+            const fs = require('fs');
+            const plan = JSON.parse(fs.readFileSync('plan.json', 'utf8'));
+            const [owner, repo] = process.env.UPSTREAM.split('/');
+            const base = process.env.BASE;
+            const botOwner = process.env.BOT_OWNER;
+            const botRepo = process.env.BOT_REPO;
+
+            const branchOf = (loc) => `automation/translations/${loc}`;
+            const headOf = (loc) => `${botOwner}:${branchOf(loc)}`;
+            const findOpen = async (loc) => {
+              const { data } = await github.rest.pulls.list({
+                owner, repo, state: 'open', head: headOf(loc), base });
+              return data[0];
+            };
+
+            for (const loc of plan.changed) {
+              if (await findOpen(loc)) { core.info(`${loc}: PR updated in place`); continue; }
+              const body = [
+                'Automated sync of `' + loc + '` translations from Transifex into ' +
+                  '`l10n/' + loc + '/LC_MESSAGES/messages.po`.',
+                '',
+                'This rolling PR updates in place as new translations land for this ' +
+                  'locale on Transifex. Only this one file changes.',
+              ].join('\n');
+              const { data: pr } = await github.rest.pulls.create({
+                owner, repo,
+                head: headOf(loc),
+                head_repo: botRepo,
+                base,
+                title: `l10n(${loc}): update translations from Transifex`,
+                body,
+                // The token has pull-requests:write on upstream only and cannot
+                // write the bot fork that owns the head branch; the API default
+                // (maintainer edits) would 403 a cross-fork create, so opt out.
+                maintainer_can_modify: false,
+              });
+              core.info(`${loc}: opened PR #${pr.number}`);
+            }
+
+            for (const loc of plan.converged) {
+              const open = await findOpen(loc);
+              if (!open) continue;
+              await github.rest.pulls.update({
+                owner, repo, pull_number: open.number, state: 'closed' });
+              core.info(`${loc}: closed PR #${open.number} (converged)`);
+            }
+
+      - name: Summary
+        if: always()
+        env:
+          ANY: ${{ steps.detect.outputs.any_action }}
+        run: |
+          if [ "${ANY:-}" = "true" ]; then
+            {
+              echo "## l10n bridge"
+              echo ""
+              echo "Changed locales: $(jq -r '.changed | join(", ") // "-"' plan.json 2>/dev/null || echo '-')"
+            } >> "$GITHUB_STEP_SUMMARY"
+          elif [ "${ANY:-}" = "false" ]; then
+            echo "No translation changes detected; nothing to sync." >> "$GITHUB_STEP_SUMMARY"
+          fi
