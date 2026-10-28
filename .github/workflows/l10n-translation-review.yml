@@ -1,0 +1,215 @@
+# Renders and checks a translation PR: which screens changed, whether format
+# placeholders survived translation, and whether translated text overflows the
+# 240x240 screen.
+#
+# This runs in the PR context, which is untrusted for fork PRs, so it has no
+# secrets and a read-only token. It can safely run PR code (the checks and the
+# screenshot generator render the PR's catalogs) because it has no write access
+# and nothing to leak. It renders only English plus the locales the PR actually
+# changes, comparing the PR head against the PR base, and uploads a
+# schema-bound manifest plus the changed screenshots as one artifact. A trusted
+# follow-up workflow turns that artifact into the PR comment and review page.
+#
+# The screenshot generator and the overflow scanner live in the main repo; the
+# main repo is resolved as <this repo's owner>/seedsigner, which points at the
+# production repo on upstream and at the matching fork in a test topology.
+#
+# The placeholder check is blocking: broken placeholders crash at runtime, so
+# the job fails when the check reports issues (after the artifact is built, so
+# the follow-up workflow can still report the details).
+name: l10n translation review
+
+on:
+  pull_request:
+    paths:
+      - "l10n/**"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: l10n-translation-review-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout main repo
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          repository: ${{ github.repository_owner }}/seedsigner
+          ref: dev
+          submodules: recursive
+          persist-credentials: false
+
+      - name: Checkout translations at PR base
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          path: src/seedsigner/resources/seedsigner-translations
+          ref: ${{ github.event.pull_request.base.sha }}
+          persist-credentials: false
+
+      - name: Checkout translations at PR head
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          path: .l10n-head
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
+        with:
+          python-version: "3.10"
+          cache: "pip"
+          cache-dependency-path: |
+            requirements.txt
+            tests/requirements.txt
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get install libzbar0
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt -r tests/requirements.txt -r l10n/requirements-l10n.txt
+          pip install -e .
+
+      - name: Detect changed locales
+        id: locales
+        run: |
+          set -euo pipefail
+          base="src/seedsigner/resources/seedsigner-translations"
+          head=".l10n-head"
+
+          locales=""
+          for dir in "$base"/l10n/*/ "$head"/l10n/*/; do
+            [ -d "$dir" ] || continue
+            loc="$(basename "$dir")"
+            case " $locales " in *" $loc "*) continue ;; esac
+            b="$base/l10n/$loc/LC_MESSAGES/messages.po"
+            h="$head/l10n/$loc/LC_MESSAGES/messages.po"
+            # A locale counts as changed when its catalog differs between base
+            # and head, including existing on only one side.
+            if [ -f "$b" ] || [ -f "$h" ]; then
+              if ! cmp -s "$b" "$h" 2>/dev/null; then
+                locales="${locales:+$locales }$loc"
+              fi
+            fi
+          done
+
+          echo "Changed locales: ${locales:-none}"
+          echo "locales=$locales" >> "$GITHUB_OUTPUT"
+
+      - name: Placeholder check
+        id: placeholder
+        if: steps.locales.outputs.locales != ''
+        env:
+          LOCALES: ${{ steps.locales.outputs.locales }}
+        run: |
+          set -uo pipefail
+          args=()
+          for loc in $LOCALES; do
+            args+=(--locale "$loc")
+          done
+          rc=0
+          python .l10n-head/l10n/automation/placeholder_check.py \
+            --root .l10n-head "${args[@]}" > placeholder.json || rc=$?
+          echo "rc=$rc" >> "$GITHUB_OUTPUT"
+          # rc 1 means issues found: reported after the artifact is built.
+          # Anything else is a real failure.
+          [ "$rc" -le 1 ]
+
+      # Rendering is skipped when the placeholder check failed: a broken
+      # placeholder crashes .format at render time (the crash the check exists
+      # to catch), and skipping keeps the manifest artifact intact so the
+      # failure detail still reaches the PR comment.
+      - name: Render screenshots at PR base
+        if: steps.locales.outputs.locales != '' && steps.placeholder.outputs.rc == '0'
+        env:
+          LOCALES: ${{ steps.locales.outputs.locales }}
+        run: |
+          set -euo pipefail
+          python setup.py compile_catalog
+          rm -rf seedsigner-screenshots
+          for loc in en $LOCALES; do
+            # A locale the PR adds does not exist at base yet; the generator
+            # simply has nothing to render for it then.
+            python -m pytest tests/screenshot_generator/generator.py --locale "$loc"
+          done
+          mkdir -p artifacts
+          mv seedsigner-screenshots artifacts/base
+
+      - name: Render screenshots at PR head (with overflow scan)
+        if: steps.locales.outputs.locales != '' && steps.placeholder.outputs.rc == '0'
+        env:
+          LOCALES: ${{ steps.locales.outputs.locales }}
+        run: |
+          set -euo pipefail
+          # Swap the PR head translations into the submodule path
+          rm -rf src/seedsigner/resources/seedsigner-translations
+          cp -a .l10n-head src/seedsigner/resources/seedsigner-translations
+          find src/seedsigner/resources/seedsigner-translations -name '*.mo' -delete
+          python setup.py compile_catalog
+
+          rm -rf seedsigner-screenshots
+          # English first: the overflow composites show EN side by side
+          python -m pytest tests/screenshot_generator/generator.py --locale en
+          for loc in $LOCALES; do
+            python -m pytest tests/screenshot_generator/generator.py --locale "$loc" \
+              --overflow-scan --overflow-json "$GITHUB_WORKSPACE/overflow.json"
+          done
+
+          mv seedsigner-screenshots artifacts/head
+          # Overflow composites are review output, not screenshots to diff
+          mkdir -p artifacts/review
+          if [ -d artifacts/head/reports ]; then
+            mv artifacts/head/reports artifacts/review/reports
+          fi
+
+      - name: Build review manifest
+        env:
+          REPO: ${{ github.repository }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          BASE_REF: ${{ github.event.pull_request.base.ref }}
+          PLACEHOLDER_RC: ${{ steps.placeholder.outputs.rc }}
+        run: |
+          set -euo pipefail
+          # A PR with no catalog changes still gets a (empty) manifest, so the
+          # follow-up workflow can report "no visual changes" instead of nothing.
+          mkdir -p artifacts/base artifacts/head artifacts/review
+          extra=()
+          [ -s placeholder.json ] && extra+=(--placeholder-report placeholder.json)
+          [ -s overflow.json ] && extra+=(--overflow-report overflow.json)
+          if [ "${PLACEHOLDER_RC:-0}" != "0" ]; then
+            extra+=(--note "Screenshot rendering was skipped because the placeholder check failed; fix the placeholders first.")
+          fi
+          python .l10n-head/.github/diff_report/diff_screenshots.py \
+            artifacts/base artifacts/head artifacts/review "$HEAD_SHA" \
+            --repository "$REPO" \
+            --pr-number "$PR_NUMBER" \
+            --head-sha "$HEAD_SHA" \
+            --base-ref "$BASE_REF" \
+            "${extra[@]}"
+          echo "::group::manifest.json"
+          cat artifacts/review/manifest.json
+          echo "::endgroup::"
+
+      - name: Upload review artifact
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: translation-review
+          path: artifacts/review/**
+          if-no-files-found: error
+          retention-days: 7
+
+      - name: Enforce blocking checks
+        if: steps.locales.outputs.locales != ''
+        env:
+          PLACEHOLDER_RC: ${{ steps.placeholder.outputs.rc }}
+        run: |
+          set -euo pipefail
+          if [ "$PLACEHOLDER_RC" != "0" ]; then
+            echo "::error::Placeholder check found issues; see placeholder.json in the run log and the PR comment."
+            exit 1
+          fi
