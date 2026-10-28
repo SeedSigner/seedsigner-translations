@@ -23,6 +23,8 @@ jobs:
       # head_ref: source branch name of a PR; null when action isn't a PR.
       # sha: hash of a commit / merge.
       INCOMING_CHANGES_REF: ${{ github.head_ref || github.sha }}
+      # Fail instead of re-resolving if the app repo's uv.lock is out of date.
+      UV_LOCKED: "1"
     steps:
       - name: Checkout main repo 'dev'
         uses: actions/checkout@v4
@@ -30,20 +32,22 @@ jobs:
           repository: 'SeedSigner/seedsigner'
           ref: dev
           submodules: true
-      - name: Set up Python 3.10
-        uses: actions/setup-python@v5
+      - name: Install uv and Python 3.10
+        uses: astral-sh/setup-uv@bec219d24cd3e171d82865faccec33120bb574f4 # v10.1.0
         with:
+          version: "0.12.13"
           python-version: "3.10"
+          enable-cache: true
       - name: Install dependencies
         run: |
           sudo apt-get install libzbar0
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt -r tests/requirements.txt -r l10n/requirements-l10n.txt
-          pip install -e .
+          # Exactly the artifacts recorded in the app repo's uv.lock (sha256-verified),
+          # including the test + l10n tools and the project itself in editable mode.
+          uv sync --locked
       - name: Generate current 'dev' screenshots
         run: |
           mkdir -p artifacts/dev
-          python -m pytest tests/screenshot_generator/generator.py
+          uv run poe screenshots
           sleep 10
           mv ./seedsigner-screenshots/* ./artifacts/dev/
       - name: Checkout updated translations (PR)
@@ -60,20 +64,20 @@ jobs:
           ref: ${{ github.sha }}
       - name: Compile updated translations catalogs
         run: |
-          python setup.py compile_catalog
+          uv run poe translations-compile
           cd src/seedsigner/resources/seedsigner-translations
           git status
       - name: Generate latest screenshots
         run: |
           rm -rf seedsigner-screenshots
           mkdir -p artifacts/incoming
-          python -m pytest tests/screenshot_generator/generator.py
+          uv run poe screenshots
           sleep 10
           mv ./seedsigner-screenshots/* ./artifacts/incoming/
       - name: Diff screenshots
         run: |
           mkdir -p artifacts/diff
-          python src/seedsigner/resources/seedsigner-translations/.github/diff_report/diff_screenshots.py ./artifacts/dev ./artifacts/incoming ./artifacts/diff $INCOMING_CHANGES_REF
+          uv run python src/seedsigner/resources/seedsigner-translations/.github/diff_report/diff_screenshots.py ./artifacts/dev ./artifacts/incoming ./artifacts/diff $INCOMING_CHANGES_REF
       - name: Clean up artifacts
         run: |
           rm -rf ./artifacts/incoming
