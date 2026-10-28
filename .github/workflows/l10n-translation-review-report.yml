@@ -1,0 +1,327 @@
+# Publishes the translation-review results: the per-PR visual review page and
+# one sticky status comment.
+#
+# This is the write-capable half of the review pair. It is triggered by the
+# read-only "l10n translation review" run completing, and runs code from the
+# default branch rather than the PR, so it never executes PR-supplied code.
+# The artifact it downloads is untrusted: the manifest is validated against
+# its schema and trust anchors, the PR-number<->head-SHA binding is confirmed
+# against the live PR, and only files the manifest lists (re-checked for path
+# allowlist, PNG magic and size) ever reach the published page, which is
+# static HTML with every string escaped.
+#
+# The page is deployed to a bot fork's gh-pages branch under /pr-<n>/ with a
+# GitHub App token scoped to that fork; this repo itself never carries a
+# contents:write credential. The comment uses the default token's
+# pull-requests:write. When a PR closes, its page directory is removed.
+#
+# No-op until the repo variable L10N_PAGES_FORK (e.g. "<bot>/seedsigner-
+# translations") and the L10N_PAGES_* App secrets are configured; see
+# l10n/automation/SETUP.md.
+name: l10n translation review report
+
+on:
+  workflow_run:
+    workflows: ["l10n translation review"]
+    types: [completed]
+  pull_request_target:
+    types: [closed]
+    paths:
+      - "l10n/**"
+
+permissions:
+  contents: read
+
+jobs:
+  report:
+    # Act on producer runs that came from a pull request, including failed
+    # ones: the blocking placeholder gate fails the producer after the
+    # artifact is uploaded, and that failure detail belongs in the comment.
+    if: >-
+      github.event_name == 'workflow_run' &&
+      github.event.workflow_run.event == 'pull_request' &&
+      contains(fromJSON('["success", "failure"]'), github.event.workflow_run.conclusion) &&
+      vars.L10N_PAGES_FORK != ''
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      actions: read
+      pull-requests: write
+    # All page deploys share one gh-pages branch; serialize them.
+    concurrency:
+      group: l10n-review-pages
+      cancel-in-progress: false
+    steps:
+      - name: Checkout default-branch automation code
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          persist-credentials: false
+          submodules: false
+
+      - name: Download review artifact
+        id: download
+        # A producer run that crashed before uploading has no artifact; that
+        # is a producer problem (its run is already red), so skip quietly.
+        continue-on-error: true
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: translation-review
+          path: incoming
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check artifact presence
+        id: artifact
+        run: |
+          set -euo pipefail
+          if [ -f incoming/manifest.json ]; then
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "present=false" >> "$GITHUB_OUTPUT"
+            echo "No review artifact on this run; nothing to report."
+          fi
+
+      - name: Set up Python
+        if: steps.artifact.outputs.present == 'true'
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
+        with:
+          python-version: "3.12"
+
+      - name: Install validation deps
+        if: steps.artifact.outputs.present == 'true'
+        # Only jsonschema is needed here; the page and comment builders are
+        # stdlib-only. This is the sole consumer, so it is pinned inline
+        # rather than in a requirements file.
+        run: python -m pip install --quiet "jsonschema==4.26.0"
+
+      - name: Validate manifest
+        if: steps.artifact.outputs.present == 'true'
+        env:
+          EXPECT_HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+          EXPECT_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          python l10n/automation/validate_review_manifest.py \
+            --manifest incoming/manifest.json \
+            --schema l10n/automation/schema/translation-review-manifest.schema.json \
+            --expect-head-sha "$EXPECT_HEAD_SHA" \
+            --expect-repository "$EXPECT_REPO"
+
+      - name: Bind manifest to its pull request
+        id: bind
+        if: steps.artifact.outputs.present == 'true'
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        env:
+          RUN_HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+        with:
+          script: |
+            const fs = require('fs');
+            const manifest = JSON.parse(fs.readFileSync('incoming/manifest.json', 'utf8'));
+            const prNumber = manifest.pr.number;
+            const runHeadSha = process.env.RUN_HEAD_SHA;
+
+            // Authoritative PR-number <-> head-SHA binding: confirm the PR this
+            // manifest names really has the head commit the producing run was
+            // built from. Prevents a malicious PR from hijacking another PR's
+            // page slot or comment thread.
+            const { data: pr } = await github.rest.pulls.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: prNumber,
+            });
+            if (pr.head.sha !== runHeadSha) {
+              core.warning(
+                `PR #${prNumber} head ${pr.head.sha} != run head ${runHeadSha}; ` +
+                `skipping (PR advanced, or the manifest names someone else's PR).`);
+              core.setOutput('proceed', 'false');
+              return;
+            }
+            core.setOutput('proceed', 'true');
+            core.setOutput('pr_number', String(prNumber));
+            core.setOutput('pr_open', pr.state === 'open' ? 'true' : 'false');
+
+      - name: Build review page
+        if: steps.bind.outputs.proceed == 'true'
+        run: |
+          set -euo pipefail
+          python l10n/automation/build_review_page.py \
+            --manifest incoming/manifest.json \
+            --artifact-dir incoming \
+            --out page
+
+      - name: Prepare Pages fork coordinates
+        id: pages
+        if: steps.bind.outputs.proceed == 'true' && steps.bind.outputs.pr_open == 'true'
+        env:
+          PAGES_FORK: ${{ vars.L10N_PAGES_FORK }}
+        run: |
+          set -euo pipefail
+          echo "owner=${PAGES_FORK%%/*}" >> "$GITHUB_OUTPUT"
+          echo "repo=${PAGES_FORK##*/}" >> "$GITHUB_OUTPUT"
+
+      - name: Mint Pages fork token
+        id: pages_token
+        if: steps.bind.outputs.proceed == 'true' && steps.bind.outputs.pr_open == 'true'
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        with:
+          client-id: ${{ secrets.L10N_PAGES_CLIENT_ID }}
+          private-key: ${{ secrets.L10N_PAGES_PRIVATE_KEY }}
+          owner: ${{ steps.pages.outputs.owner }}
+          repositories: ${{ steps.pages.outputs.repo }}
+          permission-contents: write
+
+      - name: Deploy page to the bot fork
+        id: deploy
+        if: steps.bind.outputs.proceed == 'true' && steps.bind.outputs.pr_open == 'true'
+        env:
+          GH_TOKEN: ${{ steps.pages_token.outputs.token }}
+          APP_SLUG: ${{ steps.pages_token.outputs.app-slug }}
+          PAGES_FORK: ${{ vars.L10N_PAGES_FORK }}
+          PAGES_OWNER: ${{ steps.pages.outputs.owner }}
+          PAGES_REPO: ${{ steps.pages.outputs.repo }}
+          PR_NUMBER: ${{ steps.bind.outputs.pr_number }}
+        run: |
+          set -euo pipefail
+          url="https://x-access-token:${GH_TOKEN}@github.com/${PAGES_FORK}.git"
+          if ! git clone --quiet --depth 1 --branch gh-pages "$url" site 2>/dev/null; then
+            # First deploy ever: start an orphan gh-pages branch.
+            git init --quiet site
+            git -C site checkout --quiet --orphan gh-pages
+            git -C site remote add origin "$url"
+          fi
+
+          rm -rf "site/pr-${PR_NUMBER}"
+          mkdir -p "site/pr-${PR_NUMBER}"
+          cp -a page/. "site/pr-${PR_NUMBER}/"
+          touch site/.nojekyll
+
+          cd site
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Page unchanged; nothing to push."
+          else
+            git config user.name "${APP_SLUG}[bot]"
+            git config user.email "${APP_SLUG}[bot]@users.noreply.github.com"
+            git commit --quiet -m "l10n: review page for PR #${PR_NUMBER}"
+            git push --quiet origin gh-pages
+          fi
+          echo "page_url=https://${PAGES_OWNER}.github.io/${PAGES_REPO}/pr-${PR_NUMBER}/" >> "$GITHUB_OUTPUT"
+
+      - name: Render comment
+        if: steps.bind.outputs.proceed == 'true'
+        env:
+          PAGE_URL: ${{ steps.deploy.outputs.page_url }}
+        run: |
+          set -euo pipefail
+          python l10n/automation/render_review_comment.py \
+            --manifest incoming/manifest.json \
+            --page-url "$PAGE_URL" \
+            --out comment.md
+
+      - name: Upsert review comment
+        if: steps.bind.outputs.proceed == 'true'
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        env:
+          PR_NUMBER: ${{ steps.bind.outputs.pr_number }}
+        with:
+          script: |
+            const fs = require('fs');
+            const MARKER = '<!-- l10n-automation:comment=translation-review -->';
+
+            const body = fs.readFileSync('comment.md', 'utf8');
+            const prNumber = Number(process.env.PR_NUMBER);
+
+            // The login this token comments as (e.g. "github-actions[bot]"); the
+            // [bot] suffix is normalized away so REST and GraphQL forms compare equal.
+            const { viewer } = await github.graphql('query { viewer { login } }');
+            const myLogin = viewer.login.replace(/\[bot\]$/, '');
+
+            const comments = await github.paginate(github.rest.issues.listComments, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: prNumber,
+              per_page: 100,
+            });
+            // Match our own previous comment: the marker identifies the stream,
+            // and requiring our exact author login means a human (or any other
+            // bot) carrying the marker can never be mistaken for the one we maintain.
+            const existing = comments.find(c =>
+              c.user && c.user.login.replace(/\[bot\]$/, '') === myLogin &&
+              c.body && c.body.includes(MARKER));
+
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existing.id,
+                body,
+              });
+              core.info(`Updated review comment ${existing.id} on PR #${prNumber}.`);
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber,
+                body,
+              });
+              core.info(`Created review comment on PR #${prNumber}.`);
+            }
+
+  cleanup:
+    # Remove the PR's page directory when it closes. pull_request_target runs
+    # in the base repo context so the App secrets are available; it is safe
+    # here because nothing from the PR is checked out or executed - the only
+    # PR-controlled input used is the PR number.
+    if: >-
+      github.event_name == 'pull_request_target' &&
+      vars.L10N_PAGES_FORK != ''
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions: {}
+    concurrency:
+      group: l10n-review-pages
+      cancel-in-progress: false
+    steps:
+      - name: Prepare Pages fork coordinates
+        id: pages
+        env:
+          PAGES_FORK: ${{ vars.L10N_PAGES_FORK }}
+        run: |
+          set -euo pipefail
+          echo "owner=${PAGES_FORK%%/*}" >> "$GITHUB_OUTPUT"
+          echo "repo=${PAGES_FORK##*/}" >> "$GITHUB_OUTPUT"
+
+      - name: Mint Pages fork token
+        id: pages_token
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        with:
+          client-id: ${{ secrets.L10N_PAGES_CLIENT_ID }}
+          private-key: ${{ secrets.L10N_PAGES_PRIVATE_KEY }}
+          owner: ${{ steps.pages.outputs.owner }}
+          repositories: ${{ steps.pages.outputs.repo }}
+          permission-contents: write
+
+      - name: Remove the PR's page
+        env:
+          GH_TOKEN: ${{ steps.pages_token.outputs.token }}
+          APP_SLUG: ${{ steps.pages_token.outputs.app-slug }}
+          PAGES_FORK: ${{ vars.L10N_PAGES_FORK }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          set -euo pipefail
+          url="https://x-access-token:${GH_TOKEN}@github.com/${PAGES_FORK}.git"
+          if ! git clone --quiet --depth 1 --branch gh-pages "$url" site 2>/dev/null; then
+            echo "No gh-pages branch; nothing to clean up."
+            exit 0
+          fi
+          if [ ! -d "site/pr-${PR_NUMBER}" ]; then
+            echo "No page for PR #${PR_NUMBER}; nothing to clean up."
+            exit 0
+          fi
+          cd site
+          git rm -rq "pr-${PR_NUMBER}"
+          git config user.name "${APP_SLUG}[bot]"
+          git config user.email "${APP_SLUG}[bot]@users.noreply.github.com"
+          git commit --quiet -m "l10n: remove review page for closed PR #${PR_NUMBER}"
+          git push --quiet origin gh-pages
