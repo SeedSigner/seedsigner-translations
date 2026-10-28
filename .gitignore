@@ -3,3 +3,8 @@
 # Only check in *.po files since *.mo
 # files can be generated from from them
 *.mo
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
