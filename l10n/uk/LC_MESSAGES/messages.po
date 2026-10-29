@@ -1,7 +1,7 @@
 # Translations template for seedsigner.
 # Copyright (C) 2026 ORGANIZATION
 # This file is distributed under the same license as the seedsigner project.
-# FIRST AUTHOR <yurii@ukrmarine.com>, 2026.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
 # Yurii Znakhurenko, 2026
@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: seedsigner 0.8.7\n"
-"Report-Msgid-Bugs-To: yurii@ukrmarine.com\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-03-05 22:02+0000\n"
 "PO-Revision-Date: 2022-04-29 13:50+0000\n"
 "Last-Translator: Yurii Znakhurenko, 2026\n"
@@ -150,7 +150,7 @@ msgstr[3] "отримув."
 #. Denonination is inserted (e.g. your "btc change" or "sats change")
 #: src/seedsigner/gui/screens/psbt_screens.py
 msgid "{} change"
-msgstr "решта: {}"
+msgstr "{} решта"
 
 #. Describes the address type (change or receive)
 #: src/seedsigner/gui/screens/psbt_screens.py
@@ -232,7 +232,7 @@ msgstr "Я розумію"
 
 #: src/seedsigner/gui/screens/screen.py
 msgid "Classified Info!"
-msgstr "Конфіденційна інформація!"
+msgstr "Таємна інформація!"
 
 #: src/seedsigner/gui/screens/screen.py src/seedsigner/views/scan_views.py
 #: src/seedsigner/views/view.py
@@ -486,9 +486,9 @@ msgid ""
 "\n"
 "Donate onchain or LN at:"
 msgstr ""
-"SeedSigner на 100%% безкоштовний і з відкритим кодом, фінансується лише спільнотою Bitcoin.\n"
+"SeedSigner на 100%% безкоштовний і відкритий, фінансується лише спільнотою Bitcoin.\n"
 "\n"
-"Пожертвуйте onchain або через LN тут:"
+"Пожертви onchain / LN тут:"
 
 #: src/seedsigner/gui/screens/settings_screens.py
 #: src/seedsigner/views/settings_views.py
@@ -534,8 +534,8 @@ msgid ""
 "The {mnemonic_length}th word is built from {num_bits} more entropy bits plus"
 " auto-calculated checksum."
 msgstr ""
-"{mnemonic_length}-те слово складається з {num_bits} додатк. біт ентропії та "
-"автоматично обчисл. контрольної суми."
+"{mnemonic_length}-те слово: ще {num_bits} біт ентропії та автоматична "
+"контрольна сума."
 
 #. current coin-flip number vs total flips (e.g. flip 3 of 4)
 #: src/seedsigner/gui/screens/tools_screens.py
