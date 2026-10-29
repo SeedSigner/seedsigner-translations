@@ -120,15 +120,15 @@ msgstr "OP_RETURN"
 #: src/seedsigner/gui/screens/psbt_screens.py
 #: src/seedsigner/views/psbt_views.py
 msgid "change"
-msgstr "Ρέστα"
+msgstr "ρέστα"
 
 #: src/seedsigner/gui/screens/psbt_screens.py
 msgid "Transaction Math"
-msgstr "Υπολογισμός Συναλλαγής "
+msgstr "Υπολογισμός Συναλλαγής"
 
 #: src/seedsigner/gui/screens/psbt_screens.py
 msgid "Review recipients"
-msgstr "Επανεξέταση παραληπτών"
+msgstr "Έλεγχος παραληπτών"
 
 #: src/seedsigner/gui/screens/psbt_screens.py
 msgid "input"
@@ -145,7 +145,7 @@ msgstr[1] "παραλήπτες"
 #. Denonination is inserted (e.g. your "btc change" or "sats change")
 #: src/seedsigner/gui/screens/psbt_screens.py
 msgid "{} change"
-msgstr "{} διεύθυνση ρέστων"
+msgstr "{} ρέστα"
 
 #. Describes the address type (change or receive)
 #: src/seedsigner/gui/screens/psbt_screens.py
@@ -401,7 +401,7 @@ msgstr "Φόρτωσε multisig descriptor για επαλήθευση διεύ�
 
 #: src/seedsigner/gui/screens/seed_screens.py
 msgid "Descriptor Loaded"
-msgstr "Φορτώθηκε ο descriptor "
+msgstr "Φορτώθηκε ο descriptor"
 
 #. Label for the multisig wallet's signing policy (e.g. 2-of-3)
 #: src/seedsigner/gui/screens/seed_screens.py
@@ -551,7 +551,7 @@ msgstr "Το input σου \"{}\""
 #. A function of "x" to be used for detecting errors in "x"
 #: src/seedsigner/gui/screens/tools_screens.py
 msgid "Checksum"
-msgstr "Άθροισμα ελέγχου - Checksum"
+msgstr "Checksum"
 
 #. labeled presentation of the last word in a BIP-39 mnemonic seed phrase.
 #: src/seedsigner/gui/screens/tools_screens.py
@@ -863,7 +863,7 @@ msgstr "Ανάλυση PSBT…"
 
 #: src/seedsigner/views/psbt_views.py
 msgid "Unsupported Script Type!"
-msgstr "Μη υποστηριζόμενος Type Script!"
+msgstr "Μη υποστηριζόμενο script!"
 
 #: src/seedsigner/views/psbt_views.py
 msgid ""
@@ -1152,7 +1152,7 @@ msgstr "Ορισμένες λειτουργίες απενεργοποιούντ
 
 #: src/seedsigner/views/seed_views.py
 msgid "Scan transaction"
-msgstr " Σάρωση συναλλαγής"
+msgstr "Σάρωση συναλλαγής"
 
 #: src/seedsigner/views/seed_views.py src/seedsigner/views/tools_views.py
 msgid "Address explorer"
@@ -1209,7 +1209,7 @@ msgstr "Παράγωγο #{}"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Seed Words"
-msgstr "Λέξεις Seed "
+msgstr "Λέξεις Seed"
 
 #: src/seedsigner/views/seed_views.py
 msgid "12 Words"
@@ -1229,7 +1229,7 @@ msgstr "Σφάλμα δείκτη BIP-85"
 
 #: src/seedsigner/views/seed_views.py
 msgid "Invalid Child Index"
-msgstr "Μη έγκυρος δείκτης παραγώγων"
+msgstr "Μη έγκυρος Child Index"
 
 #: src/seedsigner/views/seed_views.py
 msgid "BIP-85 Child Index must be between 0 and 2^31-1."
@@ -1301,7 +1301,7 @@ msgstr "Μορφή SeedQR"
 
 #: src/seedsigner/views/seed_views.py
 msgid "SeedQR is your private key!"
-msgstr "Το SeedQR είναι ιδιωτικό κλειδί!"
+msgstr "SeedQR = Ιδιωτικό κλειδί"
 
 #: src/seedsigner/views/seed_views.py
 msgid ""
@@ -1426,7 +1426,7 @@ msgstr "Νέο seed"
 
 #: src/seedsigner/views/tools_views.py
 msgid "Calc 12th/24th word"
-msgstr " Υπολογ. 12ης/24ης λέξης"
+msgstr "Υπολογ. 12ης/24ης λέξης"
 
 #: src/seedsigner/views/tools_views.py
 msgid "Verify address"
@@ -1589,7 +1589,7 @@ msgstr "Σφάλμα hardware"
 
 #: src/seedsigner/views/view.py
 msgid "Cannot access camera"
-msgstr "Αδυναμία πρόσβασης στη κάμερα"
+msgstr "Σφάλμα κάμερας"
 
 #: src/seedsigner/views/view.py
 msgid "Disconnect power and check for a loose camera connection."
@@ -1607,7 +1607,7 @@ msgstr "\"{}\" είναι απενεργοποιημένο στις Ρυθμίσ
 
 #: src/seedsigner/views/view.py
 msgid "Option Disabled"
-msgstr " Απενεργοποιημένη επιλογή"
+msgstr "Απενεργοποιημένη επιλογή"
 
 #: src/seedsigner/views/view.py
 msgid "Action Required"
